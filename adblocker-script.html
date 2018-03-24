@@ -1,0 +1,31 @@
+<script type="text/javascript">var adBlock = true;</script>
+   <script type="text/javascript" src="http://media2.intoday.in/aajtak/test2/resources/js/ads.js"></script>
+   <script type="text/javascript">
+        if(adBlock) {
+               //alert('Ad is Blocked');
+               setTimeout(openPopup(), 4000);
+        }
+   </script>
+
+<script>
+function openPopup() {
+    $("#div_adblock").show(), $(".ad-blocker-ajax").hide();
+    var a = $("#zedoadsmarket").attr("data-zedoads");
+    ga("send", "event", "AdblockPopup", a, "true")
+}
+        
+function checkAds(a) {
+    var b = $("#" + a).attr("data-zedoads");
+    void 0 != document.getElementById(a) ? 0 != $("#" + a).height() && "0" != $("#" + a).height() || (ga("send", "event", "Adblock", b, "true"), openPopup(), console.log("Ads not founds")) : void 0 != b && (console.log("Ads founds"), ga("send", "event", "Adblock", b, "false"))
+}
+
+$(document).ready(function() {
+    setTimeout(checkAds('zedoadsmarket'), 2000);
+}), $(document).ready(function() {
+    $(".tabs ul li").click(function() {
+        var a = $(this).index() + 1; 
+        $(".tabs ul li").removeClass("active"), $(this).addClass("active"), $(".show_instruction").hide(), $("#tab1" + a).fadeIn()
+    }), navigator.userAgent.indexOf("MSIE") !== -1 || navigator.appVersion.indexOf("Trident/") > 0 ? ($("li#ie").addClass("active"), $("#tab13").fadeIn()) : navigator.userAgent.toLowerCase().indexOf("chrome") > -1 ? ($("li#chrome").addClass("active"), $("#tab11").fadeIn()) : navigator.userAgent.toLowerCase().indexOf("firefox") > -1 ? ($("li#firefox").addClass("active"), $("#tab12").fadeIn()) : ($("li#chrome").addClass("active"), $("#tab11").css("display", "block"))
+});
+</script>
+   
