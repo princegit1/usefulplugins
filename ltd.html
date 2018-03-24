@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>TTD</title>
+</head>
+
+<body>
+<script src="jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+/*$('.btn_c').on("click",function(){
+$('.cht2').attr('checked', false);
+
+$('.cht').attr('checked', true);
+})
+
+$('.btn_d').on("click",function(){
+$('.cht').attr('checked', false);
+
+$('.cht2').attr('checked', true);
+
+})*/
+
+$('.btn_c').on(click, function(){
+try {
+$('.cht').attr('checked', true);
+}
+catch(e1)
+{
+alert('E1' + e1);
+}
+})
+$('.btn_d').on(click, function(){
+try {
+$('.cht2').attr('checked', true);
+}
+catch(e2)
+{
+alert('E2' + e2);
+}
+})
+})
+</script>
+
+
+<input type="radio" class="cht" name="t" />
+<input type="radio" class="cht2" name="t" />
+
+<button class="btn_c">Click</button>
+<button class="btn_d">Click2</button>
+
+</body>
+</html>

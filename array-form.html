@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Array form</title>
+</head>
+<body>
+
+<form name="frm11" method="post" action="a.jsp">
+<input type="text" name="t1" id="t1">
+<input type="text" name="t2" id="t2">
+<input type="text" name="t3" id="t3"><br>
+<input type="submit" value="Click" id="click">
+</form>
+
+<script src="jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$('#click').click(function(){
+t1 = $('#t1').val();
+t2 = t1.substr(0,1);
+
+var g1 = ((t2 == 9) || (t2 == 8)|| (t2 == 7));
+if(!g1)
+{
+console.log("Please fill value start from 9,8 or 7");
+return false;
+}
+else
+{
+console.log("Success");
+return true;
+}
+
+})
+})
+</script>
+</body>
+</html>

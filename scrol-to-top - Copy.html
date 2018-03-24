@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Scroll to Top</title>
+</head>
+<body>
+<style>
+.left-menu-fixed { position:fixed; top:0; width:200px}
+
+.onet{ width:100%; float:left; height:320px; border:1px solid #ccc;}
+.lmenu{ width:200px; border:1px solid #ccc; float:left; height:500px}
+
+</style>
+
+<div class="onet"></div>
+
+<div class="lmenu"></div>
+
+<script src="jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+ht1 = $('.onet').height();
+console.log(ht1);
+$(window).scroll(function(){
+if ($(this).scrollTop()> ht1)
+{
+$('.lmenu').addClass('left-menu-fixed');
+}else
+{
+$('.lmenu').removeClass('left-menu-fixed');
+}
+});
+});
+</script>
+</body>
+</html>

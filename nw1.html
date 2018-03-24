@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>abc</title>
+</head>
+
+<body>
+<script src="jquery.min.js"></script>
+<script>
+/*var nh = {
+    sProp: 'some string value',
+    numProp: 2,
+    bProp: false
+};
+
+document.write(nh["sProp"] + "<br>");
+nh.sProp = "This is new text";
+document.write(nh["sProp"]);
+
+*/
+
+$(document).ready(function(){
+var width1 = $('.main_cnt ul li').width();
+var height1 = $('.main_cnt ul li').height();
+var len = $('.main_cnt ul li').length;
+width1 = width1 + 12;
+console.log(width1);
+console.log(len);
+var totwidth = len *width1;
+$('.main_cnt ul').css({'width':totwidth});
+console.log(totwidth);
+
+var cnt = 1;
+
+$('.next').click(function(){
+	if(cnt<len){
+		$('.main_cnt ul').animate({'left':'-='+width1})
+		cnt++;
+	}
+	else
+	{
+	}
+
+})
+
+$('.prev').click(function(){
+	if(cnt==1)
+	{
+	}
+	else
+	{
+		$('.main_cnt ul').animate({'left':'+='+width1})
+		cnt--;
+	}
+	})
+	/*function sld(){
+	$('.main_cnt ul').animate({'left':'-='+width1})
+	}
+	function td(){console.log("asd"); }*/
+	setInterval(function sld(){ st while(cnt!=len){
+		$('.main_cnt ul').animate({'left':'-='+width1})
+		cnt++;
+		
+	}
+	if(cnt==len){ cnt=1; continue st;
+	},1000);
+})
+</script>
+
+<style>
+.main_cnt{ width:312px;float:left; position:relative; overflow:hidden}
+.main_cnt ul.slider{ list-style-type:none; padding:0;width:100%; margin:0;height:200px; float:left; position:relative; }
+.main_cnt ul.slider li{width:300px; border:1px solid #ccc; padding:5px; float:left; }
+.main_cnt ul.slider li img{ width:100%; height:188px; display:block}
+</style>
+
+<div class="main_cnt">
+<button class="prev">Previous</button>
+<button class="next">Next</button>
+<ul class="slider">
+<li><img src="jayant-video_305_080415091242.jpg" alt="img" /></li>
+<li><img src="jayant-video_305_080415091242.jpg" alt="img" /></li>
+<li><img src="jayant-video_305_080415091242.jpg" alt="img" /></li>
+<li><img src="jayant-video_305_080415091242.jpg" alt="img" /></li>
+<li><img src="jayant-video_305_080415091242.jpg" alt="img" /></li>
+<li><img src="jayant-video_305_080415091242.jpg" alt="img" /></li>
+</ul>
+</div>
+</body>
+</html>

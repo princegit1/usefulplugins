@@ -1,0 +1,34 @@
+<script src="jquery.min.js"></script>
+
+<div class="abc">
+
+  <p>They book youron air tickets, reserve your hotel rooms and plan your holidays. Now, they also help government officials claim Leave Travel Allowance (LTA) on fake bills and thereby rob the state exchequer of crores of rupees.</p>
+  <p>A recent sting operation has exposed that travel agents provide bogus bills of costliest air tickets to government employees while offering them much cheaper fare. The government officials, in turn, use these fake bills for availing the benefit of travel allowance. In the nine-minute video captured by a central government employee, agents have claimed that they get a lion share of the ticket cost as they offer cheaper air fare and undisclosed benefits like hotel stay, food and transport to babus.</p>
+  <p>Upon the whistleblower's complaint, Anti Corruption Branch (ACB) on of the Delhi government has appointed an investigating officer to probe the issue.</p>
+  <p>Mail Today has also learnt that additional benefits like stay at three-four star hotels, arrangements for local sightseeing in air-conditioned car and food are not covered under the Leave Travel Concession (LTC-80) scheme of the government.</p>
+  <p>The sting only reveals the tip of an iceberg. A much bigger Leave Travel Concession (LTC) scam was exposed in March 2013 after a man was arrested at the Kolkata airport with 600 blank boarding passes of Air India. Later, a probe was launched by the CBI into the alleged fraud. Not only government employees, but several members of Parliament (MPs) were also suspected of favouring travel agents in the case.</p>
+</div>
+
+<div id="td"></div>
+<script>
+$(document).ready(function(){
+//$('').css( "text-decoration", "underline" );
+//$('#td').html(a);
+
+
+$string = $('.abc').text();;
+
+var count = $string.match(/on/g);  
+$(count).css( "text-decoration", "underline" );
+
+console.log(count);
+console.log(count.length);
+
+ $("li").each(function(){
+        console.log($(this).text())
+    });
+	
+	
+})
+</script>
+

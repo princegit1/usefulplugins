@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Scroll to Top</title>
+</head>
+<body>
+<style>
+.scrollToTop {background: rgba(0, 0, 0, 0) url("http://media2.intoday.in/aajtak/wap/images/backtotop.png") no-repeat scroll 0 0;bottom: 5px;display: none;height: 60px; position: fixed;right: 5px;text-align: right;width: 60px;z-index: 99999999;}
+</style>
+<div style="width:200px;">
+1. Terrorist attack in Paris:
+
+Terrorist organisation ISIS launched another terrorist operation in Paris, France, on November 13. Hostages were taken, grenades were thrown while the cultural capital suffered from the heinous attack.
+
+Read more here: http://indiatoday.intoday.in/education/story/paris-attacks/1/523023.html
+
+2. Images of Pluto:
+
+NASA spacecraft New Horizons captured an image of Pluto showing the different textures and topography of the planet with principal component analysis technique. This technique projected a rainbow-coloured image of Pluto that was named 'Psychedelic Pluto'.
+
+Read more here: http://indiatoday.intoday.in/education/story/pluto-image/1/522866.html
+
+3. Google announces winner for Doodle for Google 2015:
+ 
+This year's theme for Doodle for Google was 'Create Something for India'. P Karthik from Sri Prakash Vidyaniketan in Andhra Pradesh won the contest and his doodle was promoted on Google's homepage.
+
+Read more here: http://indiatoday.intoday.in/education/story/google-doodle-childrens-day/1/522836.html
+
+4. Girl adoption rate increases in India:
+
+Recent studies show that parents in India are keener on adopting girl children instead of boys. In the last one year, around 6,750 girls and 4,460 boys were adopted in India.
+
+Read more here: http://indiatoday.intoday.in/education/story/adoption/1/522922.html
+
+5. New Ant species:
+
+Kerala scientists discover new species of Dracula Ant that eats its own infants.
+
+Read more here: http://indiatoday.intoday.in/education/story/dracula-ant/1/520669.html
+
+6. Bihar Polls:
+
+The population of Bihar chose Nitish Kumar as their new Chief Minister. Kumar topped the biggest state-level election in India with RJD winning 80 seats.
+
+Read more here: http://indiatoday.intoday.in/education/story/nitish-kumar/1/519976.html
+
+7. Diwali celebrations and legends:
+
+Diwali was celebrated across India on November 11. The tradition of homecoming and celebration of virtue's victory over vice was observed with great fervour.
+
+Read more here: http://indiatoday.intoday.in/education/story/diwali-around-the-world/1/520699.html and http://indiatoday.intoday.in/education/story/legends-behind-the-5-day-celebrations-of-diwali/1/518675.htm l
+
+
+</div>
+<a class="scrollToTop" href="#"></a>
+
+
+<script src="jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > 100) {
+			$('.scrollToTop').fadeIn();
+		} else {
+			$('.scrollToTop').fadeOut();
+		}
+	});
+	
+	$('.scrollToTop').click(function(){
+		$('html, body').animate({scrollTop : 0},800);
+		return false;
+	});
+	
+});
+
+</script>
+</body>
+</html>

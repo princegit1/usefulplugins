@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script src="http://www.netcu.de/templates/netcu/js/jquery.touchwipe.min.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Touch</title>
+</head>
+
+<body>
+<style>
+.box{ width:400px; height:400px; float:left; border:1px solid #c00; padding:10px;}
+</style>
+
+<div class="box"></div>
+
+<script>
+$(".box").touchwipe({
+     wipeLeft: function() { alert("left"); },
+     wipeRight: function() { alert("right"); },
+     wipeUp: function() { alert("up"); },
+     wipeDown: function() { alert("down"); },
+     min_move_x: 20,
+     min_move_y: 20,
+     preventDefaultEvents: true
+});
+</script>
+</body>
+</html>
+
+

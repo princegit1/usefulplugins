@@ -1,0 +1,79 @@
+<html>
+<head>
+<script type="text/javascript" src="http://ripplead.s3.amazonaws.com/jwplayer/6/jwplayer.js"></script>
+<!--<script type="text/javascript">jwplayer.key="PZS4mgUlGFQvqcUCRvPqakIAvK6bmtsLqmDToNmPvKQ/lml0FzEGyA==";</script>-->
+<script type="text/javascript">jwplayer.key="zoX4jWZ2iIvct/9MosgQ4dJBx/oZDSiSKTGk5Q==";</script>
+</head>
+<body>
+<div id="myElement">Loading the player...</div>
+
+<script type="text/javascript">
+    jwplayer("myElement").setup({
+	autostart: true,
+	width: 480,
+	height: 480,
+	playlist: [
+		{
+        title: "Part1",
+        image: "http://media2.intoday.in/aajtak/images/stories/052013/31_aaj_chhattisgarh_daure_par_shinde.jpg",
+		description: "Bangalore blasts: 2 kg ammonium nitrate used as explosive, says police",
+		sources: [
+			{ 	//file: "http://aajtakclouds3.intoday.in/aajtak/video/092013/06_dharm.m3u8"	
+				file: "http://lmil.live-s.cdn.bitgravity.com/cdn-live-b5/_definst_/lmil/live/hlt.smil/playlist.m3u8"
+			}
+		]
+		},
+		{
+		title: "Part2",
+		image: "http://media2.intoday.in/indiatoday/images/stories/bangalore_660_041813121546.jpg",
+		description: "Bangalore blasts: 2 kg ammonium nitrate used as explosive, says police",
+		sources: [
+		{ 	file: "http://wowcloud.intoday.in/vods3/_definst_/mp4:amazons3/videodeliverys3/indiatoday/video/April2013/18_terrot_in_banglore.mp4/playlist.m3u8"		},
+		{ 	file: "http://videodeliverys3.s3.amazonaws.com/indiatoday/video/April2013/18_terrot_in_banglore.mp4"		}
+		]
+		},
+		{
+		image: "http://media2.intoday.in/indiatoday/images/stories/bangalore_660_041813121546.jpg",
+		title: "Part3",
+		description: "Bangalore blasts: 2 kg ammonium nitrate used as explosive, says police",
+		sources: [
+		{	file: "http://wowcloud.intoday.in/vods3/_definst_/mp4:amazons3/videodeliverys3/indiatoday/video/April2013/18_day_after_no_breakthrough_upd.mp4/playlist.m3u8"		},
+		{	file: "http://videodeliverys3.s3.amazonaws.com/indiatoday/video/April2013/18_day_after_no_breakthrough_upd.mp4"		}
+		]
+		}
+		],
+	listbar: {
+	position: 'bottom',
+	size: 100
+	},
+	primary: "flash",
+	ga: {} 
+    });
+</script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-795349-3']);
+_gaq.push(['_setCustomVar',
+      1,                   // This custom var is set to slot #1.  Required parameter.
+      'Section',           // The top-level name for your online content categories.  Required parameter.
+      'Breaking News',  // Sets the value of "Section" to "Life & Style" for this particular aricle.  Required parameter.
+      3                    // Sets the scope to page-level.  Optional parameter.
+   ]);
+_gaq.push(['_trackEvent', 'Videos', 'Play', 'Gone With the Wind']);
+_gaq.push(['_trackEvent', 'Videos', 'Pause', 'Gone With the Wind']);
+_gaq.push(['_trackEvent', 'Videos', 'Stop', 'Gone With the Wind']);
+
+var pageTracker = _gat._getTracker("UA-795349-3");
+pageTracker._trackPageview();
+pageTracker._trackPageLoadTime();
+pageTracker._trackSocial(network, socialAction, opt_target, opt_pagePath);
+} catch(err) {}</script>
+
+</body>
+</html>

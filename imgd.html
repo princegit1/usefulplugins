@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Image</title>
+<style>
+.mn1{ border:1px solid #ccc; width:300px; height:200px;}
+.mn1 img{ width:100%;}
+ul{list-style-type:none;padding:0;margin:0;}
+ul li{ width:200px; height:100px; float:left; margin:20px;}
+ul li img{width:100%; float:left}
+</style>
+</head>
+
+<body>
+<div class="mn1">
+
+<iframe class="mn2" src="" ></iframe>
+</div>
+<ul>
+<li><img class="img" src="jayant-video_305_080415091242.jpg" alt="asd" dataurl="https://youtu.be/mdoHi6kaa9M" /></li>
+<li><img class="img" src="dsc_1554_050615044139.jpg" alt="jayant-video_305_080415091242" /></li>
+<li><img class="img" src="jayant-video_305_080415091242.jpg" alt="asd" /></li>
+<li><img class="img" src="jayant-video_305_080415091242.jpg" alt="asd" /></li>
+<li><img class="img" src="jayant-video_305_080415091242.jpg" alt="asd" /></li>
+<li><img class="img" src="jayant-video_305_080415091242.jpg" alt="asd" /></li>
+</ul>
+<script src="jquery.min.js"></script>
+
+<script>
+$('.img').click(function(){
+var a1 = "https://youtu.be/mdoHi6kaa9M";
+var at = $(this).attr('dataurl');
+console.log(at);
+$('.mn1').html('<iframe src="+a1+"></iframe>');
+})
+</script>
+
+<script type="text/javascript">
+		function playVideo(videoid, poster)
+		{
+			document.getElementById('videopopup').style.display="block";
+			if (videoid.match("youtube"))
+			{
+			 document.getElementById('enrollfrm').innerHTML = '<iframe width="640" height="450" src="'+videoid+'" frameborder="0" allowfullscreen></iframe>';
+			
+			}
+			/*else
+			{
+			document.getElementById('enrollfrm').innerHTML = '<video id="video1" width="640" height="480" poster="images/17_so_sorry_battle_lines_drawn-8.jpg" controls autoplay><source src="09_so_sorry-Peace-3" type="video/mp4" /></video>';
+			}*/
+		}
+    </script>
+</body>
+</html>

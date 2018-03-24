@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Slide Window</title>
+<style>
+.main-container{ width:100%; float:left; font-family:Arial, Helvetica, sans-serif; color:#000; position:relative}
+.main-container .left_panel{float:left; display:none; padding:10px; text-align:justify; position:relative; border:1px solid #c00;}
+.main-container .left_panel ul{ list-style-type:none;padding:0;margin:0;}
+.main-container .left_panel ul li{ border-bottom:1px solid #ccc; padding:10px 0; color:#000;}
+.main-container .right_panel{ float:right;text-align:justify;border:1px solid #c00;padding:10px; }
+
+.lft{ width:20%;}
+.rgt{ width:80%;}
+
+</style>
+</head>
+<body>
+<button class="btn_c">Add</button>
+<button class="btn_d">Remove</button>
+<div class="main-container">
+  <div class="left_panel">
+    <ul>
+      <li>List Menu one</li>
+      <li>List Menu one</li>
+      <li>List Menu one</li>
+      <li>List Menu one</li>
+      <li>List Menu one</li>
+      <li>List Menu one</li>
+    </ul>
+  </div>
+  <div class="right_panel">
+    <p>If 2014 was the year of autobiographies, 2015 promises to have a more eclectic line-up of story-tellers. There’ll be something for everyone on the bookstands.</p>
+    <p> I am inspired by Mark Zuckerberg. The Facebook founder and CEO has vowed to read one book every other week this year. This is his Year of Books. For all those who wish to take a leaf out of his book, here are some authors and titles to look forward to this year. </p>
+    <p> Amitav Ghosh has already brought out his narrative masterpiece: Flood of Fire, the final volume of his opium trilogy. Amish, who made Shiva sexy, is out to do the same to Ram Chandra in his Scion of Ikshvaku. Vikram Seth has brought out his Summer Requiem, his book of verse after a gap of 25 years. But there’s much more on the anvil - if you want engaging companions on lazy weekends.</p>
+    <p> “If you like to read, we’ve got some news for you. The second-half of 2015 is straight-up, stunningly chock-full of amazing books,” announces The Millions online magazine that covers books, arts, and culture in its just-published the ‘Most Anticipated: The Great Second-Half 2015 Book Preview.’ On their list is A Bad Character by Deepti Kapoor, the first American edition being published this year. “Delhi is no place for a woman in the dark,” Kapoor writes, “unless she has a man and a car or a car and a gun.” A “coming-of-age story and a portrait of New Delhi,” writes The Millions. Something about it resonates…a must-read. </p>
+    <p> A very different book is The Devourers by Indra Das, which first appeared as a short story in science fiction and fantasy magazines like Clarkesworld and Asimov Science Fiction. It’s possibly the first Indian book to belong to the latest literary genre of werewolves and shapeshifters. The mythical creatures move about in time and space: Europe to Mughal India to contemporary Calcutta. </p>
+  </div>
+</div>
+<script src="jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$('.btn_c').click(function(){
+$('.left_panel').css({'display':'block','float':'left'}).animate({'width':'20%'});
+$('.right_panel').animate({'width':'75%'});
+})
+$('.btn_d').click(function(){
+$('.left_panel').css({'display':'none'}).animate({'display':'none'});
+$('.right_panel').animate({'width':'98%'});
+})
+
+})
+</script>
+</body>
+</html>

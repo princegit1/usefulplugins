@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Top Scroller</title>
+</head>
+<body>
+<style>
+.main_outer{ width:700px; float:left;}
+.main_outer a{ color:#333; text-decoration:none;}
+.main_outer ul {list-style-type:none;padding:0; margin:0;}
+.main_outer ul li{ display:inline-block; background:#f1f1f1;padding:5px 10px; margin:10px}
+.main_outer .belt_outer{width:650px; float:left;position:relative; height:40px;overflow:hidden}
+.main_outer .belt_outer ul {position:relative; overflow:hidden;}
+.shnextarrow {background: rgba(0, 0, 0, 0) url("http://images.dailyo.in/images/right-arrow.png") no-repeat scroll left top;cursor: pointer;display: block;float: right;height: 18px;position: absolute;right: 5px;text-indent: -9999px;top: 10px;width: 12px;}
+.shprevarrow {background: rgba(0, 0, 0, 0) url("http://images.dailyo.in/images/left-arrow.png") no-repeat scroll left top;cursor: pointer;display: block;float: left;height: 18px;left: 0;margin-right: 10px;position: absolute;text-indent: -9999px;top: 10px;width: 12px;}
+</style>
+<div class="main_outer">
+  <div class="belt_outer">
+    <ul class="belt">
+    <script>
+	for(i=1;i<40;i++)
+	{ document.write('<li><a href="#">International Yoga Day ' + i + '</a></li>');}
+</script>
+    </ul>
+    <span class="shprevarrow"></span> <span class="shnextarrow"></span> </div>
+</div>
+<script src="jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+var len = $('ul.belt li').length;
+
+var width = $('ul.belt li').width();
+console.log("Length= " + len + " Width= " + width);
+var width1 = width + 20;
+var totwidth = len*width1;
+ $('ul.belt').css({'width':totwidth})
+ var cnt = 1;
+$('.shnextarrow').click(function(){
+if(cnt < len) {
+ $('ul.belt').animate({'left': '-=' + width1})
+ }
+ else {
+ }
+ 
+ 
+})
+
+$('.shprevarrow').click(function(){
+if(cnt ==1) {
+
+ }
+ else {
+  $('ul.belt').animate({'left': '+=' + width1})
+ }
+ 
+ 
+})
+})
+</script>
+</body>
+</html>

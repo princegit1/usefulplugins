@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<!--<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-795349-3']);
+_gaq.push(['_setCustomVar',
+      1,                   // This custom var is set to slot #1.  Required parameter.
+      'Section',           // The top-level name for your online content categories.  Required parameter.
+      'Video Player 5 GA',  // Sets the value of "Section" to "Life & Style" for this particular aricle.  Required parameter.
+      3                    // Sets the scope to page-level.  Optional parameter.
+   ]);
+
+
+var pageTracker = _gat._getTracker("UA-795349-3");
+pageTracker._trackPageview();
+pageTracker._trackPageLoadTime();
+pageTracker._trackSocial(network, socialAction, opt_target, opt_pagePath);
+} catch(err) {}</script>-->
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-795349-3']);
+_gaq.push(['_setCustomVar',
+      1,                   // This custom var is set to slot #1.  Required parameter.
+      'Section',           // The top-level name for your online content categories.  Required parameter.
+      'Breaking News',  // Sets the value of "Section" to "Life & Style" for this particular aricle.  Required parameter.
+      3                    // Sets the scope to page-level.  Optional parameter.
+   ]);
+_gaq.push(['_trackEvent', 'Videos', 'Play', 'Gone With the Wind']);
+_gaq.push(['_trackEvent', 'Videos', 'Pause', 'Gone With the Wind']);
+_gaq.push(['_trackEvent', 'Videos', 'Stop', 'Gone With the Wind']);
+
+var pageTracker = _gat._getTracker("UA-795349-3");
+pageTracker._trackPageview();
+pageTracker._trackPageLoadTime();
+pageTracker._trackSocial(network, socialAction, opt_target, opt_pagePath);
+} catch(err) {}</script>
+
+</head>
+
+<body>
+
+ <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+ <script type="text/javascript" src="http://media2.intoday.in/microsites/affle-player/jwplayer/jwplayer.js"></script>
+ <script type="text/javascript" src="http://media2.intoday.in/microsites/affle-player/jwplayer/ripple.js"></script>
+ <script type="text/javascript">
+       $(document).ready(function() {
+		
+		/////////////////// JW PLAYER-5 NEW SYSTE START //////////////////////////
+			
+		jwplayer("videoplayer").setup({
+		'flashplayer': "http://media2.intoday.in/microsites/affle-player/jwplayer/player.swf",
+		'controlbar.position': 'bottom',
+		//'image': 'http://indiatoday.intoday.in/images/noimage_88x66.gif',
+		                    'image': 'http://media2.intoday.in/aajtak/images/stories/092013/dharma_320_090613065922.jpg',
+				'autostart': true,
+		'stretching': 'fill',
+		'skin': 'http://media2.intoday.in/microsites/affle-player/newtubedark1/NewTubeDark.xml',      
+		'width': 480,
+        'height': 360,
+		'streamer': "rtmp://aajtakstreamings3.intoday.in:80/cfx/st",
+		//'file': '/lmil/live/HT512',
+		'provider': 'rtmp',
+		levels: [
+					{ bitrate: 256, file: 'aajtak/video/092013/256/06_dharm_256.mp4' }
+			,			{ bitrate: 512, file: 'aajtak/video/092013/06_dharm.mp4' }
+					],
+		'modes': [
+			{ type: 'flash', src: 'http://aajtak.intoday.in/player/jwplayer/player.swf' },
+			{ type: 'html5',
+				config: { 'file': 'http://aajtakclouds3.intoday.in/aajtak/video/092013/06_dharm.m3u8', 'provider': 'video' }
+			},
+			{
+			  type: 'download', config: { 'file': 'http://aajtakclouds3.intoday.in/aajtak/video/092013/3gp/06_dharm.3gp', 'provider': 'video' }
+			}
+		],   
+		provider: "rtmp",
+		'dock': 'false',
+		analytics: {
+        	enabled: true
+    	},
+		'plugins': {
+			'like-1': {},
+			'ova-jw': {
+				'ads': {
+							  'companions': {
+							  'class':"storm-vast-companion",
+                                    'restore': false,
+                                    'regions': [
+                                        {
+                                        'id': "companion",
+                                        'width': 300,
+                                        'height': 250
+                                        }
+                                    ] 
+                                },
+                                'vpaid': {
+                                    'holdingClipUrl': "http://videodeliverys3.s3.amazonaws.com/indiatoday/video/jwplayer/blank.mp4"
+                                },
+                                'schedule': [
+                                    {
+                                    'position': "pre-roll",
+                                    'tag': "http://ad.ripplead.com/?advideo/3.0/1333.1/4182941/0//cc=2;vidAS=pre_roll;vidRT=VAST;vidRTV=2.0;vidREG=COMPANION_RIGHT:300X250:adiframe",
+                                    'duration': 25
+                                    }
+                                ]
+                            }
+			}
+		}
+	}); 					
+
+		       /////////////////// JW PLAYER-6 NEW SYSTEM ENDS //////////////////////////		
+					
+			
+		            });
+        </script>
+
+<div id="fullvideosdisplay" class="videoKaryakramSubSection" style="height:auto; min-height:360px;padding-top:10px;">
+    <div style="margin:0 auto; width:480px;">
+        <div id="videoplayer"><img src="http://aajtak.intoday.in/images/video_loading.gif"  border="0" title="video loading....." style="margin-top:150px;" /></div>
+    </div>
+</div>
+</body>
+</html>

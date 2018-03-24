@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Text</title>
+</head>
+
+<body>
+<script>
+function person(first, last, age, eyecolor) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eyecolor;
+}
+
+person.prototype.name = function() {
+    return this.firstName + " " + this.lastName;
+};
+
+var pt = new person("a","b",44,"brown");
+console.log(pt.name() + " " + pt.age + " " + pt.eyeColor );
+
+
+var a = new myf();
+a.prototype.prn = function() { alert(this.name())
+</script>
+
+</body>
+</html>

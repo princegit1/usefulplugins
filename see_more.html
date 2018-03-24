@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>See More</title>
+<style>
+.box_cont{ width:100%; float:left; }
+.box{ width:200px; float:left; border:1px solid #ccc;height:400px; background:#fff;box-shadow:0 0 2px #ccc; }
+ul{ list-style-type:none;padding:0;margin:0; position:relative; overflow:hidden;}
+ul li{ width:160px; float:left; padding:10px; height:50px;box-shadow:0 0 5px #ccc; margin:10px;}
+button{ border:none; background:#6699CC; color:#fff; padding:5px 10px; box-shadow:0 0 2px #ccc; margin:10px; cursor:pointer}
+</style>
+</head>
+<body>
+<div class="box_cont">
+<button class="prev">Previous</button>
+<button class="next">Next</button>
+
+<div class="box">
+<ul class="sld">
+<script>
+for(i=1;i<10;i++)
+{
+document.write("<li> Box "+i+" </li>");
+}
+</script>
+</ul>
+</div>
+</div>
+<script src="jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+ var clen = $('.box ul li').length;
+ var cheght = $('.box ul li').height()+20;
+ var finalmove = cheght+2
+ var finallen = clen/2
+ var final2 = Math.ceil(finallen);
+ //alert(final2);
+ var ccounter = 1;
+  $('.next').click(function() {
+        if (ccounter < final2+1) {
+            $('.box ul').animate({ top: '-='+finalmove});
+                       ccounter += 1;
+           //$('.next').show();
+        } else {
+           /*  $('.next').hide();
+                      $('.prev').show();*/
+        }
+    });
+        $('.prev').click(function() {
+        if (ccounter == 1) {
+            $('.next').show();
+                      /* $('.prev').hide();*/
+        } else {
+            $('.box ul').animate({top: '+='+finalmove});
+            ccounter -= 1;
+           //$('.prev').show();
+        }
+    });
+
+});
+</script>
+<script>
+/*$(document).ready(function() {
+var len = $('ul.sld li').length;
+var ht = $('ul.sld li').height()+20;
+
+var count = 1;
+
+$('.next').click(function(){
+ if(count < len-2)
+  {
+    $('ul.sld ').animate({'top':-70});
+	count++;
+	}
+	else {
+	}
+	
+ $('.prev').click(function(){
+ if(count ==1)
+  {
+    $('ul.sld ').animate({'top':+70});
+	
+	}
+	else {count--;
+	}
+	
+	
+})
+
+
+});
+*/</script>
+</body>
+</html>

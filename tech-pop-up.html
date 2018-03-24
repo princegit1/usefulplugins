@@ -1,0 +1,127 @@
+<link rel="stylesheet" href="http://media2.intoday.in/indiatoday/tech/gallery-popup/css/bootstrap.min.css" />
+<script src="http://media2.intoday.in/indiatoday/tech/gallery-popup/js/jquery.min.js"></script>
+<script src="http://media2.intoday.in/indiatoday/tech/gallery-popup/js/bootstrap.min.js"></script>
+
+<style>
+#modal-popup img{width:100%}  
+#myModal .modal-dialog {}
+#myModal .thumbnail {margin-bottom:6px;}
+#myModal .carousel-control.left,.carousel-control.right{background-image:none;margin-top:0;width:5%;}
+#myModal .modal-body{ padding:0;}
+#myModal .modal-body .dtv{ float:right; width:100%; text-align:left; margin-top:7px;}
+#myModal .modal-body ul {list-style:none; padding:0; margin:0;  }
+#myModal .modal-body ul li{ float:right; cursor:pointer;margin-left:6px;}
+#myModal .modal-body ul li:last-child{ margin-left:0;}
+#myModal .modal-body ul li img{width:80px; height:40px;  text-align:right; /* box-shadow:0 0 2px #000;*/box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);}
+#myModal .close_btt{ cursor:pointer; background:#000; border:2px solid #fff; color:#fff; right:-28px; top:-23px; z-index:111; position:absolute; padding:2px 7px 2px 7px; border-radius:100%;}
+#myModal .thumbnail{ border:0; border-radius:0; padding:0; margin-bottom:0;}
+#mn_img .thumbnail{ border:0; border-radius:0; padding:0; }
+.hd1{ display:none;}
+@media (min-width: 800px) {#myModal .modal-dialog {width:800px; margin: 10% auto;}}
+@media (max-width: 640px) {#myModal .modal-body ul li img{width:70px;}#myModal .close_btt{ right:-10px; top:-10px;}}    
+</style>
+
+<div class="container" id="modal-popup">
+
+  <div class="row" id="mn_img">
+      <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 glr"><a title="Image 1" href="#"><img class="thumbnail img-responsive" src="http://media2.intoday.in/indiatoday/tech/gallery-popup/images/pic-1.jpg"></a></div>
+      <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 glr"><a title="Image 2" href="#"><img class="thumbnail img-responsive" src="http://media2.intoday.in/indiatoday/tech/gallery-popup/images/pic-2.jpg"></a></div>
+      <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 glr"><a title="Image 3" href="#"><img class="thumbnail img-responsive" src="http://media2.intoday.in/indiatoday/tech/gallery-popup/images/pic-3.jpg"></a></div>
+      <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 glr seemore"><a title="seemore" href="#"><img class="" src="http://media2.intoday.in/indiatoday/tech/gallery-popup/images/see-pic.png"></a></div>
+
+      <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 glr hd1"><a title="Image 2" href="#"><img class="thumbnail img-responsive" src="http://media2.intoday.in/indiatoday/tech/gallery-popup/images/pic-4.jpg"></a></div>
+      <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 glr hd1"><a title="Image 1" href="#"><img class="thumbnail img-responsive" src="http://media2.intoday.in/indiatoday/tech/gallery-popup/images/pic-1.jpg"></a></div>
+      <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 glr hd1"><a title="Image 2" href="#"><img class="thumbnail img-responsive" src="http://media2.intoday.in/indiatoday/tech/gallery-popup/images/pic-2.jpg"></a></div>
+      <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 glr hd1"><a title="Image 3" href="#"><img class="thumbnail img-responsive" src="http://media2.intoday.in/indiatoday/tech/gallery-popup/images/pic-3.jpg"></a></div>
+      <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 glr hd1"><a title="Image 2" href="#"><img class="thumbnail img-responsive" src="http://media2.intoday.in/indiatoday/tech/gallery-popup/images/pic-4.jpg"></a></div>
+
+      <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 glr hd1"><a title="Image 1" href="#"><img class="thumbnail img-responsive" src="http://media2.intoday.in/indiatoday/tech/gallery-popup/images/pic-1.jpg"></a></div>
+      <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 glr hd1"><a title="Image 2" href="#"><img class="thumbnail img-responsive" src="http://media2.intoday.in/indiatoday/tech/gallery-popup/images/pic-2.jpg"></a></div>
+      <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 glr hd1"><a title="Image 3" href="#"><img class="thumbnail img-responsive" src="http://media2.intoday.in/indiatoday/tech/gallery-popup/images/pic-3.jpg"></a></div>
+      <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 glr hd1"><a title="Image 2" href="#"><img class="thumbnail img-responsive" src="http://media2.intoday.in/indiatoday/tech/gallery-popup/images/pic-4.jpg"></a></div>
+
+    </div>
+  <div class="row">
+  <div class="modal" id="myModal" role="dialog">  
+  <div class="modal-dialog">
+    <div class="modal-content"> <span class="close_btt"  data-dismiss="modal">X</span>
+      <div class="modal-body">
+        <div id="modalCarousel" class="carousel">
+          <div class="carousel-inner"> </div>
+          <div class="dtv">
+            <ul>
+              <li><img src="http://media2.intoday.in/indiatoday/tech/gallery-popup/images/pic-1.jpg" alt="" pr="1" /></li>  
+              <li><img src="http://media2.intoday.in/indiatoday/tech/gallery-popup/images/pic-2.jpg" alt="" pr="2" /></li>
+              <li><img src="http://media2.intoday.in/indiatoday/tech/gallery-popup/images/pic-3.jpg" alt="" pr="3" /></li>
+              <li><img src="http://media2.intoday.in/indiatoday/tech/gallery-popup/images/pic-4.jpg" alt="" pr="4" /></li>
+              <!--<li><img src="http://media2.intoday.in/indiatoday/tech/gallery-popup/images/pic-3.jpg" alt="" pr="5" /></li>
+              <li><img src="http://media2.intoday.in/indiatoday/tech/gallery-popup/images/pic-4.jpg" alt="" pr="6" /></li>
+              <li><img src="http://media2.intoday.in/indiatoday/tech/gallery-popup/images/pic-2.jpg" alt="" pr="7" /></li>-->
+            </ul>
+          </div>
+          
+          <a class="left carousel-control" href="#modalCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      
+      <a class="right carousel-control" href="#modalCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+      
+  
+       </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+
+<script>
+$('.seemore').click(function() {
+$(this).remove();
+$('.glr').removeClass('hd1');
+
+})
+
+$('.row .thumbnail').on('load', function() {
+}).each(function(i) {
+  if(this.complete) {
+  	var item = $('<div class="item"></div>');
+    var itemDiv = $(this).parents('div');
+    var title = $(this).parent('a').attr("title");
+    
+    item.attr("title",title);
+  	$(itemDiv.html()).appendTo(item);
+  	item.appendTo('.carousel-inner'); 
+    if (i==0){ 
+     item.addClass('active');
+    }
+  }   
+});
+        
+$('#modalCarousel').carousel({interval:false});
+
+$('#modalCarousel').on('slid.bs.carousel', function () {
+  $('.modal-title').html($(this).find('.active').attr("title"));
+})
+
+$('.row .thumbnail').click(function(){
+    var idx = $(this).parents('div').index();
+  	var id = parseInt(idx);
+  	$('#myModal').modal('show'); 
+    $('#modalCarousel').carousel(id); 
+  	
+});
+
+$('document').ready(function(){
+$('.dtv ul li').click(function(){
+var at = $(this).children('img').attr("pr");  
+var img_src =$(this).children('img').attr('src');
+$('.active>a>img').attr({'src':img_src});
+})
+})
+
+</script>

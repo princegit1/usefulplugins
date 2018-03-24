@@ -1,0 +1,224 @@
+<script>
+function isEmail(email){
+	  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
+		return (true);
+	}
+	return (false);
+}
+function IsNumeric(strString)
+{
+   var strValidChars = "0123456789";
+   var strChar;
+   var blnResult = true;
+   if (strString.length === 0)
+   {
+   	return false;
+   }
+   //  test strString consists of valid characters listed above
+   for (i = 0; i < strString.length && blnResult == true; i++)
+   {
+      strChar = strString.charAt(i);
+      if (strValidChars.indexOf(strChar) == -1)
+      {
+         blnResult = false;
+	  }
+   }
+   	  return blnResult;
+}
+function validate(){
+	//var x = document.getElementById("accept").checked;
+	//alert(x);
+	
+	
+	retest		   = /^([a-zA-Z]+\s)*[a-zA-Z]+$/;
+	var len 	   = document.rd.mobile.value.length;
+	var first_char = document.rd.mobile.value.substr(0,1);
+	//alert('Hi');
+	
+	
+	//alert(x);
+	if(document.rd.fname.value.trim()==""){              
+	alert("Please enter your first name.");
+	document.rd.fname.focus();
+	return false;
+	}
+	else
+	if(!retest.test(document.rd.fname.value)){              
+	alert("Do not use special characters in first name.");
+	document.rd.fname.value= '';
+	document.rd.fname.focus();
+	return false
+	}
+	else
+	if(document.rd.lname.value.trim()==""){              
+	alert("Please enter your last name.");
+	document.rd.lname.focus();
+	return false;
+	}
+	else
+	if(!retest.test(document.rd.lname.value)){              
+	alert("Do not use special characters in last name.");
+	document.rd.lname.value= '';
+	document.rd.lname.focus();
+	return false
+	}
+		else
+	if(!retest.test(document.rd.city.value)){              
+	alert("Please enter city name. ");
+	document.rd.city.value= '';
+	document.rd.city.focus();
+	return false
+	}
+	else
+	if(document.rd.email.value.trim()==""){              
+	alert("Please enter your E-mail address.");
+	document.rd.email.focus();
+	return false;
+	}
+	else
+	if (isEmail(document.rd.email.value) == false){
+	alert("Please enter your E-mail address correctly.")
+	document.rd.email.focus();
+	return false
+	}
+	
+	else
+	if(document.rd.mobile.value.trim()!="")
+	{              
+		if(IsNumeric(document.rd.mobile.value)===false)
+		{
+			alert("Please enter numeric value for contact number.\nFor mobile, E.g., 9892xxxxxx.");
+			document.registration.phone.focus();
+			return (false);
+		}
+		else 
+		if(first_char == 0 || first_char == ""){
+			alert("Please enter a correct 10-digit contact number. Mobile number can not start with zero.");
+			document.rd.mobile.focus();
+		     return (false);
+		}
+		else 
+		if(len != 10){
+			alert("Please enter a correct 10-digit contact number.\nE.g. 9892xxxxxx.");
+			document.rd.mobile.focus();
+		    return (false);
+		}
+	}      
+
+	else
+	{
+	
+		document.rd.submit();
+		return true;
+	}
+}
+
+
+function validate1(){
+//alert(document.rd.mobile.value.trim());
+ 
+if(document.rd.mobile.value.trim()!="")
+	{              
+		if(IsNumeric(document.rd.mobile.value)===false)
+		{
+			alert("Please enter numeric value for contact number.\nFor mobile, E.g., 9892xxxxxx.");
+			document.registration.phone.focus();
+			return (false);
+		}
+		else 
+		if(first_char == 0 || first_char == ""){
+			alert("Please enter a correct 10-digit contact number. Mobile number can not start with zero.");
+			document.rd.mobile.focus();
+		     return (false);
+		}
+		else 
+		if(len != 10){
+			alert("Please enter a correct 10-digit contact number.\nE.g. 9892xxxxxx.");
+			document.rd.mobile.focus();
+		    return (false);
+		}
+	}  
+	else
+	{
+		document.rd.submit(); 
+		return true;
+	}
+	    
+	}
+	
+	
+	function IsMobileNumber(txtMobId) {
+    var mob = /^[1-9]{1}[0-9]{9}$/;
+    var txtMobile = document.getElementById(txtMobId);
+    if (mob.test(txtMobile.value) == false) {
+        alert("Please enter valid mobile number.");
+        txtMobile.focus();
+        return false;
+    }
+    return true;
+}
+
+
+</script>
+<form name="rd" action="google.com" method="post" onsubmit="Javascript : return validate1();">
+
+        <input type="hidden" name="csource" value="null">
+          <span>*Mandatory Fields</span>
+          <div class="row">
+          <!--  <div class="cols">
+              <label>First Name:*</label>    
+              <input type="text" value="" name="fname" />
+            </div>
+            <div class="cols">
+              <label>Last Name:*</label>
+              <input type="text" value="" name="lname" />
+            </div>
+            <div class="cols">
+              <label>City:*</label>
+              <input type="text" value="" name="city" />
+            </div>
+            <div class="cols">
+              <label>To:*</label>
+              <label>New Delhi</label>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="row pad">
+            <label class="potrv pot" style="top:0" >Purpose of Travel: </label>
+    
+            <label class="btg_l">Gala reception for the winners of the India Today Group Rupees Two Crore Super Bonanza Sweepstakes 2016</label>
+    
+          </div>
+          <div class="row">
+            <div class="cols">
+              <label>Venue:*</label>
+              <label>Top city hotel in New Delhi</label>
+            </div>
+            <div class="cols"> &nbsp; </div>
+            <div class="cols">
+              <label>Email:*</label>
+              <input type="text" value="" name="email" />
+            </div>
+            <div class="cols">
+              <label>Mobile:</label>
+              <input type="text" value="" name="mobile" maxlength="10"/>
+            </div>  
+          </div>
+          <div class="accept">
+            <label>[An email notification will also be sent to this address in the event of a win]</label>
+            <br />-->
+            <!--<div class="check_box_cont">
+          <input type="checkbox" class="accept" name="accept" id="accept"/>
+            <a class="iaccept" href="#"></a>
+            </div>-->
+            
+            <div class="cols">
+              <label>Mobile:</label>
+              <input type="text" value="" name="mobile" maxlength="10" required/>
+            </div>
+            
+            
+            <input type="submit" class="submit_img" value="Submit" style="cursor:pointer;"/>     
+             </div>
+            
+        </form>

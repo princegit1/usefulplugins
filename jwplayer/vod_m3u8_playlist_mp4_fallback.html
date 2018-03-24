@@ -1,0 +1,51 @@
+<html>
+<head>
+<script type="text/javascript" src="http://ripplead.s3.amazonaws.com/jwplayer/6/jwplayer.js"></script>
+<script type="text/javascript">jwplayer.key="PZS4mgUlGFQvqcUCRvPqakIAvK6bmtsLqmDToNmPvKQ/lml0FzEGyA==";</script>
+</head>
+<body>
+<div id="myElement">Loading the player...</div>
+
+<script type="text/javascript">
+    jwplayer("myElement").setup({
+	autostart: true,
+	width: 480,
+	height: 480,
+	playlist: [
+		{
+        title: "Part1",
+        image: "http://media2.intoday.in/indiatoday/images/stories/bangalore_660_041813121546.jpg",
+		description: "Bangalore blasts: 2 kg ammonium nitrate used as explosive, says police",
+		sources: [
+		{ 	file: "http://wowcloud.intoday.in/vods3/_definst_/mp4:amazons3/videodeliverys3/indiatoday/video/April2013/18_day_after_no_breakthrough.mp4/playlist.m3u8"		},
+		{ 	file: "http://videodeliverys3.s3.amazonaws.com/indiatoday/video/April2013/18_day_after_no_breakthrough.mp4"		}
+		]
+		},
+		{
+		title: "Part2",
+		image: "http://media2.intoday.in/indiatoday/images/stories/bangalore_660_041813121546.jpg",
+		description: "Bangalore blasts: 2 kg ammonium nitrate used as explosive, says police",
+		sources: [
+		{ 	file: "http://wowcloud.intoday.in/vods3/_definst_/mp4:amazons3/videodeliverys3/indiatoday/video/April2013/18_terrot_in_banglore.mp4/playlist.m3u8"		},
+		{ 	file: "http://videodeliverys3.s3.amazonaws.com/indiatoday/video/April2013/18_terrot_in_banglore.mp4"		}
+		]
+		},
+		{
+		image: "http://media2.intoday.in/indiatoday/images/stories/bangalore_660_041813121546.jpg",
+		title: "Part3",
+		description: "Bangalore blasts: 2 kg ammonium nitrate used as explosive, says police",
+		sources: [
+		{	file: "http://wowcloud.intoday.in/vods3/_definst_/mp4:amazons3/videodeliverys3/indiatoday/video/April2013/18_day_after_no_breakthrough_upd.mp4/playlist.m3u8"		},
+		{	file: "http://videodeliverys3.s3.amazonaws.com/indiatoday/video/April2013/18_day_after_no_breakthrough_upd.mp4"		}
+		]
+		}
+		],
+	listbar: {
+	position: 'bottom',
+	size: 100
+	},
+	primary: "flash"
+    });
+</script>
+</body>
+</html>

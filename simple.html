@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+<body>
+<script src="jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+if($('.a1').prop("checked", true))
+
+{
+$('.aaa').html("a is cheked");
+}
+else if($('.a1').prop("checked", true))
+{
+$('.aaa').html("b is cheked");
+}
+})
+</script>
+<input type="radio" name="a" class="a1" />
+<input type="radio" name="a" class="a2" />
+<input type="radio" name="a" class="a3" />
+<select name="s1" class="selt">
+</select>
+<div class="aaa"></div>
+</body>
+</html>

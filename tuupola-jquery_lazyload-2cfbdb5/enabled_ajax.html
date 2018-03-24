@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta charset="utf-8">
+  <title>Lazy Load Enabled With AJAX Content</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="text/css" media="screen" href="http://www.appelsiini.net/css/appelsiini.css" rel="stylesheet">
+ <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="http://www.appelsiini.net/img/favicon.ico">\\\
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+  <![endif]-->
+
+  <style type="text/css">
+    .container img, #container {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+   
+  <div class="container">
+    <div class="col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">
+ 
+      <pre class="prettyprint">
+ $("#container").one("click", function() {
+     $("#container").load("images.html", function(response, status, xhr) {
+         $("img.lazy").lazyload();
+     });              
+ });</pre>
+      <pre class="prettyprint"> &lt;img class="lazy" data-original="img/example.jpg" width="765" height="574"&gt;</pre>
+      <div id="container">
+          Click me to load content...
+      </div>
+      
+    </div>
+  </div>
+  
+   
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="jquery.lazyload.js?v=1.9.1"></script>
+  <script src="http://www.appelsiini.net/js/demo.js"></script>
+  <script type="text/javascript" charset="utf-8">
+  $(function() {
+      $("#container").one("click", function() {
+          $("#container").load("enabled.html #container", function(response, status, xhr) {
+                $("img.lazy").lazyload();
+          });              
+      });
+  });
+  </script>
+</body>
+</html>
+
+  
+

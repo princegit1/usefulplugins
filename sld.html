@@ -1,0 +1,332 @@
+
+<style>
+*{ margin:0; padding:0;}
+body{margin:0; padding:0; background:#e5e5e5;}
+a{color:black; text-decoration:none;}
+.ad{width:300px; margin-bottom:40px;}
+.container{width:100%;}
+.h2{ font-family:Georgia, "Times New Roman", Times, serif; font-weight:bold; font-size:30px;}
+h2.lead{ font-family:Georgia, "Times New Roman", Times, serif; font-weight:bold; font-size:30px; margin:5px 0;}
+.wrapper{width:1003px; margin:auto; margin-bottom:20px;}
+.headings{ font-family:Georgia, "Times New Roman", Times, serif; font-size:35px; height:47px; color:#574187;}
+.cf:after, .cf:before{content:''; display:table;}
+.cf:after{ clear:both;}
+#luxurysp .fl{ float:left;}
+#luxurysp .fr{ float:right;}
+.big-box-inner{width:650px; margin:auto;}
+.left-area{width:667px; float:left;}
+.right-area{width:300px; float:right;}
+.home-news{width:669px; background:white;margin-bottom:32px;-webkit-box-shadow: 2px 2px 2px 0px rgba(204, 204, 204, 0.75);
+-moz-box-shadow:2px 2px 2px 0px rgba(204, 204, 204, 0.75);
+box-shadow: 2px 2px 2px 0px rgba(204, 204, 204, 0.75);}
+.home-news-inner{width:649px; background:white url(http://media2.intoday.in/images/luxuryspecial/2015/small-corner.png) no-repeat top left; padding:10px;}
+#luxurysp .box{width:320px; background:white url(http://media2.intoday.in/images/luxuryspecial/2015/small-corner.png) no-repeat top left;  font-family:Georgia, "Times New Roman", Times, serif; font-size:18px; position:relative; -webkit-box-shadow: 2px 2px 2px 0px rgba(204, 204, 204, 0.75);
+-moz-box-shadow: 2px 2px 2px 0px rgba(204, 204, 204, 0.75);
+box-shadow:2px 2px 2px 0px rgba(204, 204, 204, 0.75); height:auto;}
+#luxurysp .box-right{width:300px; background:white url(http://media2.intoday.in/images/luxuryspecial/2015/small-corner.png) no-repeat top left; font-family:Georgia, "Times New Roman", Times, serif; font-size:18px; position:relative; -webkit-box-shadow: 2px 2px 2px 0px rgba(204, 204, 204, 0.75);
+-moz-box-shadow: 2px 2px 2px 0px rgba(204, 204, 204, 0.75);
+box-shadow: 2px 2px 2px 0px rgba(204, 204, 204, 0.75); }
+#luxurysp  .box-right-wrapper{width:280px; margin:auto; color:#000;}
+#luxurysp .box-inner{width:300px;padding:10px;}
+#luxurysp .box-right-inner{width:280px;padding:10px;}
+#luxurysp .box-right img{width:280px;}
+#luxurysp .small-box-art{width:100%; height:68px; background:url(http://media2.intoday.in/images/luxuryspecial/card-design.png) no-repeat right top;}
+#luxurysp .small-box-inner{width:302px; margin:auto;}
+#luxurysp .small-box-margin-left{margin-right:22px;}
+#luxurysp .small-box-margin-bottom{margin-bottom:37px;}
+.ad{}
+.search-box{width:300px; margin-bottom:20px;}
+#luxurysp .vid-icon{width:57px; height:57px; position:absolute; top:125px; right:15px;}
+#luxurysp .vid-icon img{width:57px;	}
+#luxurysp .luxury-gallery{width:100%;}
+#luxurysp .home-slider{width:666px; height:470px; background:#CCC;}
+ul {margin:0; padding:0;}
+ul li{ list-style:none;}
+#luxurysp .belt-outer{width:666px; height:470px; overflow:hidden; position:relative}
+#luxurysp .belt{margin:0; padding:0; overflow:hidden; position:absolute;}
+#luxurysp .belt li{float:left;}
+.prev{width:45px; height:66px; background:url(http://media2.intoday.in/images/luxuryspecial/prev.png); position:absolute; top:193px; left:0; cursor:pointer; z-index:999;}
+.next{width:45px; height:66px; background:url(http://media2.intoday.in/images/luxuryspecial/next.png); position:absolute; top:193px; right:0; cursor:pointer; z-index:999;}
+.nav-area{width:300px; position:absolute; bottom:0; overflow:hidden;  z-index:999;}
+.nav-area li{width:30px; height:27px; float:left;}
+.nav-area li a{width:30px; height:27px; color:transparent; padding:0; float:left; background:url(http://media2.intoday.in/images/luxuryspecial/bullet.png) no-repeat}
+.nav-area li a:hover{ background:url(http://media2.intoday.in/images/luxuryspecial/bullet.png) no-repeat 0px -27px}
+.nav-area li a.active{background:url(http://media2.intoday.in/images/luxuryspecial/bullet.png) no-repeat 0px -27px}
+.box-slider{width:666px; height:470px;  color:white; font-size:100px; }
+.subscribe-now{width:300px; background:white;}
+.sub-left{width:35px; height:335px; background:url(http://media2.intoday.in/images/luxuryspecial/sub-left.jpg)}
+.sub-right{width:35px; height:335px; background:url(http://media2.intoday.in/images/luxuryspecial/sub-right.jpg)}
+.sub-center{width:230px; float:left;}
+.sub-center-top{ background:#ea1f32;width:100%; height:30px; color:white; text-align:center; font-family:'Lato',Calibri,Arial,sans-serif; font-weight:bold; font-size:20px; line-height:26px;}
+.sub-mag{width:118px; margin:auto; margin-top:10px;}
+.sub-button{border:2px solid #d51a23; padding:5px 10px;}
+.sub-the-deep{ font-size:14px; line-height:18px; font-weight:bold; color:#666; font-family:arial; text-align:center; margin:2px 0; }
+.sub-butt{border: 2px solid #D71920;color: #D71920;font: bold 16px arial;margin: -1px auto;padding: 3% 5%;text-align: center;width:61%;}
+.black{color:black;}
+/* New stay connected css */
+#luxurysp .newstay-connected #searchform{ margin-bottom:5px;}
+.newstay-connected .search-inner{ background:none!important; height:auto; width:273px;}
+.newstay-connected{ padding:8px 10px 5px 5px; width:276px; background:#fff; margin-bottom:5px; margin-bottom:20px; overflow:hidden;}
+.newstay-connected input.input-box{box-shadow:inset 0 0 5px #E2E3E3; -moz-box-shadow:inset 0 0 5px #E2E3E3; -webkit-box-shadow:inset 0 0 5px #E2E3E3; background: transparent; border:1px solid #ddd; width:230px; margin-left:0px; font-size:16px; color:#A4A4A5; padding-left:5px; float:left; height:36px;}
+.newstay-connected .submit-btn{ margin:0; padding:0; height:36px; width:39px;}
+.technologycard .left-column{ min-height:465px; width:425px!Important}
+.fromthemagazine .left-column{ min-height:465px; width:425px!Important}
+.technologycard .right-column{ min-height:458px;}
+.issuesec img{ filter:none;}
+.footer{ height:86px; background:url(http://media2.intoday.in/images/luxuryspecial/footer-bg.jpg) repeat-x;}
+.footer-inner{width:1003px; margin:auto; padding-top:50px; font-family:roboto; text-align:center; font-size:12px;}
+.luxurysp-header{ background-image:url(http://media2.intoday.in/images/luxuryspecial/2015/luxury-logo-bg.png); background-position:left top; height:126px; background-repeat:repeat-x; margin:20px 0;}
+.container.luxurysp-header .wrapper{ background:url(http://media2.intoday.in/images/luxuryspecial/2015/luxury-logo.png) no-repeat center center; height:126px; position:relative;}
+#luxurysp .box .box-inner img, .home-news .home-news-inner img, .belt .box-slider img{ width:100%;}
+#luxurysp .home-news .small-box-art{ height:auto; padding-bottom:15px;}
+nav ul li.home-icon a{ text-indent:-9999px; display:block;} nav ul li{ margin-right:0px!important;}
+.socialmedia {border: 1px solid #f3f3f3; overflow:hidden;}
+.socialmedia h2 {color: #898989;float: left;font-family: roboto;font-size: 30px;font-weight: lighter;height: 40px;line-height: 40px;margin: 0 11px 0 5px;    padding: 0;}.socialmedia a {float: left;margin-right: 6px;margin-top: 5px;} 
+.monsoon_search {background: rgba(0, 0, 0, 0) url("http://media2.intoday.in/btmt/best-ceo/images/Search.gif") no-repeat scroll left top; cursor: pointer;float: left;height: 45px;width: 39px;}
+.newstay-connected #searchform {margin-bottom: 15px;clear:both;}
+.newstay-connected #searchform {background: #cccccc none repeat scroll 0 0;display: none;margin-bottom: 15px;margin-top: 0;padding-bottom: 5px;padding-top: 5px;width: 274px;}
+.newstay-connected input.input-box {background: rgba(0, 0, 0, 0) none repeat scroll 0 0;border: 1px solid #dddddd;box-shadow: 0 0 5px #e2e3e3 inset;color: #a4a4a5;float: left;font-size: 16px;margin-left: 0;padding-left: 5px;width: 230px;}
+.newstay-connected input.input-box {background: #ffffff none repeat scroll 0 0 !important;width: 195px !important;}
+.search-inner .input-box {border: medium none;float: left;height: 36px;line-height: 32px;margin-left: 40px;padding: 3px;width: 390px;}
+.newstay-connected .submit-btn {height: 36px;margin: 0;padding: 0 !important;width: 75px;}
+ul.yearlink{ position:absolute; bottom:4px; right:0;} ul.yearlink li{ list-style:none; display:inline-block;} ul.yearlink li a{ background:#574187; color:#fff; padding:3px 10px; font-weight:700; font-size:18px;}
+
+#luxurysp .lux_main_cnt{}
+#luxurysp .lux_main_cnt ul.btl_b{}
+#luxurysp .lux_main_cnt ul.btl_b li{}
+.bottom_lr_scr {
+    width: 100%;
+    float: left;
+    padding: 10px;
+    padding-bottom: 0;
+}
+.bottom_lr_scr .left_side {
+    width: 50%;
+    float: left;
+    cursor: pointer;
+    display: none;
+}
+.bottom_lr_scr .right_side {
+    width: 50%;
+    float: right;
+    cursor: pointer;
+}
+.bottom_lr_scr .left_side .ltop {
+    width: 30px;
+    height: 30px;
+    margin: 10px auto 0 auto;
+    display: block;
+    background: url(http://media2.intoday.in/btmt/cooleststartups/2015/coolest-startups-2015-sprit.png) -240px -161px no-repeat;
+}
+.bottom_lr_scr .right_side .lbtm {
+    width: 30px;
+    height: 30px;
+    margin: 10px auto 0 auto;
+    display: block;
+    background: url(http://media2.intoday.in/btmt/cooleststartups/2015/coolest-startups-2015-sprit.png) -282px -161px no-repeat;
+}
+.lux_main_cnt{  }
+.mn_lx_t{ clear:both; width:100%; float:left}
+
+.mn_lx_t{ height:400px;position:relative; overflow:hidden}
+.lux_main_cnt .btl_b {overflow:hidden; position:relative}
+.lux_main_cnt .btl_b li{ height:335px; }
+.clearfix{ clear:both;}
+</style>
+<div id="luxurysp" style="width:300px; float:left;">
+  <div class="lux_main_cnt">
+    <div class="mn_lx_t">
+      <ul class="btl_b">
+        <li>
+          <div class="box-right fl small-box-margin-bottom">
+            <div class="vid-icon"> <img src="http://media2.intoday.in/images/luxuryspecial/vid-icon.png"></div>
+            <div class="box-right-inner"> <a href="http://www.businesstoday.in/videos/luxury-market/2015/frazer-and-haws-india-president-says-luxury-has-become-very-brand-oriented/223076.html"><img src="http://media2.intoday.in/btmt/images/stories/archana-kumari_179_082515123512.jpg"></a></div>
+            <div class="container small-box-art">
+              <div class="small-box-inner">
+                <div class="box-right-wrapper">Luxury has become very brand-oriented: Archana Kumari of Frazer &amp; Haws India</div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="clearfix"></div>
+        </li>
+        <li>
+          <div class="box-right fl small-box-margin-bottom">
+            <div class="vid-icon"> <img src="http://media2.intoday.in/images/luxuryspecial/vid-icon.png"></div>
+            <div class="box-right-inner"> <a href="http://www.businesstoday.in/videos/luxury-market/2015/frazer-and-haws-india-president-says-luxury-has-become-very-brand-oriented/223076.html"><img src="http://media2.intoday.in/btmt/images/stories/archana-kumari_179_082515123512.jpg"></a></div>
+            <div class="container small-box-art">
+              <div class="small-box-inner">
+                <div class="box-right-wrapper">Luxury has become very brand-oriented: Archana Kumari of Frazer &amp; Haws India</div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="clearfix"></div>
+        </li>
+        <li>
+          <div class="box-right fl small-box-margin-bottom">
+            <div class="vid-icon"> <img src="http://media2.intoday.in/images/luxuryspecial/vid-icon.png"></div>
+            <div class="box-right-inner"> <a href="http://www.businesstoday.in/videos/luxury-market/2015/frazer-and-haws-india-president-says-luxury-has-become-very-brand-oriented/223076.html"><img src="http://media2.intoday.in/btmt/images/stories/archana-kumari_179_082515123512.jpg"></a></div>
+            <div class="container small-box-art">
+              <div class="small-box-inner">
+                <div class="box-right-wrapper">Luxury has become very brand-oriented: Archana Kumari of Frazer &amp; Haws India</div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="clearfix"></div>
+        </li>
+        <li>
+          <div class="box-right fl small-box-margin-bottom">
+            <div class="vid-icon"> <img src="http://media2.intoday.in/images/luxuryspecial/vid-icon.png"></div>
+            <div class="box-right-inner"> <a href="http://www.businesstoday.in/videos/luxury-market/2015/frazer-and-haws-india-president-says-luxury-has-become-very-brand-oriented/223076.html"><img src="http://media2.intoday.in/btmt/images/stories/archana-kumari_179_082515123512.jpg"></a></div>
+            <div class="container small-box-art">
+              <div class="small-box-inner">
+                <div class="box-right-wrapper">Luxury has become very brand-oriented: Archana Kumari of Frazer &amp; Haws India</div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="clearfix"></div>
+        </li>
+        <li>
+          <div class="box-right fl small-box-margin-bottom">
+            <div class="vid-icon"> <img src="http://media2.intoday.in/images/luxuryspecial/vid-icon.png"></div>
+            <div class="box-right-inner"> <a href="http://www.businesstoday.in/videos/luxury-market/2015/frazer-and-haws-india-president-says-luxury-has-become-very-brand-oriented/223076.html"><img src="http://media2.intoday.in/btmt/images/stories/archana-kumari_179_082515123512.jpg"></a></div>
+            <div class="container small-box-art">
+              <div class="small-box-inner">
+                <div class="box-right-wrapper">Luxury has become very brand-oriented: Archana Kumari of Frazer &amp; Haws India</div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="clearfix"></div>
+        </li>
+        <li>
+          <div class="box-right fl small-box-margin-bottom">
+            <div class="vid-icon"> <img src="http://media2.intoday.in/images/luxuryspecial/vid-icon.png"></div>
+            <div class="box-right-inner"> <a href="http://www.businesstoday.in/videos/luxury-market/2015/frazer-and-haws-india-president-says-luxury-has-become-very-brand-oriented/223076.html"><img src="http://media2.intoday.in/btmt/images/stories/archana-kumari_179_082515123512.jpg"></a></div>
+            <div class="container small-box-art">
+              <div class="small-box-inner">
+                <div class="box-right-wrapper">Luxury has become very brand-oriented: Archana Kumari of Frazer &amp; Haws India</div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="clearfix"></div>
+        </li>
+        <li>
+          <div class="box-right fl small-box-margin-bottom">
+            <div class="vid-icon"> <img src="http://media2.intoday.in/images/luxuryspecial/vid-icon.png"></div>
+            <div class="box-right-inner"> <a href="http://www.businesstoday.in/videos/luxury-market/2015/frazer-and-haws-india-president-says-luxury-has-become-very-brand-oriented/223076.html"><img src="http://media2.intoday.in/btmt/images/stories/archana-kumari_179_082515123512.jpg"></a></div>
+            <div class="container small-box-art">
+              <div class="small-box-inner">
+                <div class="box-right-wrapper">Luxury has become very brand-oriented: Archana Kumari of Frazer &amp; Haws India</div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="clearfix"></div>
+        </li>
+        <li>
+          <div class="box-right fl small-box-margin-bottom">
+            <div class="vid-icon"> <img src="http://media2.intoday.in/images/luxuryspecial/vid-icon.png"></div>
+            <div class="box-right-inner"> <a href="http://www.businesstoday.in/videos/luxury-market/2015/frazer-and-haws-india-president-says-luxury-has-become-very-brand-oriented/223076.html"><img src="http://media2.intoday.in/btmt/images/stories/archana-kumari_179_082515123512.jpg"></a></div>
+            <div class="container small-box-art">
+              <div class="small-box-inner">
+                <div class="box-right-wrapper">Luxury has become very brand-oriented: Archana Kumari of Frazer &amp; Haws India</div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="clearfix"></div>
+        </li>
+        <li>
+          <div class="box-right fl small-box-margin-bottom">
+            <div class="vid-icon"> <img src="http://media2.intoday.in/images/luxuryspecial/vid-icon.png"></div>
+            <div class="box-right-inner"> <a href="http://www.businesstoday.in/videos/luxury-market/2015/frazer-and-haws-india-president-says-luxury-has-become-very-brand-oriented/223076.html"><img src="http://media2.intoday.in/btmt/images/stories/archana-kumari_179_082515123512.jpg"></a></div>
+            <div class="container small-box-art">
+              <div class="small-box-inner">
+                <div class="box-right-wrapper">Luxury has become very brand-oriented: Archana Kumari of Frazer &amp; Haws India</div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="clearfix"></div>
+        </li>
+        <li>
+          <div class="box-right fl small-box-margin-bottom">
+            <div class="vid-icon"> <img src="http://media2.intoday.in/images/luxuryspecial/vid-icon.png"></div>
+            <div class="box-right-inner"> <a href="http://www.businesstoday.in/videos/luxury-market/2015/frazer-and-haws-india-president-says-luxury-has-become-very-brand-oriented/223076.html"><img src="http://media2.intoday.in/btmt/images/stories/archana-kumari_179_082515123512.jpg"></a></div>
+            <div class="container small-box-art">
+              <div class="small-box-inner">
+                <div class="box-right-wrapper">Luxury has become very brand-oriented: Archana Kumari of Frazer &amp; Haws India</div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="clearfix"></div>
+        </li>
+      </ul>
+      <div class="clearfix"></div>
+    </div>
+    <div class="clearfix"></div>
+    <!--<div class="bottom_lr_scr">
+      <div class="left_side" style="display: block;"> <span class="ltop"></span> </div>
+      <div class="right_side"> <span class="lbtm"></span> </div>
+    </div>-->
+    <div class="sld_scr">
+<a href="#" class="up_scr"></a>
+<a href="#" class="down_arr"></a>
+SEE MORE
+
+</div>
+  </div>
+</div>
+
+
+
+<style>
+.sld_scr{width:300px; float:left; text-align:center; background:#F1F1F1; color:#573F89; padding:6px 0 10px 0; cursor:pointer}
+.sld_scr .up_scr{ width:20px; position:relative; top:9px; margin-right:5px; height:20px; display:inline-block; background:url(up_arr.png) no-repeat;}
+.sld_scr .down_arr{ width:20px;position:relative; top:9px;margin-right:5px; height:20px;display:inline-block;  background:url(down_arr.png) no-repeat;}
+</style>
+<script src="jquery.min.js"></script>
+<script>
+ $(document).ready(function(){
+ var clen = $('.btl_b li').length;
+ var cheght = $('.btl_b li').height();
+ console.log(clen);
+ console.log(cheght);
+ var finalmove = cheght;
+ var totht = cheght * clen;
+/* var finallen = clen/2
+ var final2 = Math.ceil(finallen);
+*/
+ //alert(final2);
+$('.btl_b').css({'height':totht});
+ var ccounter = 1;
+  $('.lbtm').click(function() {
+        if (ccounter < clen-1) {
+            $('.btl_b').animate({ top: '-='+finalmove});
+                       ccounter += 1;
+           //$('.next').show();
+        } else {
+           /*  $('.next').hide();
+                      $('.prev').show();*/
+        }
+    });
+        $('.ltop').click(function() {
+        if (ccounter == 1) {
+            $('.lbtm').show();
+                      /* $('.prev').hide();*/
+        } else {
+            $('.btl_b').animate({top: '+='+finalmove});
+            ccounter -= 1;
+           //$('.prev').show();
+        }
+    });
+
+});
+
+ </script>

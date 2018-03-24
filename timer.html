@@ -1,0 +1,70 @@
+<style>
+.dash .digit {font-size: 12pt;font-weight: bold;float: left;width: 20px;text-align: center;color: #555;position: relative;}
+.dash_title {position: absolute;display: block;bottom: 0px;right: 6px;font-size: 9pt;color: #fff;text-transform: uppercase;letter-spacing: 2px;}
+.dev_comment {font-size: 14pt;color: #777;text-align: center;font-style: italic;margin: 40px 10px;}
+.top,.bottom{color: #000;margin-right:5px;border-radius: 10px;}
+#countdown_dashboard{ margin: 0 auto;width: 538px; text-align:center}
+</style>
+<!--<form name="fr1" method="get">-->
+  <input type="text" name="dt" class="dt" />
+  <input type="submit" class="cl" value="Submit" />
+<!--</form>-->
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="http://indiatoday.intoday.in/be-lucky-today/js/jquery.lwtCountdown-0.9.5.js"></script>
+<script>
+$(document).ready(function(){
+/*$('.cl').on('click', function(){
+ dt  = $('.dt').val();
+ console.log(dt);
+ })
+})*/
+
+/*function pst(){
+this.dt = dt;
+ 
+}
+var ob1 = new pst();*/
+//dt2  = $('.dt').val();
+
+//console.log(dt2);
+
+
+			$('.dt').val(18);
+			tt = $('.dt').val();
+			$('.cl').click(function(){
+		tt = $('.dt').val();
+			//alert("--" + tt);
+				$('#countdown_dashboard').countDown({
+					targetDate: {
+						'day': 		+tt,
+						'month': 	10,
+						'year': 	2015,
+						'hour': 	12,
+						'min': 		0,
+						'sec': 		0					
+						}
+					})
+				
+			
+				})
+			})
+		</script>
+<div id="countdown_dashboard">
+  <div class="dash days_dash"> <span class="dash_title">days</span>
+    <div class="digit">0</div>
+    <div class="digit">6</div>
+  </div>
+  <div class="dash hours_dash"> <span class="dash_title">hours</span>
+    <div class="digit">2</div>
+    <div class="digit">0</div>
+  </div>
+  <div class="dash minutes_dash"> <span class="dash_title">minutes</span>
+    <div class="digit">5</div>
+    <div class="digit">9</div>
+  </div>
+  <div class="dash seconds_dash"> <span class="dash_title">seconds</span>
+    <div class="digit">2</div>
+    <div class="digit">1</div>
+  </div>
+  <div class="clearfix"></div>
+</div>

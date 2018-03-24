@@ -1,0 +1,29 @@
+
+<script src="jquery.min.js"></script>
+<script>
+
+/*$(document).bind('contextmenu', function(){
+alert("Right click disabled");
+return false;
+})*/
+
+
+$(document).ready(function(){
+$('#reslink').click(function(e){
+    e.preventDefault();
+    $.ajax({
+        type: "GET",
+        url: "sample.html",
+        data: { },
+        success: function(data){
+            $('#maincont').html(data);
+        }
+    });
+});
+})
+</script> 
+
+
+<a href="Javascript:void(0);" id="reslink">link1</a>
+
+<div id="maincont"></div>

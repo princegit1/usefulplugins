@@ -1,0 +1,113 @@
+<style>
+.main_cont{ float:left; width:100%;}
+.belt_cont{border:1px solid #ccc;float:left;height:416px; position:relative; overflow:hidden }
+.belt_cont ul{ list-style-type:none; padding:0; margin:0;  position:relative; }
+
+.belt_cont ul li { width:600px; float:left;}
+.main_c_cont{ border:1px solid #ccc; width:100%;}
+.img_cont{ width:100%; float:left;}
+.des_cont{ width:100%; float:left;}
+.clearfix{ clear:both;}
+</style>
+<div class="main_cont">
+  <div class="belt_cont">
+    <ul>
+      <li>
+        <div class="main_c_cont">
+          <div class="img_cont"> <img src="dsc_1554_050615044139.jpg" width="100%"> </div>
+          <div class="des_cont"> If you are buying the Moto E today or tomorrow or in near future, get the 4G version.</div>
+          <div class="clearfix"></div>
+        </div>
+      </li>
+      <li>
+        <div class="main_c_cont">
+          <div class="img_cont"> <img src="dsc_1554_050615044139.jpg" width="100%"> </div>
+          <div class="des_cont"> If you are buying the Moto E today or tomorrow or in near future, get the 4G version.</div>
+          <div class="clearfix"></div>
+        </div>
+      </li>
+      <li>
+        <div class="main_c_cont">
+          <div class="img_cont"> <img src="dsc_1554_050615044139.jpg" width="100%"> </div>
+          <div class="des_cont"> If you are buying the Moto E today or tomorrow or in near future, get the 4G version.</div>
+          <div class="clearfix"></div>
+        </div>
+      </li>
+      <li>
+        <div class="main_c_cont">
+          <div class="img_cont"> <img src="dsc_1554_050615044139.jpg" width="100%"> </div>
+          <div class="des_cont"> If you are buying the Moto E today or tomorrow or in near future, get the 4G version.</div>
+          <div class="clearfix"></div>
+        </div>
+      </li>
+      <li>
+        <div class="main_c_cont">
+          <div class="img_cont"> <img src="dsc_1554_050615044139.jpg" width="100%"> </div>
+          <div class="des_cont"> If you are buying the Moto E today or tomorrow or in near future, get the 4G version.</div>
+          <div class="clearfix"></div>
+        </div>
+      </li>
+      <li>
+        <div class="main_c_cont">
+          <div class="img_cont"> <img src="dsc_1554_050615044139.jpg" width="100%"> </div>
+          <div class="des_cont"> If you are buying the Moto E today or tomorrow or in near future, get the 4G version.</div>
+          <div class="clearfix"></div>
+        </div>
+      </li>
+      <li>
+        <div class="main_c_cont">
+          <div class="img_cont"> <img src="dsc_1554_050615044139.jpg" width="100%"> </div>
+          <div class="des_cont"> If you are buying the Moto E today or tomorrow or in near future, get the 4G version.</div>
+          <div class="clearfix"></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<button class="prev">Previous</button>
+<button class="next">Next</button>
+<script src="jquery.min.js"></script>
+<script>
+
+$(document).ready(function() {
+    var len = $('.belt_cont ul li').length;
+    var width = $('.belt_cont ul li').width();
+    var totwidth = len * width;
+    var counter = 1;
+	var scrwidth= screen.width;
+	console.log(scrwidth);
+    console.log(len);
+    console.log(totwidth);
+    $('.belt_cont ul').css({
+        'width': totwidth
+    });
+
+    $('.next').click(function() {
+        if (counter < len) {
+            $('.belt_cont ul').animate({
+                'left': '-=' + width
+            });
+            counter += 1;
+
+
+        } else {
+
+        }
+    })
+
+    $('.prev').click(function() {
+        if (counter == 1) {
+
+        } else {
+            $('.belt_cont ul').animate({
+                'left': '+=' + width
+            });
+            counter -= 1;
+
+        }
+    })
+
+
+	
+})
+</script>

@@ -1,0 +1,12 @@
+<script src="angular.min.js"></script>
+
+<div ng-app="">
+
+{{angular}}
+</div>
+
+
+<script>
+var app = angular.module
+
+</script>

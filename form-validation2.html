@@ -1,0 +1,421 @@
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script>
+function yesaction(frm)
+{
+	//alert('Yes');
+	var email =/[-a-zA-Z0-9_\.]+@[-a-zA-Z0-9]+\.[-a-zA-Z0-9\.]+/;
+		var eflag = frm.email.value.match(email);
+		var first_char = frm.fname.value.substr(0,1);
+		
+		
+		var nval = /[a-zA-Z\s]{1,100}/;
+		var nflag = frm.fname.value.match(nval);
+		var lnflag = frm.lname.value.match(nval);
+		var cflag = frm.city.value.match(nval);
+		
+		var zval = /[0-9]{6}/
+		var zflag = frm.zip.value.match(zval);
+		
+		//var mval = /[0-9]{10,11}/
+		var mval = /[1-9]+[0-9]{9}/
+		var mflag = frm.mobile.value.match(mval);
+        
+		if(typeof String.prototype.trim !== 'function') {
+  String.prototype.trim = function() {
+    return this.replace(/^\s+|\s+$/g, '');
+  }
+}
+
+		if (frm.fname.value=="")
+		{
+			alert("Please enter your first name");
+			frm.fname.focus();
+			return false;
+		}
+		if (frm.fname.value.trim() == "" || frm.fname.value.trim() == " ")
+		{
+			alert("Please enter your first name without space in first place");
+			frm.fname.focus();
+			return false;
+		}
+		if (nflag != frm.fname.value)
+		{
+			alert("Enter only alphabets in first name");
+			frm.fname.focus();
+			//frm.fname.select();
+			return false;
+		}
+		if (frm.lname.value=="")
+		{
+			alert("Please enter your last name");
+			frm.lname.focus();
+			return false;
+		}
+		if (frm.lname.value.trim()=="")
+		{
+			alert("Please enter your last name without space in first place");
+			frm.lname.focus();
+			return false;
+		}
+		if (lnflag != frm.lname.value)
+		{
+			alert("Enter only alphabets in last name");
+			frm.lname.focus();
+			frm.lname.select();
+			return false;
+		}
+		if (frm.address1.value=="")
+		{
+			alert("Please enter address line 1");
+			document.rd.address1.focus();
+			return false;
+		}
+		if (frm.address1.value.trim()=="")
+		{
+			alert("Please enter address line 1 without space in first place");
+			document.rd.address1.focus();
+			return false;
+		}
+		
+		
+		if (frm.address2.value=="")
+		{
+			alert("Please enter address line 2");
+			frm.address2.focus();
+			return false;
+		}
+		if (frm.address2.value.trim()=="")
+		{
+			alert("Please enter address line 2 without space in first place");
+			document.rd.address1.focus();
+			return false;
+		}
+		
+		
+		if (frm.city.value=="")
+		{
+			alert("Please enter your city name");
+			frm.city.focus();
+			return false;
+		}
+			if (frm.city.value.trim()=="")
+		{
+			alert("Please enter your city name without space in first place");
+			frm.city.focus();
+			return false;
+		}
+		if (cflag != frm.city.value)
+		{
+			alert("Enter only alphabets in city");
+			frm.city.focus();
+			return false;
+		}
+		if(frm.state.value=="")
+		{
+			alert("Please select your state");
+			frm.state.focus();
+			return false;
+		}
+		
+		if (frm.mobile.value=="")
+		{
+			alert("Please enter your mobile number");
+			frm.mobile.focus();
+			return false;
+		}
+		if (frm.mobile.value != "")
+		{
+			if(mflag!=frm.mobile.value)
+			{
+				alert("Enter a valid mobile number");
+				frm.mobile.focus();
+				//frm.mobile.select();
+				return false;
+			}
+		}
+		
+		if (frm.zip.value=="")
+		{
+			alert("Please enter postal code");
+			frm.zip.focus();
+			return false;
+		}
+		if (zflag != frm.zip.value)
+		{
+			alert("Enter valid 6 digit postal code");
+			frm.zip.focus();
+			//frm.zip.select();
+			return false;
+		}
+		if (frm.email.value=="")
+		{
+			alert("Please enter your email address");
+			frm.email.focus();
+			return false;
+		}
+		if(eflag!=frm.email.value)
+		{
+			alert("Enter a valid email address");
+			frm.dob.focus();
+			//frm.email.select();
+			return false;
+		}
+		
+			var dob1 = document.getElementById('datepicker').value;
+			if(dob1=="")
+		 {
+			alert("Select Date of Birth");
+			frm.email.focus();
+			//frm.email.select();
+			return false;
+		}
+		/*if (!frm.accept.checked)
+		{
+			alert("You must be above 18 years of age");
+			frm.accept.focus();
+			return false;
+		}  */
+	document.rd.action="thanksyes-new.jsp";
+	document.rd.submit();   
+	
+}
+
+function noaction(frm)
+{
+	//alert('No');
+	var email =/[-a-zA-Z0-9_\.]+@[-a-zA-Z0-9]+\.[-a-zA-Z0-9\.]+/;
+		var eflag = frm.email.value.match(email);
+		
+		var nval = /[a-zA-Z\s]{1,100}/;
+		var nflag = frm.fname.value.match(nval);
+		var lnflag = frm.lname.value.match(nval);
+		var cflag = frm.city.value.match(nval);
+		
+		var zval = /[0-9]{6}/
+		var zflag = frm.zip.value.match(zval);
+		
+		//var mval = /[0-9]{10,11}/
+		var mval = /[1-9]+[0-9]{9}/
+		var mflag = frm.mobile.value.match(mval);
+
+		if (frm.fname.value=="")
+		{
+			alert("Please enter your first name");
+			frm.fname.focus();
+			return false;
+		}
+		if (nflag != frm.fname.value)
+		{
+			alert("Enter only alphabets in first name");
+			frm.fname.focus();
+			//frm.fname.select();
+			return false;
+		}
+		if (frm.lname.value=="")
+		{
+			alert("Please enter your last name");
+			frm.lname.focus();
+			return false;
+		}
+		if (lnflag != frm.lname.value)
+		{
+			alert("Enter only alphabets in last name");
+			frm.lname.focus();
+			frm.lname.select();
+			return false;
+		}
+		if (frm.address1.value=="")
+		{
+			alert("Please enter address line 1");
+			document.rd.address1.focus();
+			return false;
+		}
+		
+		
+		if (frm.address2.value=="")
+		{
+			alert("Please enter address line 2");
+			frm.address2.focus();
+			return false;
+		}
+		
+		
+		if (frm.city.value=="")
+		{
+			alert("Please enter your city name");
+			frm.city.focus();
+			return false;
+		}
+		
+		if (cflag != frm.city.value)
+		{
+			alert("Enter only alphabets in city");
+			frm.city.focus();
+			return false;
+		}
+		if(frm.state.value=="")
+		{
+			alert("Please select your state");
+			frm.state.focus();
+			return false;
+		}
+		
+		if (frm.mobile.value=="")
+		{
+			alert("Please enter your mobile number");
+			frm.mobile.focus();
+			return false;
+		}
+		if (frm.mobile.value != "")
+		{
+			if(mflag!=frm.mobile.value)
+			{
+				alert("Enter a valid mobile number");
+				frm.mobile.focus();
+				//frm.mobile.select();
+				return false;
+			}
+		}
+		
+		if (frm.zip.value=="")
+		{
+			alert("Please enter postal code");
+			frm.zip.focus();
+			return false;
+		}
+		if (zflag != frm.zip.value)
+		{
+			alert("Enter valid 6 digit postal code");
+			frm.zip.focus();
+			//frm.zip.select();
+			return false;
+		}
+		if (frm.email.value=="")
+		{
+			alert("Please enter your email address");
+			frm.email.focus();
+			return false;
+		}
+		if(eflag!=frm.email.value)
+		{
+			alert("Enter a valid email address");
+			frm.email.focus();
+			//frm.email.select();
+			return false;
+		}
+	/*	if (!frm.accept.checked)
+		{
+			alert("You must be above 18 years of age");
+			frm.accept.focus();
+			return false;
+		} */
+	document.rd.action="whysayno_page.jsp";
+	//document.rd.action="whysayno.jsp";
+	document.rd.submit();
+	
+
+}
+
+  </script>
+  <form  name="rd" method="post" id="rdform" >
+  <div class="form_center">
+          <div class="main">
+            <div class="m_cnt_rw" style="width:100%;">
+<div class="rows">
+  <div class="left_col">
+    <label>*Title:</label>
+    <select name="title">
+      <option>Mr.</option>
+      <option>Mrs.</option>
+    </select>
+  </div>
+    <div class="left_col htg_l">
+    </div>
+</div>
+<div class="rows">
+  <div class="left_col">
+    <label>*First Name:</label>
+    <input type="text" value="" name="fname" />
+  </div>
+  <div class="left_col">
+    <label>*Last Name:</label>
+    <input type="text" value="" name="lname" />
+  </div>
+</div>
+<div class="rows">
+  <div class="left_col">   <label>*Address1:</label>
+      <input type="text" value="" name="address1" /></div>
+  <div class="left_col"> <label>*Address2:</label>
+      <input type="text" value="" name="address2" /> </div>
+</div>
+
+<div class="rows">
+  <div class="left_col">   <label>*City:</label>
+      <input type="text" value="" name="city" /> </div>
+  <div class="left_col">   <label>*State:</label>
+      <select class="wid" name="state">
+        <option value="" selected="selected">Select </option>
+        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands </option>
+        <option value="Andhra Pradesh">Andhra Pradesh </option>
+        <option value="Arunachal Pradesh">Arunachal Pradesh </option>
+        <option value="Assam">Assam </option>
+        <option value="Bihar">Bihar </option>
+        <option value="Chandigarh">Chandigarh </option>
+        <option value="Chhattisgarh">Chhattisgarh </option>
+        <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli </option>
+        <option value="Daman and Diu">Daman and Diu </option>
+        <option value="Delhi">Delhi </option>
+        <option value="Goa">Goa </option>
+        <option value="Gujarat">Gujarat </option>
+        <option value="Haryana">Haryana </option>
+        <option value="Himachal Pradesh">Himachal Pradesh </option>
+        <option value="Jammu and Kashmir">Jammu and Kashmir </option>
+        <option value="Jharkhand">Jharkhand </option>
+        <option value="Karnataka">Karnataka </option>
+        <option value="Kerala">Kerala </option>
+        <option value="Lakshadweep">Lakshadweep </option>
+        <option value="Madhya Pradesh">Madhya Pradesh </option>
+        <option value="Maharashtra">Maharashtra </option>
+        <option value="Manipur">Manipur </option>
+        <option value="Meghalaya">Meghalaya </option>
+        <option value="Mizoram">Mizoram </option>
+        <option value="Nagaland">Nagaland </option>
+        <option value="Orissa">Orissa </option>
+        <option value="Pondicherry">Pondicherry </option>
+        <option value="Punjab">Punjab </option>
+        <option value="Rajasthan">Rajasthan </option>
+        <option value="Sikkim">Sikkim </option>
+        <option value="Tamil Nadu">Tamil Nadu </option>
+        <option value="Tripura">Tripura </option>
+        <option value="Telangana">Telangana </option>
+        <option value="Uttaranchal">Uttaranchal </option>
+        <option value="Uttar Pradesh">Uttar Pradesh </option>
+        <option value="West Bengal">West Bengal </option>
+      </select> </div>
+</div>
+
+<div class="rows">
+  <div class="left_col">  <label>*Mobile Phone:</label>
+      <input type="text" value="" name="mobile" maxlength="10"/>  <em>(number only - no space)</em> </div>
+  <div class="left_col">  <label>*Pin Code:</label>
+      <input type="text" value="" name="zip" maxlength="6"/> </div>
+</div>
+
+<div class="rows">
+  <div class="left_col">  <label>*Email:</label>
+      <input type="text" value=e"" name="email" /> </div>
+    <div class="left_col">  <label>*Date Of Birth:</label>
+    <input type="text" name="dob" required="required" id="datepicker" readonly />   </div>
+</div>
+
+<!--<div class="rows">
+  <div class="left_col">  <label class="wid">*Yes, I am above 18yrs of age:</label>
+      <input type="checkbox" value="" name="accept" /> </div>
+  <div class="left_col">  </div>
+</div> -->
+
+<input type="button" value="Validate" onClick="javascript : yesaction(document.rd);" />
+</div>
+          </div>
+        </div>
+        </form>
