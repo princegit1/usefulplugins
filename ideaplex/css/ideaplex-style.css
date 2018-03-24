@@ -1,0 +1,612 @@
+*{ margin:0; padding:0;}
+.clearfix{ clear:both;}
+:focus {outline: 0;}
+
+body{padding:0; margin:0; font-size:100%; font-family: "Oxygen", sans-serif;}
+a{text-decoration:none;}
+h2{font:34px/36px "Yanone Kaffeesatz"; color:#000; display:block; padding-bottom:20px; text-transform:uppercase;}
+h3{font:300 30px/36px "Yanone Kaffeesatz"; color:#000; display:block; padding-bottom:8px; text-transform:uppercase;}
+
+#outer_wrapper{float:left; width:100%;}
+.wrapper{width:1000px; margin:0 auto;}
+
+#header{float:left; width:100%; border-bottom:1px solid #d4d4d4; box-shadow:0 0 5px #d4d4d4; min-height:110px; position:relative;}
+#header .logo{float:left; width:auto; padding:5px 0 0;}
+#header .logo a{background-position:284px -41px; display:inline-block; width:254px; height:92px;}
+#header .head_search{float:right; width:auto; margin-top:60px;}
+#header .head_search form{float:left; width:100%;}
+#header .head_search input{width:354px; float:left; border:1px solid #e8e8e8; border-radius:5px 0px 0px 5px; height:30px; border-right:0; padding:5px 0 5px 10px;}
+#header .head_search input.searchbtn{background:url(http://media2.intoday.in/ideaplex/searchbtn.gif) no-repeat 0 0; border:0; float:left; width:41px; height:42px; cursor:pointer; position:relative; left:-3px; border:1px solid #e8e8e8; border-radius:0px 5px 5px 0px; border-left:0;}  
+
+.ipadnav{display:none; background:url(http://media2.intoday.in/ideaplex/ipad_nav.gif) no-repeat center 9px; border:1px solid #e8e8e8; border-radius:27px; width:36px; height:36px; padding:5px;}
+.ipadlogo{display:none;}
+
+#body_container{float:left; width:1000px;}
+
+#left_container{float:left; width:190px; padding:17px 0 0;}
+#left_container .nav{width:135px; border:1px solid #f3f3f3; box-sizing:border-box; float:left; background-color:#fcfcfc;}
+#left_container .nav ul{list-style:none;}
+#left_container .nav ul li{width:135px; float:left; border-bottom:1px solid #f3f3f3; padding:0px;}
+#left_container .nav ul li:last-child{border-bottom:0;}
+#left_container .nav ul li a{font:17px/30px "Oxygen"; color:#1c1c1c; text-transform:uppercase; border-left:4px solid #fcfcfc; padding:5px 0 5px 17px; float:left; width:118px;}
+#left_container .nav ul li a:hover,#left_container .nav ul li a.active{color:#1c1c1c; font-weight:600; border-left:4px solid #f3f3f3;}
+
+#left_container .social{float:left; width:135px; border:1px solid #f3f3f3; box-sizing:border-box; margin:30px 0 0; background:url(http://media2.intoday.in/ideaplex/bord.png) no-repeat center top; padding:0 10px; min-height:127px;}
+#left_container .social ul{list-style:none;}
+#left_container .social ul li{width:auto; float:left; padding-top:8px; padding-bottom:15px;}
+#left_container .social ul li:nth-child(odd){padding-right:15px;}
+#left_container .social ul li:nth-child(even){padding-left:15px;}
+#left_container .social ul li.pad{padding-bottom:0px;}
+
+#left_container .social ul li a{width:40px; height:40px; display:inline-block; background-image:url(http://media2.intoday.in/ideaplex/Sprit.png);}
+#left_container .social ul li a.facebook{background-position:-26px -24px;}
+#left_container .social ul li a.rss{background-position:-94px -24px;}
+#left_container .social ul li a.in{background-position:-26px -98px;}
+#left_container .social ul li a.twitter{background-position:-94px -98px;}
+
+#left_container .presented{float:left; width:auto; padding:54px 0 0 16px;}
+#left_container .presented strong{font:300 13px/16px "Oxygen"; display:block; padding:0 0 6px 4px; color:#acacac;}
+#left_container .presented span.indiatoday{background-position:-165px -341px; width:77px; height:73px; display:inline-block;}
+
+#right_container{float:left; width:810px;}
+
+#footer{width:100%; float:left; background-color:#f9f9f9; min-height:30px; margin-top:55px;}
+#footer p{text-align:center; font:300 13px/32px "Oxygen"; color:#aeaeae; display:block;}
+
+.preload *{ -webkit-transition: none !important;  -moz-transition: none !important;  -ms-transition: none !important;  -o-transition: none !important;}
+.sprit{ background-image:url(http://media2.intoday.in/ideaplex/Sprit.png);}
+#cat-grid{ width:745px; margin:0 auto; position:relative; margin-top:0px;}
+#ideate h2 span{ background-position:-19px -157px; width:48px; height:46px; display:block;}
+#debate h2 span{ background-position:-97px -157px; width:48px; height:46px; display:block;}
+#celebrate h2 span{ background-position:-180px -157px; width:48px; height:46px; display:block;}
+h2 span{ margin-left:20%; padding:2px;}
+#cat-grid h2{ font-family:Oxygen; font-size:22px; width:auto; float:left; font-weight:400;}
+
+/*************************   YEllow box bootm ********************/
+
+.yellowbox{ background:#F4B802; box-shadow:5px 5px 9px -5px rgba(0 ,0, 0, 0.8 ) ;border-radius:8px; position:absolute; }
+.wh72{ width:72px; height:72px;} .wh112{ width:112px; height:102px;} .wh144{ width:144px; height:144px;} .wh120{ width:120px; height:120px;} .wh112x112{ width:112px; height:102px;} .wh65x75{ width:65px; height:75px;} .wh105x95{ width:105px; height:95px;}
+.zindex1{ z-index:-1;}
+.greenbox{ background:#6EBB21;box-shadow:5px 5px 9px -5px rgba(0 ,0, 0, 0.8);border-radius:8px; position:absolute;}
+.redbox{ background:#DE117A;box-shadow:0 1px 15px 0 #000;border-radius:8px; position:absolute;}
+
+/****************** background box postion ***********************/
+#ideate h2{ position:absolute; top:82px; left:97px;}
+#debate h2{ position:absolute; top:25px; left:380px;}
+#celebrate h2{ position:absolute; top:75px; left:666px;}
+
+.pos1{ left:0; top:295px;}
+.pos2{ left:90px; top:170px;}
+.pos3{ left:83px; top:413px;}
+.pos4{ left:422px; top:233px;}
+.pos5{ left:310px; top:109px;}
+.pos6{ left:350px; top:360px;}
+.pos7{ left:237px; top:388px;}
+.pos8{ left:491px; top:78px;}
+.pos9{ left:674px; top:367px;}
+.pos10{ left:558px; top:195px;}
+.pos11{ left:550px; top:368px;}
+.pos12{ left:541px; top:432px;}
+
+
+/*************************************** image postions ******************************/
+
+.preload .imgbox{box-shadow:0 1px 10px 0 rgba(0,0,0,0.5) ;border-radius:5px; position:absolute; background:#fff; padding:7px; left:325px; top:290px; opacity:0;
+    webkit-transition: left 0.8s cubic-bezier(0.755, 0.050, 0.855, 0.060), top 0.8s cubic-bezier(0.755, 0.050, 0.855, 0.060),opacity 0.6s cubic-bezier(0.755, 0.050, 0.855, 0.060);
+	-moz-transition: left 0.8s cubic-bezier(0.755, 0.050, 0.855, 0.060), top 0.8s cubic-bezier(0.755, 0.050, 0.855, 0.060),opacity 0.6s cubic-bezier(0.755, 0.050, 0.855, 0.060);
+	-o-transition: left 0.8s cubic-bezier(0.755, 0.050, 0.855, 0.060), top 0.8s cubic-bezier(0.755, 0.050, 0.855, 0.060), opacity 0.6s cubic-bezier(0.755, 0.050, 0.855, 0.060);
+	-ms-transition: left 0.8s cubic-bezier(0.755, 0.050, 0.855, 0.060), top 0.8s cubic-bezier(0.755, 0.050, 0.855, 0.060), opacity 0.6s cubic-bezier(0.755, 0.050, 0.855, 0.060);
+	transition: left 0.8s cubic-bezier(0.755, 0.050, 0.855, 0.060), top 0.8s cubic-bezier(0.755, 0.050, 0.855, 0.060), opacity 0.6s cubic-bezier(0.755, 0.050, 0.855, 0.060);
+	-webkit-transition-timing-function: cubic-bezier(0.680, 0, 0.265, 1); /* older webkit */
+-webkit-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+   -moz-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+     -o-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+        transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+
+}
+
+
+.imgbox{box-shadow:0 1px 10px 0 rgba(0,0,0,0.5) ;border-radius:5px; position:absolute; background:#fff; padding:5px; left:0; opacity:1;
+    webkit-transition: left 0.8s cubic-bezier(0.755, 0.050, 0.855, 0.060), top 0.8s cubic-bezier(0.755, 0.050, 0.855, 0.060),opacity 0.6s cubic-bezier(0.755, 0.050, 0.855, 0.060);
+	-moz-transition: left 0.8s cubic-bezier(0.755, 0.050, 0.855, 0.060), top 0.8s cubic-bezier(0.755, 0.050, 0.855, 0.060),opacity 0.6s cubic-bezier(0.755, 0.050, 0.855, 0.060);
+	-o-transition: left 0.8s cubic-bezier(0.755, 0.050, 0.855, 0.060), top 0.8s cubic-bezier(0.755, 0.050, 0.855, 0.060), opacity 0.6s cubic-bezier(0.755, 0.050, 0.855, 0.060);
+	-ms-transition: left 0.8s cubic-bezier(0.755, 0.050, 0.855, 0.060), top 0.8s cubic-bezier(0.755, 0.050, 0.855, 0.060), opacity 0.6s cubic-bezier(0.755, 0.050, 0.855, 0.060);
+	transition: left 0.8s cubic-bezier(0.755, 0.050, 0.855, 0.060), top 0.8s cubic-bezier(0.755, 0.050, 0.855, 0.060), opacity 0.6s cubic-bezier(0.755, 0.050, 0.855, 0.060);
+	-webkit-transition-timing-function: cubic-bezier(0.680, 0, 0.265, 1); /* older webkit */
+-webkit-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+   -moz-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+     -o-transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+        transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+
+
+}
+
+.imgbox img{border-radius:3px; -webkit-border-radius:5px;}
+.imgpos1{ left:205px; top:100px;}
+.imgpos2{ left:130px; top:202px;}
+.imgpos3{ left:113px; top:390px;}
+.imgpos4{ left:5px; top:428px;}
+.imgpos5{ left:5px; top:240px;}
+
+.imgpos6{ left:318px; top:127px;}
+.imgpos7{ left:316px; top:289px;}
+.imgpos8{ left:422px; top:315px;}
+.imgpos9{ left:245px; top:405px;}
+.imgpos10{ left:384px; top:445px;}
+
+.imgpos11{ left:500px; top:88px;}
+.imgpos12{ left:660px; top:256px;}
+.imgpos13{ left:642px; top:381px;}
+.imgpos14{ left:518px; top:419px;}
+.imgpos15{ left:530px; top:259px;}
+
+
+/*************** Images Size ***************/
+
+.imgpos1 img{ width:89px; height:89px;}
+.imgpos2 img{ width:168px; height:168px;}
+.imgpos3 img{ width:108px; height:108px;}
+.imgpos4 img{ width:89px; height:89px;}
+.imgpos5 img{ width:108px; height:108px;}
+
+.imgpos6 img{ width:146px; height:146px;}
+.imgpos7 img{ width:89px; height:89px;}
+.imgpos8 img{ width:89px; height:89px;}
+.imgpos9 img{ width:108px; height:108px;}
+.imgpos10 img{ width:108px; height:108px;}
+
+.imgpos11 img{ width:148px; height:148px;}
+.imgpos12 img{ width:89px; height:89px;}
+.imgpos13 img{ width:89px; height:89px;}
+.imgpos14 img{ width:108px; height:108px;}
+.imgpos15 img{ width:108px; height:108px;}
+
+
+/************************ Tooltip css **********************/
+.tooltip-popup{font-family:Oxygen; position:absolute; width:245px; bottom:0px; right:70%; background:rgba(255, 255, 255, 0.9); padding:10px; border-radius:10px; box-shadow:1px 1px 3px 0 rgba(0, 0, 0 , 0.5) ; opacity:0; z-index:-1;
+-webkit-transition:opacity 0.1s ease-in-out, right 0.1s ease-in-out;
+	-moz-transition:opacity 0.1s ease-in-out, right 0.1s ease-in-out;
+	-o-transition:opacity 0.1s ease-in-out, right 0.1s ease-in-out;
+	-ms-transition:opacity 0.1s ease-in-out, right 0.1s ease-in-out;
+	transition: opacity 0.1s ease-in-out, right 0.1s ease-in-out;
+
+}
+.tooltip-popup.tooltip-active{ right:100%; opacity:1; z-index:10;  -webkit-transition:opacity 0.3s ease-in-out;
+	-webkit-transition:opacity 0.4s ease-in-out, right 0.4s ease-in-out;
+	-moz-transition:opacity 0.4s ease-in-out, right 0.4s ease-in-out;
+	-o-transition:opacity 0.4s ease-in-out, right 0.4s ease-in-out;
+	-ms-transition:opacity 0.4s ease-in-out, right 0.4s ease-in-out;
+	transition: opacity 0.4s ease-in-out, right 0.4s ease-in-out;
+	
+	}
+.tooltip-popup .tooltip-container{ position:relative;}
+.tooltip-popup .close-popup{ color:#999999; position:absolute; right:0px; margin-right:5px; cursor:pointer;}
+.tooltip-popup h4{ font-size:16px; color:#111; text-transform:uppercase;} 
+.tooltip-popup h6{ font-size:14px; color:#666666;}
+.tooltip-popup p{ font-size:13px; color:#999999;}
+.tooltip-popup .popnav { margin-top:5px;}
+.tooltip-popup .popnav ul li{ list-style:none; width:auto; display:inline-block; font-size:11px; color:#999999; border-right:1px solid #ccc; line-height:18px; float:left; padding:0 5px; height:auto}
+.tooltip-popup .popnav ul li span.popup-videoicon{ width:18px; height:18px; display:block; background-position:-259px -242px; float:left; margin-right:5px; }
+.tooltip-popup .popnav ul li span.popup-watch{ width:18px; height:18px; display:block; background-position:-297px  -242px; float:left;}
+.tooltip-popup .popnav ul li span.popup-share{ width:18px; height:18px; display:block; background-position:-336px -242px; float:left;}
+.tooltip-popup .popnav ul li a{ font-size:11px; color:#999999; text-decoration:none;}
+
+/********************************* Box Arrow right ******************************/
+
+.tooltip-popup:after, .tooltip-popup:before { left: 100%; top: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; } 
+.tooltip-popup:after { border-color: rgba(136, 183, 213, 0);  border-width: 30px; margin-top: -30px; } 
+.tooltip-popup:before { border-color: rgba(194, 225, 245, 0); border-left-color:rgba(255, 255, 255, 0.9); border-width: 27px; margin-top: -6px;  }
+
+
+/********************************* Box Arrow right ******************************/
+#ideate .tooltip-popup:after, #ideate .tooltip-popup:before { left: -20%; top: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; } 
+#ideate .tooltip-popup:after { border-color: rgba(136, 183, 213, 0); border-width: 30px; margin-top: -30px; } 
+#ideate .tooltip-popup:before { border-color: rgba(194, 225, 245, 0); border-right-color: rgba(255, 255, 255, 0.9); border-width: 27px; margin-top: -6px; }
+
+/******************************************************** tootip for right section ******************************************/
+#ideate .tooltip-popup{font-family:Oxygen; position:absolute; width:245px; bottom:0px; left:70%; background:rgba(255, 255, 255, 0.9); padding:10px; border-radius:10px; box-shadow:1px 1px 3px 0 rgba(0, 0, 0 , 0.5) ; opacity:0; z-index:-1;
+-webkit-transition: left 0.5s ease-in-out,opacity 0.1s ease-in-out;
+	-moz-transition:left 0.5s ease-in-out,opacity 0.1s ease-in-out;
+	-o-transition:left 0.5s ease-in-out,opacity 0.1s ease-in-out;
+	-ms-transition:left 0.5s ease-in-out,opacity 0.1s ease-in-out;
+	transition: left 0.5s ease-in-out, opacity 0.1s ease-in-out;
+
+}
+#ideate .tooltip-popup.tooltip-active{ left:100%; opacity:1; z-index:10;  -webkit-transition:opacity 0.3s ease-in-out;
+	-webkit-transition:opacity 0.4s ease-in-out, left 0.4s ease-in-out;
+	-moz-transition:opacity 0.4s ease-in-out, left 0.4s ease-in-out;
+	-o-transition:opacity 0.4s ease-in-out, left 0.4s ease-in-out;
+	-ms-transition:opacity 0.4s ease-in-out, left 0.4s ease-in-out;
+	transition: opacity 0.4s ease-in-out, left 0.4s ease-in-out;	
+	}
+
+
+/***************************All Ideas*************************/
+
+.all_ideas{float:left; width:100%; padding:15px 0 0;}
+.all_ideas ul{list-style:none;}
+.all_ideas ul li{float:left; width:100%;}
+.all_ideas ul li .top_row{width:100%; display:table-cell; vertical-align:bottom; font:13px/16px "Oxygen"; color:#000;}
+.all_ideas ul li .top_row img{margin-right:7px;}
+.all_ideas ul li span strong{font-weight:600; font-size:24px;}
+.all_ideas ul li p{display:block; font-size:14px; padding-top:10px; overflow:hidden;}
+.all_ideas ul li p a{color:#000;}
+.all_ideas ul li .comment{float:right; padding:12px 0 0;}
+.all_ideas ul li .comment a{font:13px/15px "Oxygen"; color:#909090; text-decoration:underline;}
+.all_ideas ul li .comment a.comment_btn{background-color:#6dbc23; border-radius:5px; color:#fff; text-transform:uppercase; text-decoration:none; margin-left:12px; padding:4px 8px;}
+.all_ideas ul li .comment a:hvoer{text-decoration:none;}
+
+.expander_content{float:left; width:100%; display:none;}
+.topheading{float:left; width:100%;}
+
+
+.all_ideas ul li .related_comment{float:left; width:100%; padding:10px; border:1px solid #ddd; box-sizing:border-box; margin-top:12px; display:none; height:180px;}
+.all_ideas ul li .related_comment .box_row{width:100%;}
+.all_ideas ul li .related_comment .box_row:nth-child(odd){padding-bottom:10px;}
+.all_ideas ul li .related_comment .box_row span{font-size:12px;}
+.all_ideas ul li .related_comment .box_row span strong{font-size:20px; color:#464646;}
+.all_ideas ul li .related_comment p{color:#717171;}
+
+
+.contact{float:left; width:100%; padding:15px 0 0;}
+.contact .cont_box{float:left; width:100%; border:1px solid #e2e2e2; box-shadow:0 0 5px #e2e2e2; min-height:282px; box-sizing:border-box; padding:4px;}
+.contact .cont_box #map-canvas{float:left; width:800px; height:282px;}
+.contact .address{float:left; width:100%; font:200 18px/26px "Oxygen"; color:#a0a0a0; text-align:center; padding:40px 0 0; text-transform:uppercase;}
+.contact .address a{color:#a0a0a0;}
+.contact .address  strong{font-size:36px; line-height:40px; font-weight:600;}
+.contact p{color:#818181; font-size:15px; padding-top:10px; display:inline-block;}
+
+
+.video_area{float:left; width:100%; background-color:#000; min-height:332px;}
+.video_area .main_video{width:385px; height:270px; margin:0 auto;}
+.video_area .video_bot_row{border-top:1px solid #fff; float:left; width:100%; font:300 12px/18px "Oxygen"; color:#fff; text-transform:uppercase;}
+.video_area .video_bot_row .video_left{float:left; width:auto; padding:0 0 0 18px;}
+.video_area .video_bot_row .video_left span{display:block; clear:left; position:relative; top:5px;}
+.video_area .video_bot_row .video_left span em{font-style:normal; padding-left:20px; font-family:"Oxygen";}
+.video_area .video_bot_row .video_left strong{display:block;font:900 35px "Yanone Kaffeesatz"; letter-spacing:2px;}
+.video_area .video_bot_row .video_right{float:right; width:auto; margin:13px 22px 0 0;}
+.video_area .video_bot_row .video_right ul{list-style:none;}
+.video_area .video_bot_row .video_right li{width:95px; float:left; padding:3px 8px; border:1px solid #383838; border-radius:1px; margin-right:10px;}
+.video_area .video_bot_row .video_right li a{font:400 13px/15px "Yanone Kaffeesatz"; color:#fff; float:left;}
+.video_area .video_bot_row .video_right li a em{background:url(http://media2.intoday.in/ideaplex/video_icon.png) no-repeat 0 0; padding-left:2px; width:26px; height:30px; float:left; margin:0 10px 0 0;}
+.video_area .video_bot_row .video_right li a em.speakear{background-position: 0 0;}
+.video_area .video_bot_row .video_right li a em.session{background-position: 0 0;}
+
+.video_area .top_video_icon{float:right; width:auto; margin:7px 9px 0 0;}
+.video_area .top_video_icon ul{list-style:none;}
+.video_area .top_video_icon ul li{width:auto; float:left; margin-right:16px; position:relative;}
+
+.video_red_tooltip{position:absolute; top:2px; right:-60px; display:none;}
+.video_red_tooltip .arrow{width:10px; height:10px; border-style: solid; border-width: 0 5px 10px 5px; border-color: transparent transparent #c00607 transparent;-webkit-transform:rotate(360deg); position:relative; left:97px;}
+.video_red_tooltip .tool_main{width:158px; min-height:90px; background-color:#c00607; border-radius:10px; margin-top:10px; padding:5px 8px;}
+.video_red_tooltip .tool_main .row{width:100%; float:left; padding-bottom:1px;}
+.video_red_tooltip .tool_main .row strong{font:300 12px/18px "Oxygen"; color:#fff; text-transform:uppercase; float:left; width:58px;} 
+.video_red_tooltip .tool_main .wid{width:75px; float:left;}
+.video_red_tooltip .tool_main .row em{font-style:normal; color:#efea12; font-size:10px; float:left; padding-left:4px; width:15px; line-height:17px;}
+.video_red_tooltip .tool_main .row a{background:url(http://media2.intoday.in/ideaplex/rating_bg.png) repeat-x 0 5px !important; width:auto; height:8px !important; float:left; padding-bottom:5px; border-radius:2px 2px 2px 2px;}
+
+.video_area .top_video_icon ul li a{background:url(http://media2.intoday.in/ideaplex/video_icon01.png) no-repeat 0 0; float:left; width:18px; height:24px; position:relative; z-index:9999; cursor:pointer;}
+.video_area .top_video_icon ul li a.fav{background-position:0 0;}
+.video_area .top_video_icon ul li a.star{background-position:-19px 0; width:23px;}
+.video_area .top_video_icon ul li a.share{background-position:-41px 0; width:24px;}
+
+.related_videos{float:left; width:94%; padding:25px 3% 0 3%; position:relative;}
+.related_videos .realate_videos_slider{ width:770px; overflow:hidden; /*height:150px;*/}
+
+.related_videos ul{position:relative; width:100%; float:left; list-style:none;}
+.related_videos ul li{width:auto; float:left; padding:10px; /*margin-right:15px;*/ margin-right:14px;position:relative;}
+.related_videos ul li:first-child .tooltip-popup{right:-183% !important;}
+.related_videos ul li:nth-child(2) .tooltip-popup{right:-183% !important;}
+
+.related_videos ul li:first-child .tooltip-popup:after, .related_videos ul li:first-child .tooltip-popup:before,.related_videos ul li:nth-child(2) .tooltip-popup:after, .related_videos ul li:nth-child(2) .tooltip-popup:before { left: -20%; top: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; } 
+
+
+.related_videos ul li:first-child .tooltip-popup:after,.related_videos ul li:nth-child(2) .tooltip-popup:after{ left: 100%; top: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; } 
+.related_videos ul li:first-child .tooltip-popup:after,.related_videos ul li:nth-child(2) .tooltip-popup:after { border-color: rgba(136, 183, 213, 0);  border-width: 30px; margin-top: -30px; } 
+.related_videos ul li:first-child .tooltip-popup:before,.related_videos ul li:nth-child(2) .tooltip-popup:before { border-color: rgba(194, 225, 245, 0); border-left-color:rgba(255, 255, 255, 0.9); border-width: 27px; margin-top: -6px;  }
+/********************************* Box Arrow right ******************************/
+.related_videos ul li:first-child .tooltip-popup:after,.related_videos ul li:nth-child(2) .tooltip-popup:after { left: -20%; top: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; } 
+.related_videos ul li:first-child .tooltip-popup:after,.related_videos ul li:nth-child(2) .tooltip-popup:after { border-color: rgba(136, 183, 213, 0); border-width: 30px; margin-top: -30px; } 
+.related_videos ul li:first-child .tooltip-popup:before,.related_videos ul li:nth-child(2) .tooltip-popup:before { border-color: rgba(194, 225, 245, 0); border-right-color: rgba(255, 255, 255, 0.9); border-width: 27px; margin-top: -6px; }
+
+
+.related_videos ul li:last-child{margin-right:0;}
+.related_videos ul li img{border-radius:3px; box-shadow:1px 4px 10px #9b9b9b;}
+
+.related_videos .prev{display:none;background-position:-374px -164px; width:18px; height:36px; position:absolute; top:62%; left:0; cursor:pointer; text-indent:-9999px;}
+.related_videos .next{display:none;background-position:-397px -164px; width:18px; height:36px; position:absolute; top:62%; right:0; cursor:pointer; text-indent:-9999px;}
+
+
+/******************Ideastore ******************************/
+.ideastore_h{ width:810px; float:left;  padding: 15px 0 0;}
+.ideastore_h .idea_hd{ font-size:26px; text-transform:uppercase; padding:0 34px; float:left;}
+.ideastore_h .idea_des{ font-size:14px; /* margin-top:20px;*/ float:left; padding:0 34px;}
+.ideastore_h .idea_store_cont{ width:100%; float:left; margin-top:20px;}
+.ideastore_h .idea_store_cont .idea_box_cont{ width:730px; float:left; position:relative; height:433px; overflow:hidden;}
+.ideastore_h .idea_store_cont .idea_box_cont .idea_img_left{ width:120px; float:left;}
+.ideastore_h .idea_store_cont .idea_box_cont .idea_img_left img{ width:100%; box-shadow:-4px 4px 4px #999; border-radius:5px;}
+.ideastore_h .idea_store_cont .idea_box_cont .idea_img_cont{ width:206px; float:right;}
+.ideastore_h .idea_store_cont .idea_box_cont  ul{ list-style-type:none; padding:0; margin:0; position:relative;}
+.ideastore_h .idea_store_cont .idea_box_cont  ul li{ width:340px; float:left; margin:10px;}
+.ideastore_h .idea_store_cont .idea_box_cont  ul li .idea_box_inner_cont{width:100%; float:left;}
+.ideastore_h .idea_store_cont .idea_box_cont  ul li .idea_box_inner_cont .idea_hds{ font-size:18px; width:100%; float:left; color:#333333; margin-bottom:5px;}
+.ideastore_h .idea_store_cont .idea_box_cont  ul li .idea_box_inner_cont .idea_desc{ font-size:13px; width:100%; float:left; color:#333333;}
+.ideastore_h .idea_store_cont .left_arr{ width:34px; float:left;margin-top:20%}
+.ideastore_h .idea_store_cont .right_arr{ width:34px; float:left;margin-top:20%}
+.ideastore_h .idea_store_cont .left_arr .left_icon{ width:18px; height:45px; float:left; display:inline-block; background:url(http://media2.intoday.in/ideaplex/Sprit.png) -374px -164px no-repeat;  cursor:pointer}
+.ideastore_h .idea_store_cont .right_arr .right_icon{ width:18px;height:45px; float:left; display:inline-block; background:url(http://media2.intoday.in/ideaplex/Sprit.png) -397px -164px no-repeat;  cursor:pointer}
+
+.ideastore_h .see_more_h{ width:100%;float:left; font-size:14px;}
+.ideastore_h .see_more_h .see_more{ width:120px;margin:0 auto;  height:30px; cursor:pointer; color:#B5B5B5;}
+.ideastore_h .see_more_h .see_less{ display:none;width:120px;margin:0 auto; height:30px;cursor:pointer;color:#B5B5B5;}
+.ideastore_h .see_more_h .see_more .more_icon{ width:36px; display:inline-block; background:url(http://media2.intoday.in/ideaplex/Sprit.png) -452px -159px no-repeat ; height:30px;position: relative; top: 2px;}
+.ideastore_h .see_more_h .see_less .less_icon{ width:36px; display:inline-block; background:url(http://media2.intoday.in/ideaplex/Sprit.png) -423px -159px no-repeat; height:30px;}
+
+.alphabet-down-slider, .see_more_h{ width:100%;float:left; font-size:14px; position:relative; top:15px;}
+.alphabet-down-slider .alpha-top, .see_more_h .alpha-top{ width:120px;margin:0 auto;  height:30px; cursor:pointer; color:#B5B5B5; position:relative; z-index:999;}
+.alphabet-down-slider .alpha-down, .see_more_h .alpha-down{width:173px;margin:0 auto; height:30px;cursor:pointer;color:#B5B5B5; position:relative; top:-25px; opacity:0.5}
+.alphabet-down-slider .alpha-top .more_icon, .see_more_h .alpha-top .more_icon{ width:36px; display:inline-block; background:url(http://media2.intoday.in/ideaplex/Sprit.png) -452px -159px no-repeat ; height:30px;position: relative; top: 2px;}
+.alphabet-down-slider .alpha-down .less_icon, .see_more_h .alpha-down .less_icon{ width:36px; display:inline-block; background:url(http://media2.intoday.in/ideaplex/Sprit.png) -423px -159px no-repeat; height:30px;}
+
+.pos{top:40px;}
+
+
+/******************Search Results******************************/
+.search_results_h {width:810px; float:left;  padding: 57px 0 0;}
+.search_results_h .idea_hd{ font-size:26px; text-transform:uppercase;  float:left;}
+.search_results_h .idea_des{ font-size:14px; /* margin-top:20px;*/ float:left; padding:0 34px;}
+.search_results_h .search_result_cont{ width:100%; float:left;}
+.search_results_h .search_result_cont .idea_box_cont{ width:810px; float:left; position:relative; height:430px; overflow:hidden;}
+.search_results_h .search_result_cont .idea_box_cont .idea_img_left{ width:120px; float:left;}
+.search_results_h .search_result_cont .idea_box_cont .idea_img_left img{ width:100%; box-shadow:-4px 4px 4px #999; border-radius:5px;}
+.search_results_h .search_result_cont .idea_box_cont .idea_img_cont{ width:115px; float:right;}
+.search_results_h .search_result_cont .idea_box_cont  ul{ list-style-type:none; padding:0; margin:0; position:relative;}
+.search_results_h .search_result_cont .idea_box_cont  ul li{ width:250px; float:left; margin:0 10px 25px 10px;}
+.search_results_h .search_result_cont .idea_box_cont  ul li .idea_box_inner_cont{width:100%; float:left;}
+.search_results_h .search_result_cont .idea_box_cont  ul li .idea_box_inner_cont .idea_hds{ font-size:13px; font-weight:600; width:100%; float:left; color:#333333; margin-bottom:5px;}
+.search_results_h .search_result_cont .idea_box_cont  ul li .idea_box_inner_cont .idea_desc{ font-size:13px; line-height:16px; text-transform:uppercase; font-weight:bold; width:100%; float:left; color:#333333;}
+.search_results_h .search_result_cont .idea_box_cont  ul li .idea_box_inner_cont  .idea_time{font-size:13px; margin-top:5px; width:100%; float:left; color:#333333; }
+.search_results_h .search_result_cont .left_arr{ width:34px; float:left;margin-top:20%}
+.search_results_h .search_result_cont .right_arr{ width:34px; float:left;margin-top:20%}
+.search_results_h .search_result_cont .left_arr .left_icon{ width:18px; height:45px; float:left; display:inline-block; background:url(http://media2.intoday.in/ideaplex/Sprit.png) -374px -164px no-repeat;  cursor:pointer}
+.search_results_h .search_result_cont .right_arr .right_icon{ width:18px;height:45px; float:left; display:inline-block; background:url(http://media2.intoday.in/ideaplex/Sprit.png) -397px -164px no-repeat;  cursor:pointer}
+
+.search_results_h .see_more_h1{ width:100%;float:left; font-size:14px;}
+.search_results_h .see_more_h1 .see_more1{ width:120px;margin:0 auto;  height:30px; cursor:pointer; color:#B5B5B5;}
+.search_results_h .see_more_h1 .see_less1{ display:none;width:120px;margin:0 auto; height:30px;cursor:pointer;color:#B5B5B5;}
+.search_results_h .see_more_h1 .see_more1 .more_icon1{ width:36px; display:inline-block; background:url(http://media2.intoday.in/ideaplex/Sprit.png) -452px -159px no-repeat ; height:30px;position: relative; top: 2px;}
+.search_results_h .see_more_h1 .see_less1 .less_icon1{ width:36px; display:inline-block; background:url(http://media2.intoday.in/ideaplex/Sprit.png) -423px -159px no-repeat; height:30px;}
+
+/******************Search Results******************************/
+.video_play_h {width:810px; float:left;  padding: 15px 0 0;}
+.video_play_h .idea_hd{ font-size:26px; text-transform:uppercase;  float:left;}
+.video_play_h .idea_des{ font-size:14px; /* margin-top:20px;*/ float:left; padding:0 34px;}
+.video_play_h .video_play_cont{ width:100%; float:left;}
+.video_play_h .video_play_cont .video_box{ width:800px;padding:5px; background:#fff; float:left; box-shadow:0 0 3px #ccc;}
+.video_play_h .video_play_cont .video_des{font-size:13px; line-height:16px; width:100%; float:left; color:#949494; margin-top:15px;}
+.video_play_h .related_video_cont{ width:100%; float:left;}
+.video_play_h .related_video_cont .video_hd{ width:100%; margin-top:20px; float:left; font-weight:300; font-size:26px; text-transform:uppercase;  font-family: "Yanone Kaffeesatz";}
+.video_play_h .related_video_cont .video_cont{ width:100%; float:left; margin-top:20px;}
+.video_play_h .related_video_cont .video_cont .left_arr_v{width:34px; float:left;margin-top:40px;}
+.video_play_h .related_video_cont .video_cont .left_arr_v .left_arr_icon{ width:18px; height:45px; float:left; display:inline-block; background:url(http://media2.intoday.in/ideaplex/Sprit.png) -374px -164px no-repeat;  cursor:pointer}
+
+.video_play_h .related_video_cont .video_cont .right_arr_v{width:34px; float:left;margin-top:40px}
+.video_play_h .related_video_cont .video_cont .right_arr_v .right_arr_icon{width:18px;height:45px; float:left; display:inline-block; background:url(http://media2.intoday.in/ideaplex/Sprit.png) -397px -164px no-repeat;  cursor:pointer}
+
+.video_play_h .related_video_cont .video_cont .video_box_c{ width:742px; float:left;}
+.video_play_h .related_video_cont .video_cont .video_box_c ul.belt_v{ list-style-type:none; padding:0; margin:0; width:742px; overflow:hidden; height:120px;}
+.video_play_h .related_video_cont .video_cont .video_box_c ul.belt_v li{ width:122px; float:left; margin-right:32px;}
+
+.video_play_h .related_video_cont .video_cont .video_box_c ul.belt_v li .video_img_box{ width:120px; float:left; position:relative;}
+.video_play_h .related_video_cont .video_cont .video_box_c ul.belt_v li .video_img_box img{ width:100%; box-shadow:-4px 4px 4px #999; border-radius:5px;}
+
+
+
+
+
+
+
+
+/*=============================ideaplex-ideators========================================*/
+#ideaplex-ideators {width: 810px;margin-top:15px; float:left;}
+#ideaplex-ideators h3 {font-size: 36px;color: #000;font-family: 'Yanone Kaffeesatz', sans-serif;letter-spacing: 4px;font-weight: 400}
+#ideaplex-ideators h5 {font-size: 14px;color: #7c7c7c;font-family: 'Oxygen', sans-serif;font-weight: bold;letter-spacing: 1px;margin-top: 20px;}
+#ideaplex-ideators .alphabet-menu {margin-top:20px}
+#ideaplex-ideators .alphabet-menu ul{margin:0; padding:0;}
+#ideaplex-ideators .alphabet-menu ul li{ list-style:none; float:left; margin-right:6px;}
+#ideaplex-ideators .alphabet-menu ul li a{ background:url(http://media2.intoday.in/ideaplex/alpha_bg.png) no-repeat; width:25px; height:25px; line-height:25px; text-align:center;
+color:#aaaaaa; font-size:14px; font-weight:bold;font-family: 'Oxygen', sans-serif; display:inline-block; text-decoration:none; text-transform:uppercase;}
+
+.alphabetical-search{margin-top: 30px;clear: both;}
+
+.alphabet-slide-container {background-color: #FFFFFF; height: 360px; position: relative; width:790px; top:50px;}
+.alpha-back {background: url(http://media2.intoday.in/ideaplex/Sprit.png) no-repeat -373px  -164px; cursor: pointer; float: left; height: 36px; opacity: 1; width: 18px; z-index: 999; margin-top: 75px; margin-left: 7px;}
+.alpha-next {background: url(http://media2.intoday.in/ideaplex/Sprit.png) no-repeat -397px  -164px; cursor: pointer; float: right; height: 36px; opacity: 1; width: 18px; z-index: 999; margin-top: 75px; margin-right: 10px;}
+
+.alphabet-slider {left: 12px;overflow: hidden;position: relative;top:15px;width:800px;height: 340px; padding-top:5px;}
+.alphabet-slider ul {margin: 0; position: relative;}
+.alphabet-slider ul li {float: left;height: 175px;list-style: none outside none;margin-right: 13px;position: relative;width: 120px; text-align:center;}
+.alphabet-slider ul li a{ color:#ccc; font-size:14px; text-decoration:none;}
+.alphabet-slider ul li a img {margin-bottom: 7px; border-radius:4px;-moz-box-shadow: 0px 0px 5px #000000;
+-webkit-box-shadow: 0px 0px 5px #000000;box-shadow: 0px 0px 5px #000000;}
+
+.alpha-back  {background:url(http://media2.intoday.in/ideaplex/Sprit.png) no-repeat -373px  -164px;cursor: pointer;float: left;height: 36px;opacity: 1;width: 18px;z-index: 999;margin-top: 75px;margin-left: -20px;}
+.alpha-next {background: url(http://media2.intoday.in/ideaplex/Sprit.png) no-repeat -397px  -164px;cursor: pointer;float: right;height: 36px;opacity: 1;width: 18px;z-index: 999;margin-top: 75px;margin-right: -40px;}
+.alpha-back:hover, .alpha-next:hover {opacity: 1;}
+
+.alphabet-down-slider{margin:50px auto 0; width:102px;}
+/*.alpha-top  {background:url(http://media2.intoday.in/ideaplex/Sprit.png) no-repeat -434px -176px;cursor: pointer;float: left;height: 13px;opacity: 1;width: 20px;z-index: 999;margin-right:8px; margin-top:3px;}
+.alpha-down {background: url(http://media2.intoday.in/ideaplex/Sprit.png) no-repeat -460px -176px;cursor: pointer;float: left;height: 13px;opacity: 1;width: 20px;z-index: 999; margin-top:3px; display:none;}
+.alpha-top:hover, .alpha-down:hover {opacity: 1;}*/
+.seemore{ float:left; font-size:14px; font-weight:bold; width:100px; padding-left:22px;}
+
+.themeplex-top{ top:20px;}
+.mediaplex-down-slider{margin-top:30px;}
+
+#ideaplex-themeplex {width: 810px;margin-top:15px; float:left;}
+#ideaplex-themeplex h3 {font-size: 36px;color: #000;font-family: 'Yanone Kaffeesatz', sans-serif;letter-spacing: 4px;font-weight: 400}
+#ideaplex-themeplex h5 {font-size: 14px;color: #7c7c7c;font-family: 'Oxygen', sans-serif;font-weight: bold;letter-spacing: 1px;margin-top: 20px;}
+#ideaplex-themeplex .theme-menu {margin-top:20px}
+
+#ideaplex-themeplex .theme-menu ul{margin:0; padding:0;}
+#ideaplex-themeplex .theme-menu ul li{ list-style:none; margin-right:28px; display:inline; text-align:center;}
+#ideaplex-themeplex .theme-menu ul li:last-child{margin-right:0;}
+#ideaplex-themeplex .theme-menu ul li a{text-align:center;color:#aaaaaa; font-size:14px; font-weight:bold;font-family: 'Oxygen', sans-serif; display:inline-block; text-decoration:none; text-transform:uppercase;}
+#ideaplex-themeplex .theme-menu ul li a strong{font-weight:normal; color:#181818; font-size:13px;}
+#ideaplex-themeplex .theme-menu ul li a.active{border-bottom:2px solid #181818; box-sizing:border-box; padding-bottom:5px;}
+
+.lead{ background:url(http://media2.intoday.in/ideaplex/TheMeplex_1.png) no-repeat center top; height:75px; line-height:113px; display:block;}
+.money{ background:url(http://media2.intoday.in/ideaplex/TheMeplex_2.png) no-repeat center top; height:75px; line-height:113px; display:block;}
+.ideas{ background:url(http://media2.intoday.in/ideaplex/TheMeplex_3.png) no-repeat center top; height:75px; line-height:113px; display:block;}
+.codes{ background:url(http://media2.intoday.in/ideaplex/TheMeplex_4.png) no-repeat center top; height:75px; line-height:113px; display:block;}
+.world{ background:url(http://media2.intoday.in/ideaplex/TheMeplex_5.png) no-repeat center top; height:75px; line-height:113px; display:block;}
+.smile{ background:url(http://media2.intoday.in/ideaplex/TheMeplex_6.png) no-repeat center top; height:75px; line-height:113px; display:block;}
+
+#themeplex2,#themeplex3,#themeplex4,#themeplex5,#themeplex6{display:none;}
+
+
+#nav ul, li {margin: 0; padding: 0;}
+.lava-lamp-menu{ background:url(http://media2.intoday.in/ideaplex/menu-top_bg.png); width:810px;}
+#blob {position: absolute; z-index: 1; top: 0; background:url(http://media2.intoday.in/ideaplex/lawalamp.png) no-repeat top center; width:67px; height:32px;}
+#nav {position: relative; float: left; top:20px; background: url(http://media2.intoday.in/ideaplex/menu-top_bg.png) 0 -6px;}
+#nav li {float: left; list-style: none;}
+#nav li a {color: #787878; z-index: 2; position: relative; cursor: pointer; float: left; font-size: 12px; font-weight:400; font-family: 'Oxygen', sans-serif; text-decoration: none; padding:13px 20px; width: 100%; display:inline-block;}
+#nav li a:hover{ color:#FFF;}
+#nav li#selected a{color:#FFF;}
+
+/******************Know US******************************/
+.know_us_container {width:810px; float:left;  padding: 57px 0 0;}
+.know_us_container .left_arr_h{width:34px; float:left;margin-top:40%;}
+.know_us_container .left_arr_h .left_arr_icon{ width:18px; height:45px; float:left; display:inline-block; background:url(http://media2.intoday.in/ideaplex/Sprit.png) -374px -164px no-repeat;  cursor:pointer}
+
+.know_us_container .right_arr_h{width:34px; float:left;margin-top:40%;}
+.know_us_container .right_arr_h .right_arr_icon{width:18px;height:45px; float:right; display:inline-block; background:url(http://media2.intoday.in/ideaplex/Sprit.png) -398px -164px no-repeat;  cursor:pointer}
+
+.know_us_h {width:742px; float:left; }
+.know_us_h .know_hd{ font-size:26px; text-transform:uppercase;  float:left;}
+.know_us_h .know_us_b_cont{ width:100%; float:left; margin-top:25px;}
+.know_us_h .know_us_b_cont .know_us_left{ width:104px; padding:5px; box-shadow:0 0 3px #ccc; float:left;}
+.know_us_h .know_us_b_cont .know_us_left img{ width:100%;}
+.know_us_h .know_us_b_cont .know_des{ width:600px; float:right; font-size:14px;}
+.know_us_h .know_us_b_cont .know_des p{ margin:0;padding:0; margin-bottom:20px; color:#959595;}
+
+
+.know_us_h .know_us_cont{ width:100%; float:left; }
+.know_us_h .know_us_cont .know_us_box{ width:732px;padding:5px; background:#fff; float:left; box-shadow:0 0 3px #ccc;}
+
+ul.hometab{display:none;}
+.ipad_social,.fpresented{display:none;}
+
+
+
+
+/******************************* IDEA sTORE CSS NEW **********************/
+.ideastore_h .see_more_h .see_less, .search_result_cont .see_more_h1 .see_less1 {  color: #b5b5b5; cursor: pointer; float: left;  height: 30px;	display:block;	opacity:0.3;    margin: 0 auto;    width: 20px;}
+.ideastore_h .see_more_h, .search_result_cont .see_more_h1 {float: none;    font-size: 14px;    margin: 0 auto;    width: 22%;}
+
+
+/****login and popup area****/
+
+.login_area{float:left; width:auto; padding-top:22px;}
+.login_area a{border:1px solid #f3f3f3; box-shadow:0 0 5px #e5e5e5; float:left; background:url(http://media2.intoday.in/ideaplex/login_icon.gif) no-repeat 85px 5px; padding:5px 0 5px 16px; font:bold 18px/26px "Oxygen"; color:#646263; width:116px;}
+
+#target-content {position: fixed; top: 0; right: 0; bottom: 0; left: 0; pointer-events: none; opacity: 0; -webkit-transition: opacity 200ms; transition: opacity 200ms; z-index:999999999;}
+#target-content:target {pointer-events: all;opacity: 1;}
+#target-content #target-inner {position: absolute; display: block; line-height: 1.8; width:258px; padding:10px 0 45px 23px; top: 50%; left: 50%; -webkit-transform: translateX(-50%) translateY(-50%); -ms-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%); box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2); background: white; color: #34495E;}
+#target-content #target-inner h2 { margin-top: 0; }
+#target-content #target-inner code { font-weight: bold; }
+#target-content a.close {content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: #fff; opacity: 0.9; -webkit-transition: opacity 200ms; transition: opacity 200ms;}
+#target-content a.close:hover { opacity: 0.9; }
+#target-inner ul{list-style:none; float:left; width:100%;}
+#target-inner ul li{width:auto; float:left;}
+#target-inner ul li a{background:url(http://media2.intoday.in/ideaplex/popup_social.jpg) no-repeat 0 0; width:230px; height:47px; float:left; margin-bottom:12px;}
+#target-inner ul li a.facebook{background-position:0 0;}
+#target-inner ul li a.twitter{background-position:0 -59px;}
+#target-inner ul li a.linkedin{background-position:0 -118px;}
+#target-inner a.closebtn{background:url(http://media2.intoday.in/ideaplex/pop_close.png) no-repeat 0 0; width:28px; height:27px; float:right; position:relative; top:-20px; left:8px;}
+
+
+.ps_area{float:left; position:absolute; right:42%; top:56px; z-index:99999999;}
+a.ps{float:left; width:48px; height:39px; background-color:#bfbbbc; border-radius:48px; font:24px/28px "Oxygen"; color:#fff; display:block; padding-top:9px; text-align:center; z-index:99999;}
+
+ul.pspop{position:absolute; top:48px; left:-76px; list-style:none; background-color:#fff; box-shadow:0 0 5px #f0f0f0; width:104px; padding:7px 0 0 6px;}
+ul.pspop li{width:auto; float:left; padding-bottom:9px;}
+ul.pspop li a{background:url(http://media2.intoday.in/ideaplex/ps_icon.jpg) no-repeat 0 0; padding-left:30px; font:15px/24px "Oxygen"; color:#ababab;}
+ul.pspop li a.mypage{background-position:0 0; padding-bottom:4px;}
+ul.pspop li a.logout{background-position:0px -34px;}
+
+.pagination{float:left; width:100%; text-align:center; padding-top:25px;}
+.pagination ul{list-style:none; width:auto;}
+.pagination ul li{width:auto; display:inline; padding-left:10px;}
+.pagination ul li a{font:bold 16px/20px "Oxygen"; color:#909090;}
+
+
+
+
+
+.related_videos_v{float:left; width:94%; padding:25px 3% 0 3%; position:relative;}
+.related_videos_v .realate_videos_slider_v{ width:770px; overflow:hidden; height:150px;}
+
+.related_videos_v ul{position:relative; width:100%; float:left; list-style:none;}
+.related_videos_v ul li{width:auto; float:left; padding:10px; margin-right:14px; position:relative;}
+.related_videos_v ul li:last-child{margin-right:0;}
+.related_videos_v ul li img{border-radius:3px; box-shadow:1px 4px 10px #9b9b9b;}
+
+.related_videos_v .prev_v{background-position:-374px -164px; width:18px; height:36px; position:absolute; top:62%; left:0; cursor:pointer; text-indent:-9999px;}
+.related_videos_v .next_v{background-position:-397px -164px; width:18px; height:36px; position:absolute; top:62%; right:0; cursor:pointer; text-indent:-9999px;}
+
+
+/************************ Tooltip css **********************/
+.tooltip-popup-v{font-family:Oxygen; position:absolute; width:245px; bottom:0px; right:70%; background:rgba(255, 255, 255, 0.9); padding:10px; border-radius:10px; box-shadow:1px 1px 3px 0 rgba(0, 0, 0 , 0.5) ; opacity:0; z-index:-1;
+-webkit-transition:opacity 0.1s ease-in-out, right 0.1s ease-in-out;
+	-moz-transition:opacity 0.1s ease-in-out, right 0.1s ease-in-out;
+	-o-transition:opacity 0.1s ease-in-out, right 0.1s ease-in-out;
+	-ms-transition:opacity 0.1s ease-in-out, right 0.1s ease-in-out;
+	transition: opacity 0.1s ease-in-out, right 0.1s ease-in-out;
+
+}
+.tooltip-popup-v.tooltip-active-v{ right:100%; opacity:1; z-index:10;  -webkit-transition:opacity 0.3s ease-in-out;
+	-webkit-transition:opacity 0.4s ease-in-out, right 0.4s ease-in-out;
+	-moz-transition:opacity 0.4s ease-in-out, right 0.4s ease-in-out;
+	-o-transition:opacity 0.4s ease-in-out, right 0.4s ease-in-out;
+	-ms-transition:opacity 0.4s ease-in-out, right 0.4s ease-in-out;
+	transition: opacity 0.4s ease-in-out, right 0.4s ease-in-out;
+	
+	}
+.tooltip-popup-v .tooltip-container-v{ position:relative;}
+.tooltip-popup-v .close-popup-v{ color:#999999; position:absolute; right:0px; margin-right:5px; cursor:pointer;}
+.tooltip-popup-v h4{ font-size:16px; color:#111; text-transform:uppercase;} 
+.tooltip-popup-v h6{ font-size:14px; color:#666666;}
+.tooltip-popup-v p{ font-size:13px; color:#999999;}
+.tooltip-popup-v .popnav-v { margin-top:5px;}
+.tooltip-popup-v .popnav-v ul li{ list-style:none; width:auto; display:inline-block; font-size:11px; color:#999999; border-right:1px solid #ccc; line-height:18px; float:left; padding:0 5px; height:auto}
+.tooltip-popup-v .popnav-v ul li span.popup-videoicon{ width:18px; height:18px; display:block; background-position:-259px -242px; float:left; margin-right:5px; }
+.tooltip-popup-v .popnav-v ul li span.popup-watch{ width:18px; height:18px; display:block; background-position:-297px  -242px; float:left;}
+.tooltip-popup-v .popnav-v ul li span.popup-share{ width:18px; height:18px; display:block; background-position:-336px -242px; float:left;}
+.tooltip-popup-v .popnav-v ul li a{ font-size:11px; color:#999999; text-decoration:none;}
+
+
+
+.tooltip-popup-v:after, .tooltip-popup-v:before { left: 100%; top: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; } 
+.tooltip-popup-v:after { border-color: rgba(136, 183, 213, 0);  border-width: 30px; margin-top: -30px; } 
+.tooltip-popup-v:before { border-color: rgba(194, 225, 245, 0); border-left-color:rgba(255, 255, 255, 0.9); border-width: 27px; margin-top: -6px;  }
+
+
+.inner-videopage {
+  position: absolute;
+  top:50px;
+  right: 20px;
+  width: 110px;
+ 
+}
+.video_area .top_video_icon ul li .inner-videopage a{ background:none;}
+.video_red_tooltip .inner-videopage a.share{ background:none !important;}
+
+
+
+
+
+
+
+
+

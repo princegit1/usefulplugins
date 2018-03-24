@@ -1,0 +1,292 @@
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation:portrait){
+
+.wrapper{width:100%; padding:0 0.5%;}
+.ipadnav{display:block; background-color:#fff; position:relative; left:84%; top:-2%;}
+#header .head_search input.searchbtn{border-radius:41px; border:1px solid #e8e8e8; background-position:6px 1px; background-color:#fff; padding:10px; position:relative; z-index:99999; width:45px; height:45px;}
+#header{min-height:95px;}
+#header .head_search{margin-top:17px; margin-right:7px;}
+.hid,.logo,#left_container .social,#left_container .presented{display:none;}
+#body_container{position:relative; width:100%;}
+#left_container{position:relative; right:0; width:100%; padding:0; margin-top:-10.6%;}
+#left_container .nav{display:none; width:100%; z-index:9999999; position:absolute; top:79px;}
+#left_container .nav ul li{width:100%;  background-color:#fcfcfc;}
+#left_container .nav ul li a{width:97%;}
+.ipadlogo{display:block; margin-top:5px; float:left;}
+
+#right_container{width:100%; min-height:740px;}
+#cat-grid{width:auto;}
+
+.fpresented{float:left; width:auto; padding:54px 0 0 16px;}
+#left_container .presented strong{font:300 13px/16px "Oxygen"; display:block; padding:0 0 6px 4px; color:#acacac;}
+#left_container .presented span.indiatoday{background-position:-165px -341px; width:77px; height:73px; display:inline-block;}
+
+.fpresented{float:right; width:auto; display:block; padding:0; margin-right:20px;}
+#footer p{float:left; padding:10px 0 0 13%;}
+ul.ipad_social{list-style:none; width:28%; display:block; margin:0 auto;}
+ul.ipad_social li{width:auto; float:left; background:url(../images/ipad_social_sep.jpg) no-repeat right 0; padding:0 5px 0 6px;}
+ul.ipad_social li:last-child{background:none;}
+ul.ipad_social li a{width:40px; height:40px; display:inline-block; background-image:url(http://media2.intoday.in/ideaplex/Sprit.png);}
+ul.ipad_social li a.facebook{background-position:-26px -24px;}
+ul.ipad_social li a.rss{background-position:-94px -24px;}
+ul.ipad_social li a.in{background-position:-26px -98px; margin-top:4px;}
+ul.ipad_social li a.twitter{background-position:-94px -98px; margin-top:4px;}
+#footer{margin-top:16px;}
+
+.ideastore_h{width:100%;}
+.ideastore_h .idea_store_cont .right_arr,.ideastore_h .idea_store_cont .left_arr{margin-top:0; display:none;}
+.ideastore_h .idea_hd,.ideastore_h .idea_des{padding:0; width:100%;}
+h2{display:block; text-align:center;}
+.know_us_container,.know_us_h,.alphabet-slider{width:100%;}
+.alphabet-slider ul li{margin-right:26px;}
+.alpha-back,.alpha-next,.left_arr_h,.right_arr_h{display:none;}
+
+.know_us_h .know_hd,.search_results_h .idea_hd{width:100%;}
+.know_us_h .know_us_cont .know_us_box{width:98%;}
+.know_us_h .know_us_cont .know_us_box img{width:100%; height:100%;}
+
+.search_results_h .search_result_cont .idea_box_cont,.search_results_h{width:100%;}
+.search_results_h .search_result_cont .idea_box_cont ul li{width:244px; margin:0 0 25px 0;}
+.search_results_h .search_result_cont .idea_box_cont ul li .idea_box_inner_cont .idea_hds{margin-bottom:0;}
+#ideaplex-themeplex{width:100%;}
+#ideaplex-themeplex .theme-menu ul li{margin-right:13px;}
+.related_videos .realate_videos_slider{width:100%;}
+.related_videos{width:83%; position:relative; left:5%;}
+.related_videos h3{position:relative; left:-10%;}
+.video_play_h .video_play_cont .video_box{width:98%;}
+.video_play_h .video_play_cont .video_box img{width:100%; height:100%;}
+.video_play_h{width:100%;}
+.video_play_h .idea_hd,.contact .cont_box #map-canvas{width:100%;}
+#ideaplex-ideators .alphabet-menu ul li{margin-right:3px;}
+.alphabet-slide-container,#ideaplex-ideators{width:100%;}
+#cat-grid h2{font-size:16px;}
+
+.all_ideas ul li .comment{ margin-right:10px;}
+
+.login_area{display:none; padding-top:33px;}
+
+.ps_area{float:left; right:130px; top:17px; z-index:99999999;}
+
+
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 640px) {
+
+#header .logo { display:none;}
+.ipadlogo{ display:inline-block; width:144px; padding-left:8px; padding-top:8px; float:left;}
+.ipadlogo img{ width:100%; float:left;}
+
+.ipadnav{background-color: #fff; display: block; right:20px;  position: absolute; top:10px;}
+#left_container .nav{display:none; width:100%; z-index:9999999; position:absolute; top:70px;}
+#left_container .nav ul li{width:100%;  background-color:#fcfcfc;}
+#left_container .nav ul li a{width:97%;}
+
+#right_container{width:100%; min-height:550px; margin-bottom:10%;}
+
+#header .head_search input.searchbtn {background-color: #fff;background-position: 6px 1px; border: 1px solid #e8e8e8; border-radius: 41px; height: 45px;padding: 10px;    width: 45px; z-index: 99999;/*position: absolute; left:0; top:10px;*/}
+#header {min-height: 68px;}
+.nav,.social,.presented{ display:none;}
+.wrapper{width:98%; padding:0 1%;}
+.belt { width:80%; margin-left:20px; overflow:hidden}
+#body_container{ width:100% !important;}
+#left_container{ padding:0;}
+#left_container .nav{width:97%;}
+
+#right_container { width:100%;}
+ul.ipad_social{list-style:none; width:67%; display:block; margin:0 auto;}
+ul.ipad_social li{width:auto; float:left; background:url(../images/ipad_social_sep.jpg) no-repeat right 0; padding:0 5px 0 6px;}
+ul.ipad_social li:last-child{background:none;}
+ul.ipad_social li a{width:40px; height:40px; display:inline-block; background-image:url(http://media2.intoday.in/ideaplex/Sprit.png);}
+ul.ipad_social li a.facebook{background-position:-26px -24px;}
+ul.ipad_social li a.rss{background-position:-94px -24px;}
+ul.ipad_social li a.in{background-position:-26px -98px; margin-top:4px;}
+ul.ipad_social li a.twitter{background-position:-94px -98px; margin-top:4px;}
+
+/***************Know Us*************/
+.know_us_container{ width:100%; padding:0;}
+.know_us_container .left_arr_h{ display:none;}
+.know_us_container .right_arr_h{ display:none;}
+.know_us_container .know_us_h{ margin-top:32px;}
+
+.fpresented, ul.ipad_social{display:block;}
+#footer p{float:left; padding:10px 0 0 0; width:81%; line-height:16px; text-align:left;}
+
+/****ideastore*****/
+.ideastore_h .idea_store_cont .left_arr,.right_arr{display:none;}
+.ideastore_h .idea_des,.ideastore_h .idea_hd{padding-left:0; padding-right:0;}
+.ideastore_h .idea_store_cont .idea_box_cont,.ideastore_h,.know_us_h{width:100%;}
+
+.know_us_h .know_us_cont .know_us_box{width:100%;}
+.know_us_h .know_us_cont .know_us_box img{width:100%; height:100%;}
+h2{font-size:28px; line-height:30px; padding-bottom:5px; text-align:center;}
+.know_us_h .know_us_b_cont .know_us_left{margin-right:15px;}
+.know_us_h .know_us_b_cont .know_des{float:none; width:auto;}
+#header .head_search{margin-top:0; float:left; position:absolute; top:-46px; right:28px; width:93%; height:42px;}
+#header .head_search input{ width:100%; padding:5px 10px; }
+#header .head_search input.hid{ display:none; position:absolute; top:115px;  }
+
+
+#header .head_search input.searchbtn{position:absolute; right:60px; top:60px; left:inherit; }
+#ideaplex-ideators{width:100%;}
+.alphabet-slide-container{width:94%;}
+.alphabet-slider{width:94%; padding:0 2%}
+
+.video_area .main_video{width:100%;}
+.main_video iframe{width:100% !important;}
+.video_area .video_bot_row .video_left{padding-top:26px;}
+.related_videos .realate_videos_slider{width:97%; position:relative; left:-3%;}
+.related_videos ul{left:5%;}
+
+.ideastore_h .idea_des, .ideastore_h .idea_hd,.video_play_h{width:100%;}
+.video_play_h .video_play_cont .video_box{width:96%;}
+.contact .cont_box #map-canvas{width:100%;}
+#ideaplex-ideators .alphabet-menu ul li{margin-bottom:6px;}
+#ideaplex-ideators .alphabet-menu{margin-top:5px;}
+
+.video_play_h .idea_hd,.know_us_h .know_hd{width:100%;}
+
+.search_results_h,.search_results_h .idea_hd{width:100%;}
+.search_results_h .search_result_cont .idea_box_cont{width:100%;}
+.search_results_h .search_result_cont .idea_box_cont ul{left:10%;}
+
+#ideaplex-themeplex{width:100%;}
+#ideaplex-themeplex .theme-menu{position:relative; left:10%;}
+
+.video_area .video_bot_row .video_right{margin-right:36px; padding-bottom:10px;}
+.related_videos{padding-left:0; padding-right:0; width:100%;}
+
+.tooltip-popup{/*display:none;*/ right:0;}
+.video_box img{width:100%; height:100%;}
+
+.lava-lamp-menu{width:100%;}
+
+ul.hometab{display:block; width:98%; background-color:#f7f8fa; list-style:none; margin-top:15px; padding-left:2%; display:inline-block; text-align:center;}
+ul.hometab li{width:auto; padding-right:18px; display:inline;}
+ul.hometab li:last-child{padding-right:0;}
+ul.hometab li a{font:15px/20px "Oxygen"; color:#2c2d2f; padding:13px 13px; display:inline-block; border-top:3px solid #f7f8fa;}
+ul.hometab li a.active{ border-radius:8px 8px 0px 0px; color:#212121; background:#fff;}
+ul.hometab li:nth-child(1) a.active{ border-top:3px solid #f4b802;}
+ul.hometab li:nth-child(2) a.active{ border-top:3px solid #6ebb21;}
+ul.hometab li:nth-child(3) a.active{ border-top:3px solid #de117a;}
+
+#cat-grid{width:320px;}
+#ideate{position:absolute; top:-120px; left:0;}
+#debate{position:absolute; top:-120px; left:-72%;}
+#celebrate{position:absolute; top:-100px; left:-148%;}
+
+#ideate h2,#debate h2,#celebrate h2{display:none;}
+.tabcontent2{display:none;}
+.tabcontent3{display:none;}
+
+#ideate .tooltip-popup{ left:0% !important; width:157px;}
+#debate .tooltip-popup{left:0% !important; width:157px;}
+#celebrate .tooltip-popup{left:0% !important; width:157px;}
+
+
+#ideate .imgpos1 .tooltip-popup{ left:-78px !important; bottom:-43px;}
+
+#debate .imgpos8 .tooltip-popup, #celebrate .imgpos12 .tooltip-popup{ left:-78px !important;} #debate .imgpos10 .tooltip-popup{ left:-60px !important;} #celebrate .imgpos13 .tooltip-popup{left:-78px !important;}
+
+
+
+#ideate .tooltip-popup::before{ border-width:0px;}
+
+.ideastore_h .see_more_h, .search_result_cont .see_more_h1{ width:53%;}
+
+
+.tooltip-popup:after,.tooltip-popup:before{ left: -20%; top: 20%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; } 
+
+
+.tooltip-popup:after,.tooltip-popup:after{ left: 100%; top: 20%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; } 
+.tooltip-popup:after,.tooltip-popup:after { border-color: rgba(136, 183, 213, 0);  border-width: 0px; margin-top: -30px; } 
+.tooltip-popup:before,.tooltip-popup:before { border-color: rgba(194, 225, 245, 0); border-left-color:rgba(255, 255, 255, 0.9); border-width: 0px; margin-top: -6px;  }
+/********************************* Box Arrow right ******************************/
+.tooltip-popup:after,.tooltip-popup:after { left: -20%; top: 20%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; } 
+.tooltip-popup:after,.tooltip-popup:after { border-color: rgba(136, 183, 213, 0); border-width: 0px; margin-top: -30px; } 
+.tooltip-popup:before,.tooltip-popup:before { border-color: rgba(194, 225, 245, 0); border-right-color: rgba(255, 255, 255, 0.9); border-width: 0px; margin-top: -6px; }
+
+
+/*.tabcontent1,.tabcontent2,.tabcontent3{margin:0 auto; width:320px; position:relative !important;}*/
+
+
+
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 640px) and (orientation:landscape){
+.ipadnav{background-color: #fff; display: block; right:20px;  position: absolute; top:10px;}
+
+}
+@media only screen and (min-device-width : 320px){
+#header .head_search input.searchbtn{right:37px;}
+.ipadnav{right:10px;}
+}
+
+/**********************Scroller in mobile*********************/
+.left_arr_mb{display:none; }
+.right_arr_mb{ display:none;}
+@media only screen and (min-device-width : 320px) and (max-device-width : 640px) {
+.theme-menu{ left:0 !important; position:relative;}
+.left_arr_cont{width:20px; float:left; }
+.left_arr_mb{position:absolute;z-index:11;left:0; margin-top: 22px; cursor:pointer;display:block;width:20px; float:left; height:35px; background: url("http://media2.intoday.in/ideaplex/Sprit.png") no-repeat scroll -373px -164px rgba(0, 0, 0, 0); }
+.right_arr_mb{ position:absolute;z-index:11;right:0; top:22px;cursor:pointer;display:block;width:20px; float:right;  height:35px;background: url("http://media2.intoday.in/ideaplex/Sprit.png") no-repeat scroll -397px -164px rgba(0, 0, 0, 0);}
+#ideaplex-themeplex .theme-menu ul { position:relative; overflow:hidden; left:10px;}
+
+#ideaplex-themeplex .theme-menu ul li {display: inline; list-style: outside none none;margin-right: 16px;  text-align: center;}
+.thmplx{}
+.themplex_cont_hh{ width:240px; float:left; position:relative; }
+
+.related_videos ul li {float: left; margin-right: 12px;padding: 10px;position: relative; width: auto;}
+.video_play_h .video_play_cont {margin-left: 5px;width: 95%;}
+.video_play_h {  padding: 23px 0 0; }
+.related_videos h3{ padding-left:5px;}
+.know_us_h .know_us_cont {  margin-left: 0;width:100%;}
+#ideaplex-ideators{ margin-top:23px;}
+#ideaplex-ideators { padding-left: 5px;width: 96%;}
+.alphabet-slide-container {width: 100%;}
+.ideastore_h {float: left;padding: 23px 0 0;width: 810px;}
+.ideastore_h .idea_store_cont .idea_box_cont, .ideastore_h, .know_us_h {padding-left: 5px;width: 95%;}
+.contact {float: left;padding: 23px 0 0 4px;width: 98%;}
+.all_ideas {float: left;padding: 23px 0 0 5px;width: 96%;}
+.all_ideas ul li { margin-bottom: 10px;}
+.alphabet-slider ul li:nth-child(odd){margin-right:9%;}
+.alphabet-slider ul li:nth-child(even){margin-right:0;}
+.alphabet-slider { 
+    left: 0;
+    margin: 0 auto;
+    top: 0;
+	padding: 0 6%;
+    width: 88%;
+	}
+.ideastore_h .idea_store_cont .idea_box_cont ul li { width:100%}
+.ideastore_h .idea_store_cont .idea_box_cont .idea_img_left {  margin-right: 5%; width: 30%;}	
+.ideastore_h .idea_store_cont .idea_box_cont .idea_img_cont { width: 65%;}
+.alphabet-slider ul li:nth-child(odd) .tooltip-popup.tooltip-active { bottom: 25%;  left: 0;}
+.alphabet-slider ul li:nth-child(even) .tooltip-popup.tooltip-active { bottom: 25%;  right: 0;}
+.alphabet-slider { padding-top:30px;}
+.alphabet-slider #ideate { top:0}
+
+.login_area{display:none; padding-top:33px;}
+.ps_area{top:14px; right:114px;}
+
+
+}
+
+@media only screen and (min-device-width : 480px) and (max-device-width : 640px) {
+.alphabet-slider ul li:nth-child(odd){margin-right:20%;}
+.alphabet-slider {  width: 67%;}
+}
+
+/**********************Scroller in mobile*********************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
