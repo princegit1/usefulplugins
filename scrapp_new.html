@@ -1,0 +1,1027 @@
+<!doctype>
+<html ng-app="scrcard">
+<head>
+    <title>Score Card</title>
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <style>
+        body {
+ 
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+            font-family: 'Varela Round', sans-serif;
+            font-size: 14px
+        }
+        *, :after, :before {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        .live_details,
+        .matchscore,
+        li strong.light {
+            font-size: 12px
+        }
+        
+        .ng-cloak {
+            display: none
+        }
+        
+        .scr_live_mob li,
+        li strong.light {
+            line-height: 23px
+        }
+        
+        .scndone,
+        .scr_live_mob,
+        .scr_live_mob .vs {
+            text-align: center
+        }
+        
+        .dot_red,
+        .live-score h3,
+        .scr_live_mob,
+        ul.scr_live_mob li {
+            display: inline-block
+        }
+        
+        ul.scr_live_mob li.batting strong.light {
+            color: #000
+        }
+        
+        ul.scr_live_mob li strong.light {
+            color: #6d6d6d
+        }
+        
+        .scorecard-box,
+        .scorecard-box .scorecard-inner {
+            max-width: 100%;
+            overflow: hidden;
+            position: relative
+        }
+        
+        .score-wrapper {
+            position: relative;
+            cursor: pointer;
+            height: 0
+        }
+        
+        .live-score {
+            position: relative;
+            background: #ccc
+        }
+        
+        .live-score h3 {
+            background: #000;
+            color: #ffe240;
+            text-transform: uppercase;
+            padding: 4px 5px 2px;
+            margin: 0;
+            position: relative;
+            z-index: 9999
+        }
+        
+        #live-score-mob,
+        .live-score-mob,
+        .live_text {
+            background: #e4e4e4
+        }
+        
+        .live_details {
+            margin-left: 12px;
+            vertical-align: text-top;
+            font-weight: 700;
+            font-size: 11px;
+        }
+        
+        .scr_live_mob {
+            list-style: none;
+            margin: 5px 0;
+            padding: 3px;
+            width: 100%
+        }
+        
+        .scr_live_mob .vs {
+            font-size: 12px;
+            color: #d40023;
+            font-weight: 700
+        }
+        
+        .lvtvscrore {}
+        
+        .slide_show {
+            visibility: visible;
+            animation: fadeIn 1.5s;
+            -webkit-transition: all 1s ease-out;
+            transition: all 1s ease-out;
+            transform: rotateX(-180deg);
+            -webkit-transform: rotateX(-180deg)
+        }
+        
+        #live-score-mob,
+        .slide_show {
+            width: 100%
+        }
+        
+        #live-score-mob {
+            top: 0;
+            cursor: pointer;
+            position: absolute;
+            z-index: 0;
+            height: 60px;
+            perspective: 60px
+        }
+        
+        .slide_hide {
+            visibility: hidden
+        }
+        
+        .slide_show {
+            background: #f2f2f2;
+            position: absolute;
+            z-index: 1;
+            height: 100%
+        }
+        
+        ul.scr_live_mob li.vs {
+            width: 8%
+        }
+        
+        ul.scr_live_mob li {
+            vertical-align: top;
+            width: 45%;
+            box-sizing: border-box;
+            float: left
+        }
+        
+        .live_text {
+            background: #d40025;
+            width: 100%;
+            padding: 0;
+            color: #fff
+        }
+        
+        .live_text .live_txt {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 15px
+        }
+        
+        @-webkit-keyframes fadeIn {
+            0%,
+            20% {
+                opacity: .5
+            }
+            40% {
+                opacity: .6
+            }
+            60% {
+                opacity: .7
+            }
+            80% {
+                opacity: .8
+            }
+            100% {
+                opacity: 1
+            }
+        }
+        
+        @keyframes fadeIn {
+            0%,
+            20% {
+                opacity: .5
+            }
+            40% {
+                opacity: .6
+            }
+            60% {
+                opacity: .7
+            }
+            80% {
+                opacity: .8
+            }
+            100% {
+                opacity: 1
+            }
+        }
+        
+        .scndone img {
+            margin-right: 4px;
+            vertical-align: middle
+        }
+        
+        .noanimation .slide_show {
+            -webkit-animation: none!important;
+            -moz-animation: none!important;
+            -o-animation: none!important;
+            -ms-animation: none!important;
+            animation: none!important
+        }
+        
+        .scoreexpand {
+            padding: 6px 8px
+        }
+        
+        .scoreexpand span {
+            display: inline-block;
+            width: 50%;
+        }
+        
+        .scoreexpand .scrtext {
+            font-weight: 400;
+            color: #888888
+        }
+        
+        .expndicon {
+            text-align: right
+        }
+        
+        .expndicon i {
+            border: 1px solid black;
+            border-width: 0 1px 1px 0;
+            display: inline-block;
+            padding: 5px;
+        }
+        
+        .expndicon .down {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+        
+        .scrcardshow {
+            padding: 0px 10px;
+            cursor:pointer;
+        }
+        
+        .scrcardshow img {
+            width: 55px;
+            height: 33px;
+            vertical-align: middle;
+            margin-right: 8px;
+            border-radius:5px;
+        }
+        
+        .scrcarleft {
+            position: relative;
+            margin-top:10px
+        }
+        
+        .scrupd {
+            white-space: pre-line;
+            position: absolute;
+            right: 8px;
+            top: 0px;
+            text-align: right;
+            font-weight: bold;
+        }
+        
+        .scrover {
+            display: block;
+            font-weight: 400
+        }
+        
+        .fullscr {
+            padding: 4px 10px;
+            border-bottom: 1px solid #a19e9e82;
+            margin-bottom: 17px;
+            cursor: pointer
+        }
+        
+        .mtchstat {
+            background: #4CAF50;
+            color: #fff;
+            padding: 1px 7px;
+        }
+        
+        .tourname {
+            margin-left: 10px;
+        }
+        
+        .scrmatchde {
+            list-style-type: none;
+            margin: 12px 0px 1px;
+            padding: 0px;
+            width: 100%;
+        }
+        
+        .scrmatchde li {
+            display: inline-block;
+            width: 48%
+        }
+        
+        .scrmatchde li:last-child img {
+            margin-right: 0px;
+            margin-left: 8px
+        }
+        
+        .scrmatchde li img {
+            width: 75px;
+            height: 50px;
+            vertical-align: middle;
+            margin-right: 8px
+        }
+        
+        .scrmatchde li:last-child {
+            text-align: right
+        }
+        
+        .scrcarup {
+            display: block;
+            margin-top: 10px
+        }
+        
+        .scrbold {
+            font-weight: 600
+        }
+        
+        .bldcl {
+            font-weight: bold;
+            margin: 9px 0px 14px;
+            display: block
+        }
+        
+        .scndone .scrbold {
+            float: right;
+            margin-left: 6px
+        }
+        .recent_match{
+          background:#efefef;  
+            padding: 10px;
+        }
+        .rec_tit{
+    margin-bottom: 10px;
+    display: block;
+    width: 87%;
+        }
+        .scr_recent{
+         width:100%;   
+        }
+        .scr_recent .recent_teama,.scr_recent .recent_teamb{
+          display: inline-block;
+          width:48.9%;   
+          position: relative;
+                vertical-align: text-top;
+        }
+        .scr_recent .recent_teamb{
+          text-align: right   
+        }
+        .team_recent{
+          font-size: 203%;
+          font-weight: bold;
+            vertical-align: top;
+        }
+        .scr_rec .scrbold{
+            color:#000
+        }
+        .scr_rec{
+            color:#878787;
+          text-align: center;
+           display: inline-block;
+        }
+        .recent_teama .scr_rec{
+            margin-left:14px
+        }
+        .recent_teamb .scr_rec{
+            margin-right:14px
+        }
+        .recent_teama .team_sepa, .recent_teamb .team_sepa{
+            border-right: 1px solid #c2c0c0;
+            height: 92%;
+            position: absolute                       
+        }
+       .recent_teama .team_sepa{
+           margin-left: 8px; 
+        }
+               .recent_teamb .team_sepa{
+           margin-left: -4px; 
+        }
+        .recetn_nam{
+              position: absolute;
+    right: 5px;
+    top: 9px;
+    background: #c40029;
+    color: #fff;
+    font-size: 11px;
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 3px; 
+        }
+        .scr_recent:before{
+            position: absolute;
+            left: 47%;
+            transform: translate(0,0px);
+            margin-top: 0px;
+            color: #fff;
+            content: "";
+            background: url(https://smedia2.intoday.in/images/matchcenter/VS.png) no-repeat;
+            font-size: 12px;
+            width: 32px;
+            height: 32px;
+            padding: 1px;
+            border-radius: 12px;
+            z-index: 990;
+        }
+        .scr_recent:after{
+/*
+    content: "";
+    border-right: 1px solid #aeaeae;
+    position: absolute;
+    left: 50%;
+    transform: translate(0,0px) rotate(19deg);
+    height: 35px;
+             z-index:890;
+*/
+        }
+        .recent_test .recent_teamb .scr_rec{
+          text-align: right;   
+        }
+                .recent_test .recent_teama .scr_rec{
+          text-align: left;   
+        }
+        .tleft{
+            text-align: left
+        }
+        .tright{
+            text-align: right
+        }
+        .spnblk{display:inline-block;width:50%}
+        .upcomginmat{background:#D8D8D8;width:100%;position: relative}
+        .upcomwrapp{padding: 10px 18px}
+        .stattxt{font-size: 19px;font-weight: bold;vertical-align: middle}
+        .upcomdtal{white-space: nowrap}
+        .blkleft,.blkright{display: inline-block;white-space: normal}
+        .blkleft{width:40%;vertical-align: text-bottom}.blkright{width:60%;text-align: right}
+        .teamup{font-size: 203%;font-weight: bold}
+        .teamupvs{width:32px;height:32px;background: url(https://smedia2.intoday.in/images/matchcenter/VS.png) no-repeat;display: inline-block;vertical-align: top}
+        .teamaup{margin-right: 10px}
+        .teambup{margin-left: 10px}
+        .match_dtalup{margin-bottom: 6px}
+        .togo{color: #848484;font-size: 15px;font-weight: bold}
+    </style>
+    <script src="https://smedia2.intoday.in/indiatoday_wap/1.1/resources/js/angular.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-sanitize.js"></script>
+</head>
+
+<body ng-controller="cardCntrl" class='ng-cloak'>
+    <!-- new design -->
+    <!--<div class="scrcardfrst" ng-show="!showBigsc">-->
+    <div class="scrcardfrst">
+        <div class="scrcardshow" ng-repeat="scr in scrdata.match | filter: teamParam | limitTo:1" ng-click="scoreBoard(scr.matchfile)">
+            <div class="scrcar" ng-if="getBatTeam(scr.teama_Id,0,scr.current_batting_team,scr.upcoming,scr.live)">
+                <div class="scrcarleft">
+                    <img ng-src="https://smedia2.intoday.in/indiatoday_wap/1.1/resources/images/flag_img_b/{{scr.teama_Id}}.png" alt="" />{{scr.teama}} <span class="scrupd" id="scrupd" ng-bind-html="matchScoreUpdateu(scr,1)"></span>
+                </div>
+            </div>
+            <div class="scrcar" ng-if="getBatTeam(0,scr.teamb_Id,scr.current_batting_team,scr.upcoming,scr.live)">
+                <div class="scrcarleft">
+                    <img ng-src="https://smedia2.intoday.in/indiatoday_wap/1.1/resources/images/flag_img_b/{{scr.teamb_Id}}.png" alt="" />
+                    {{scr.teamb}}
+                    <span class="scrupd" id="scrupd" ng-bind-html="matchScoreUpdateu(scr,0)"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--    {{recentchck()}}-->
+    <div class="scrcardfrst" ng-if="recentchck()">
+        <div class="scrcardshow_rec recent_test" ng-if="count == 0 && scr.matchtype=='Test'" ng-repeat="scr in scrdata.match | limitTo:1" ng-click="scoreBoard(scr.matchfile)">
+           <span class="recetn_nam">RECENT</span>
+            <div class="recent_match">
+                <span class="rec_tit">{{scr.matchnumber}}: <strong>{{scr.matchresult}}</strong></span>
+                <div class="scr_recent">
+                   <div class="recent_teama">
+                     <span class="team_recent">{{scr.teama_short}}</span><span class="team_sepa"></span>
+                    <span class="scr_rec" ng-bind-html="matchScoreUpdaterecenttest(scr,1)"></span>
+                   </div>
+                   <div class="recent_teamb">
+                    <span class="scr_rec" ng-bind-html="matchScoreUpdaterecenttest(scr,0)"></span><span class="team_sepa"></span>
+                    <span class="team_recent">{{scr.teamb_short}}</span>
+                   </div>                    
+                </div>
+            </div>
+        </div>
+         <div class="scrcardshow_rec" ng-if="count == 0 && scr.matchtype=='ODI'" ng-repeat="scr in scrdata.match | limitTo:1" ng-click="scoreBoard(scr.matchfile)">
+           <span class="recetn_nam">RECENT</span>
+            <div class="recent_match">
+                <span class="rec_tit">{{scr.matchnumber}}: <strong>{{scr.matchresult}}</strong></span>
+                <div class="scr_recent">
+                   <div class="recent_teama">
+                     <span class="team_recent">{{scr.teama_short}}</span><span class="team_sepa"></span>
+                    <span class="scr_rec" ng-bind-html="matchScoreUpdaterecentodi(scr,1)"></span>
+                   </div>
+                   <div class="recent_teamb">
+                    <span class="scr_rec" ng-bind-html="matchScoreUpdaterecentodi(scr,0)"></span><span class="team_sepa"></span>
+                    <span class="team_recent">{{scr.teamb_short}}</span>
+                   </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="upcomginmat" ng-if="count==0 && !recentchck()">
+       <div class="upcomwrapp" ng-repeat="scr in scrdata.match | filter : {upcoming: '1'} | limitTo:1">
+         <div class="match_dtalup"><span class="tleft spnblk">{{scr.matchnumber}}</span><span class="tright spnblk"><span class="togo" ng-bind-html="timeLeft(scr.matchdate_ist,scr.matchtime_ist)"></span></span></div>
+             <div class="upcomdtal">
+                 <div class="blkleft">
+                 <span class="stattxt">Start at {{scr.matchtime_ist}}, <span ng-bind-html="datmntup(scr.matchdate_ist)"></span></span>
+                 </div>
+                 <div class="blkright">
+                   <span class="teamup teamaup">{{scr.teama_short}}</span><span class="teamupvs"></span><span class="teamup teambup">{{scr.teamb_short}}</span>
+                 </div>
+             </div>
+        </div>
+    </div>
+<!-- end of score card -->
+    <script type="text/javascript">
+        var scrcard = angular.module('scrcard', ['ngSanitize']);
+        scrcard.controller('cardCntrl', ['$scope', '$http', '$timeout', '$interval', '$window', function(s, h, t, i, w) {
+            /* device check */
+            var monthNames = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV","DEC"];
+            s.showBigsc = false;
+            s.checkDevice = function() {
+                var mobile = (/iphone|ipad|ipod|android|blackberry|bb10|wpdekstop|nokia|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+                if (mobile) {
+                    return true;
+                } else {
+                    return false
+                }
+            };
+            var getUrlParameter = function getUrlParameter(sParam) {
+                var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+                    sURLVariables = sPageURL.split('&'),
+                    sParameterName,i;
+
+                for (i = 0; i < sURLVariables.length; i++) {
+                    sParameterName = sURLVariables[i].split('=');
+
+                    if (sParameterName[0] === sParam) {
+                        return sParameterName[1] === undefined ? true : sParameterName[1].toUpperCase();
+                    }
+                }
+            };
+            s.teamparam = getUrlParameter('team');
+            s.scrCardUrl = 'http://indiatoday.intoday.in/scorecard/matchcenter.jsp?matchid=';
+            if (s.checkDevice()) {
+                s.scrCardUrl = 'http://m.indiatoday.in/scorecard/matchcenter.jsp?matchid=';
+            }
+            s.teamParam = function(scr){
+                //console.log(scr.live === '1' || scr.teama_short === s.teamparam || scr.teamb_short === s.teamparam);
+                //console.log(scr.teama_short);
+                if(s.teamparam !== undefined){
+                    //console.log('if condition')
+                   return scr.live == '1' && (scr.teama_short == s.teamparam || scr.teamb_short == s.teamparam); 
+                }else{
+                    //console.log('else condition')
+                   return scr.live == '1' 
+                }                
+            }
+            s.cnt_slide = 0;
+            s.cnt_slide_flip = 0;
+            s.jsleng = [];
+            s.name = 'working';
+            s.ref_time = 3000;
+            s.jsonUrl = 'http://feeds.intoday.in/xml_it/commentary/live_match.json';
+            //s.jsonUrl = 'live_match.json';            
+            s.getData = function() {
+                t.cancel(0);
+                h.get(s.jsonUrl).then(function(response) {
+                    s.scrdata = response.data.calendar;
+                    s.liveLength = response.data.calendar.match;
+                    // s.count = 3;
+                    s.live = s.liveLength.filter(function(match) {
+                        return (match.live == "1");
+                    });
+                    s.count = s.live.length;
+                    s.recentchks = s.liveLength.filter(function(match) {
+                        if(match.recent == "yes"){
+                            s.recda = match.end_matchdate_ist;
+                            s.matct = match.end_matchtime_ist;
+                        }
+                    });
+                    //console.log(s.recentchck.length);
+                    //console.log('length of the live match' + s.count)
+                });
+            }
+            <!-- For Timeout -->
+            //           $ref_tim = t(function() {
+            //              s.getData();
+            //           }, s.ref_time);
+            <!-- For Interval -->
+            $ref_tim = i(function() {
+              s.getData();
+            }, s.ref_time * 10);
+            s.getData();
+            s.getBatTeam = function(teama_Id, teamb_Id, current_batting_team, upcoming, live) {
+                var batTrue = false;
+                if ((upcoming == '0' && live == '1') && teamb_Id == '0') {
+                    if (teama_Id == current_batting_team) {
+                        return batTrue = true;
+                    } else {
+                        return batTrue;
+                    }
+                } else if ((upcoming == '0' && live == '1') && teama_Id == '0') {
+                    if (teamb_Id == current_batting_team) {
+                        return batTrue = true;
+                    } else {
+                        return batTrue;
+                    }
+                }
+                return batTrue;
+            }
+            s.matchStatus = function(_matstatusL, _matstatusR, _matstatusU) {
+                var mStatus = "";
+                if (_matstatusL == '1') {
+                    mStatus = "Live";
+                } else if (_matstatusR == 'yes') {
+                    mStatus = "Recent";
+                } else if (_matstatusU == '1') {
+                    mStatus = "Upcoming";
+                } else {
+                    mStatus = "Upcoming";
+                }
+                return mStatus;
+            }
+            s.getMatchStatus = function(matchresult, matchstatus, equation) {
+                var _matSt = '';
+                if (matchresult != '') {
+                    _matSt = matchresult;
+                }
+                if (equation != '') {
+                    _matSt = equation;
+                } else {
+                    _matSt = matchstatus;
+                }
+                return _matSt;
+            }
+            s.recentchck = function(){
+               // console.log(s.recda+"-----------"+s.matct)
+                if(s.recda !== undefined && s.matct !== undefined){ 
+                        var resolved = s.recda+" "+s.matct;
+                        var times = (new Date(resolved)).getTime();
+                        var dayInMss = 24 * 60 * 60 * 1000;
+                    console.log(Date.now() - times);
+                        if (Date.now() - times > dayInMss) {
+                          return false
+                        } else {
+                          return true;
+                        }
+                }
+            }
+            s.timeLeft = function(ddt,ddm){
+                var dd = ddt.split("/");
+                var dm = ddm.split(":");
+                var etime = dd[2]+"/"+dd[0]+"/"+dd[1]+" "+dm[0]+":"+dm[1];
+                var today = new Date();var dats = today.getDate();var months = today.getMonth()+1;var years = today.getFullYear();
+                var stime = years+"/"+months+"/"+dats+" "+"00:00";
+                var startTime = new Date(stime); 
+                var endTime = new Date(etime);
+                var difference = endTime.getTime() - startTime.getTime(); // This will give difference in milliseconds
+                var resultInMinutes = Math.round(difference / 60000);
+                var htogo = Math.floor(resultInMinutes / 60);
+                var daystogo = Math.floor(resultInMinutes / (24*60))
+                if(htogo > 23){
+                    return (daystogo+" "+"Days to go");
+                }else{
+                    return (htogo+" "+"Hrs. to go");
+                }
+                
+            }
+            s.matchScoreUpdateu = function(matchData, a) {
+                var teamAscore = "";
+                var teamBscore = "";
+                if (matchData.inn_score_1) {
+                    var s = (matchData.inn_score_1).split("(");
+                    var t = s[1].split(" ov");
+                    s[0] = s[0].replace(/ /g, '')
+                    t[0] = t[0].replace(/ /g, '')
+                    s[0] = s[0].replace(/dec/g, 'd')
+                    if (matchData.teama_Id == matchData.inn_team_1)
+                        teamAscore = s[0] + "<span class='scrover'>" + t[0] + " OVERS" + "</span>";
+                    else
+                        teamBscore = s[0] + "<span class='scrover'>" + t[0] + " OVERS" + "</span>";
+
+                }
+                if (matchData.inn_score_2) {
+                    var s = (matchData.inn_score_2).split("(");
+                    var t = s[1].split(" ov");
+                    s[0] = s[0].replace(/ /g, '')
+                    t[0] = t[0].replace(/ /g, '')
+
+                    s[0] = s[0].replace(/dec/g, 'd')
+
+                    if (matchData.teamb_Id == matchData.inn_team_2)
+                        teamBscore = s[0] + "<span class='scrover'>" + t[0] + " OVERS" + "</span>";
+                    else
+                        teamAscore = s[0] + "<span class='scrover'>" + t[0] + " OVERS" + "</span>";
+
+                }
+                if (matchData.inn_score_3) {
+                    var s = (matchData.inn_score_3).split("(");
+                    var t = s[1].split(" ov");
+                    s[0] = s[0].replace(/ /g, '')
+                    t[0] = t[0].replace(/ /g, '')
+
+                    s[0] = s[0].replace(/dec/g, 'd')
+
+                    if (matchData.teama_Id == matchData.inn_team_3)
+                        teamAscore = s[0] + "<span class='scrover'>" + t[0] + " OVERS" + "</span>";
+                    else
+                        teamBscore = s[0] + "<span class='scrover'>" + t[0] + " OVERS" + "</span>";
+
+                }
+                if (matchData.inn_score_4) {
+                    var s = (matchData.inn_score_4).split("(");
+                    var t = s[1].split(" ov")
+                    s[0] = s[0].replace(/ /g, '')
+                    t[0] = t[0].replace(/ /g, '')
+                    s[0] = s[0].replace(/dec/g, 'd')
+                    if (matchData.teamb_Id == matchData.inn_team_4)
+                        teamBscore = s[0] + "<span class='scrover'>" + t[0] + " OVERS" + "</span>";
+                    else
+                        teamAscore = s[0] + "<span class='scrover'>" + t[0] + " OVERS" + "</span>";
+
+                }
+                if (a == 1) {
+                    //document.getElementById("scrupd").innerHTML = teamAscore;
+                    return teamAscore
+                } else {
+                    //document.getElementById("scrupd").innerHTML = teamBscore;
+                    return teamBscore
+                }
+            }
+           s.matchScoreUpdaterecent = function(matchData,a){
+            var teamAscore = "";
+            var teamBscore = "";
+            if (matchData.inn_score_1) {
+                var s = (matchData.inn_score_1).split("(");
+                var t = s[1].split(" ov");
+                s[0] = s[0].replace(/ /g, '')
+                t[0] = t[0].replace(/ /g, '')
+                s[0] = s[0].replace(/dec/g, 'd')
+                if (matchData.teama_Id == matchData.inn_team_1)
+                    teamAscore = s[0] + " (" + t[0] + ")";
+                else
+                    teamBscore = s[0] + " (" + t[0] + ")";
+
+            }
+            if (matchData.inn_score_2) {
+                var s = (matchData.inn_score_2).split("(");
+                var t = s[1].split(" ov");
+                s[0] = s[0].replace(/ /g, '')
+                t[0] = t[0].replace(/ /g, '')
+
+                s[0] = s[0].replace(/dec/g, 'd')
+
+                if (matchData.teamb_Id == matchData.inn_team_2)
+                    teamBscore = s[0] + " (" + t[0] + ")";
+                else
+                    teamAscore = s[0] + " (" + t[0] + ")";
+
+            }
+            if (matchData.inn_score_3) {
+                var s = (matchData.inn_score_3).split("(");
+                var t = s[1].split(" ov");
+                s[0] = s[0].replace(/ /g, '')
+                t[0] = t[0].replace(/ /g, '')
+
+                s[0] = s[0].replace(/dec/g, 'd')
+
+                if (matchData.teama_Id == matchData.inn_team_3)
+                    teamAscore = s[0] + " (" + t[0] + ")";
+                else
+                    teamBscore = s[0] + " (" + t[0] + ")";
+
+            }
+            if (matchData.inn_score_4) {
+                var s = (matchData.inn_score_4).split("(");
+                var t = s[1].split(" ov")
+                s[0] = s[0].replace(/ /g, '')
+                t[0] = t[0].replace(/ /g, '')
+                s[0] = s[0].replace(/dec/g, 'd')
+                if (matchData.teamb_Id == matchData.inn_team_4)
+                    teamBscore = s[0] + " (" + t[0] + ")";
+                else
+                    teamAscore = s[0] + " (" + t[0] + ")";
+
+            }
+            if(a == 1){
+                return teamAscore
+            }
+            else{
+                return teamBscore
+            }
+         }
+           s.matchScoreUpdaterecenttest = function(matchData,a){
+            var teamAscore = "";
+                var teamBscore = "";
+                if (matchData.inn_score_1) {
+                    var s = (matchData.inn_score_1).split("(");
+                    var t = s[1].split(" ov");
+                    s[0] = s[0].replace(/ /g, '')
+                    t[0] = t[0].replace(/ /g, '')
+                    s[0] = s[0].replace(/dec/g, 'd')
+                    if (matchData.teama_Id == matchData.inn_team_1)
+                        teamAscore += "<span class='scrbold'>" + s[0] + "</span><br/>";
+                    else
+                        teamBscore += "<span class='scrbold'>" + s[0] + "</span><br/>";
+
+                }
+                if (matchData.inn_score_2) {
+                    var s = (matchData.inn_score_2).split("(");
+                    var t = s[1].split(" ov");
+                    s[0] = s[0].replace(/ /g, '')
+                    t[0] = t[0].replace(/ /g, '')
+
+                    s[0] = s[0].replace(/dec/g, 'd')
+
+                    if (matchData.teamb_Id == matchData.inn_team_2)
+                        teamBscore += "<span class='scrbold'>" + s[0] + "</span><br/>";
+                    else
+                        teamAscore += "<span class='scrbold'>" + s[0] + "</span><br/>";
+
+                }
+                if (matchData.inn_score_3) {
+                    var s = (matchData.inn_score_3).split("(");
+                    var t = s[1].split(" ov");
+                    s[0] = s[0].replace(/ /g, '')
+                    t[0] = t[0].replace(/ /g, '')
+
+                    s[0] = s[0].replace(/dec/g, 'd')
+
+                    if (matchData.teama_Id == matchData.inn_team_3)
+                        teamAscore += "<span class='scrbold'>" + s[0] + "</span><br/>";
+                    else
+                        teamBscore += "<span class='scrbold'>" + s[0] + "</span><br/>";
+
+                }
+                if (matchData.inn_score_4) {
+                    var s = (matchData.inn_score_4).split("(");
+                    var t = s[1].split(" ov")
+                    s[0] = s[0].replace(/ /g, '')
+                    t[0] = t[0].replace(/ /g, '')
+                    s[0] = s[0].replace(/dec/g, 'd')
+                    if (matchData.teamb_Id == matchData.inn_team_4)
+                        teamBscore += "<span class='scrbold'>" + s[0] + "</span><br/>";
+                    else
+                        teamAscore += "<span class='scrbold'>" + s[0] + "</span><br/>";
+
+                }
+                if (a == 1) {
+                    return teamAscore
+                } else {
+                    return teamBscore
+                }
+         }
+           s.matchScoreUpdaterecentodi = function(matchData,a){
+            var teamAscore = "";
+                var teamBscore = "";
+                if (matchData.inn_score_1) {
+                    var s = (matchData.inn_score_1).split("(");
+                    var t = s[1].split(" ov");
+                    s[0] = s[0].replace(/ /g, '')
+                    t[0] = t[0].replace(/ /g, '')
+                    s[0] = s[0].replace(/dec/g, 'd')
+                    if (matchData.teama_Id == matchData.inn_team_1)
+                        teamAscore = "<span class='scrbold'>" + s[0] + "</span><br/>" + "(" + t[0] + ")";
+                    else
+                        teamBscore = "<span class='scrbold'>" + s[0] + "</span><br/>" + "(" + t[0] + ")";
+
+                }
+                if (matchData.inn_score_2) {
+                    var s = (matchData.inn_score_2).split("(");
+                    var t = s[1].split(" ov");
+                    s[0] = s[0].replace(/ /g, '')
+                    t[0] = t[0].replace(/ /g, '')
+
+                    s[0] = s[0].replace(/dec/g, 'd')
+
+                    if (matchData.teamb_Id == matchData.inn_team_2)
+                        teamBscore = "<span class='scrbold'>" + s[0] + "</span><br/>" + "(" + t[0] + ")";
+                    else
+                        teamAscore = "<span class='scrbold'>" + s[0] + "</span><br/>" + "(" + t[0] + ")";
+
+                }
+                if (matchData.inn_score_3) {
+                    var s = (matchData.inn_score_3).split("(");
+                    var t = s[1].split(" ov");
+                    s[0] = s[0].replace(/ /g, '')
+                    t[0] = t[0].replace(/ /g, '')
+
+                    s[0] = s[0].replace(/dec/g, 'd')
+
+                    if (matchData.teama_Id == matchData.inn_team_3)
+                        teamAscore = "<span class='scrbold'>" + s[0] + "</span><br/>" + "(" + t[0] + ")";
+                    else
+                        teamBscore = "<span class='scrbold'>" + s[0] + "</span><br/>" + "(" + t[0] + ")";
+
+                }
+                if (matchData.inn_score_4) {
+                    var s = (matchData.inn_score_4).split("(");
+                    var t = s[1].split(" ov")
+                    s[0] = s[0].replace(/ /g, '')
+                    t[0] = t[0].replace(/ /g, '')
+                    s[0] = s[0].replace(/dec/g, 'd')
+                    if (matchData.teamb_Id == matchData.inn_team_4)
+                        teamBscore = "<span class='scrbold'>" + s[0] + "</span><br/>" + "(" + t[0] + ")";
+                    else
+                        teamAscore = "<span class='scrbold'>" + s[0] + "</span><br/>" + "(" + t[0] + ")";
+
+                }
+                if (a == 1) {
+                    return teamAscore
+                } else {
+                    return teamBscore
+                }
+         }
+            s.matchScoreUpdate = function(matchData, a) {
+                var teamAscore = "";
+                var teamBscore = "";
+                if (matchData.inn_score_1) {
+                    var s = (matchData.inn_score_1).split("(");
+                    var t = s[1].split(" ov");
+                    s[0] = s[0].replace(/ /g, '')
+                    t[0] = t[0].replace(/ /g, '')
+                    s[0] = s[0].replace(/dec/g, 'd')
+                    if (matchData.teama_Id == matchData.inn_team_1)
+                        teamAscore = "<span class='scrbold'>" + s[0] + "</span>" + " (" + t[0] + ")";
+                    else
+                        teamBscore = "<span class='scrbold'>" + s[0] + "</span>" + " (" + t[0] + ")";
+
+                }
+                if (matchData.inn_score_2) {
+                    var s = (matchData.inn_score_2).split("(");
+                    var t = s[1].split(" ov");
+                    s[0] = s[0].replace(/ /g, '')
+                    t[0] = t[0].replace(/ /g, '')
+
+                    s[0] = s[0].replace(/dec/g, 'd')
+
+                    if (matchData.teamb_Id == matchData.inn_team_2)
+                        teamBscore = "<span class='scrbold'>" + s[0] + "</span>" + " (" + t[0] + ")";
+                    else
+                        teamAscore = "<span class='scrbold'>" + s[0] + "</span>" + " (" + t[0] + ")";
+
+                }
+                if (matchData.inn_score_3) {
+                    var s = (matchData.inn_score_3).split("(");
+                    var t = s[1].split(" ov");
+                    s[0] = s[0].replace(/ /g, '')
+                    t[0] = t[0].replace(/ /g, '')
+
+                    s[0] = s[0].replace(/dec/g, 'd')
+
+                    if (matchData.teama_Id == matchData.inn_team_3)
+                        teamAscore = "<span class='scrbold'>" + s[0] + "</span>" + " (" + t[0] + ")";
+                    else
+                        teamBscore = "<span class='scrbold'>" + s[0] + "</span>" + " (" + t[0] + ")";
+
+                }
+                if (matchData.inn_score_4) {
+                    var s = (matchData.inn_score_4).split("(");
+                    var t = s[1].split(" ov")
+                    s[0] = s[0].replace(/ /g, '')
+                    t[0] = t[0].replace(/ /g, '')
+                    s[0] = s[0].replace(/dec/g, 'd')
+                    if (matchData.teamb_Id == matchData.inn_team_4)
+                        teamBscore = "<span class='scrbold'>" + s[0] + "</span>" + " (" + t[0] + ")";
+                    else
+                        teamAscore = "<span class='scrbold'>" + s[0] + "</span>" + " (" + t[0] + ")";
+
+                }
+                if (a == 1) {
+                    return teamAscore
+                } else {
+                    return teamBscore
+                }
+            }
+            $ref_tim_slide = i(function() {
+                s.slideFunc();
+            }, 8000);
+
+            s.slideFunc = function() {
+                s.cnt_slide++;
+                if (s.cnt_slide > s.count - 1 && (s.cnt_slide = s.count - 1)) {
+                    s.cnt_slide = 0;
+                }
+            }
+            s.datmntup = function(dd){
+                //console.log(dd);
+                var ssd = dd.split("/");
+                return monthNames[ssd[0] - 1]+" "+ssd[1];
+            }
+            s.scoreBoard = function(matchFile) {
+                //alert(matchFile);
+                s.scrCardUrl = 'http://indiatoday.intoday.in/scorecard/matchcenter.jsp?matchid=' + matchFile;
+                if (s.checkDevice()) {
+                    s.scrCardUrl = 'http://m.indiatoday.in/scorecard/matchcenter.jsp?matchid=' + matchFile;
+                }
+                //console.log(s.scrCardUrl)
+                w.open(s.scrCardUrl, "_blank")
+            }
+            s.$on('$destroy', function() {
+                i.cancel($ref_tim);
+            });
+        }]);
+    </script>
+</body>
+</html>
