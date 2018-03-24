@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<html ng-app='routingDemoApp'>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/style.css">
+        <title>RoutingDemo App</title>
+    </head>
+    <body>
+  
+        <div ng-controller="AppCtrl">
+         <header ng-include="'includes/header.html'"></header>
+         </div>
+         
+        <div ng-view></div>
+        
+         <footer ng-include="'includes/footer.html'"></footer>
+    <!--scroll top function html-->
+    <div class="scroll_top_btn"><img src="images/scrollTopIcon.png" alt="" /></div>
+        
+        
+        
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular-route.min.js"></script>
+        <script>
+            var app = angular.module('routingDemoApp',['ngRoute'])
+			
+			
+			
+            app.config(['$routeProvider', function($routeProvider){
+                $routeProvider
+                .when("/", {
+								templateUrl : "templates/home.html",
+								controller: "homecontroller",
+								caseInsensitiveMatch : true
+							})
+                .when("/sports", {
+								templateUrl : "templates/sports.html",
+								controller: "homecontroller",
+								caseInsensitiveMatch : true
+							})
+                .otherwise({redirectTo:'/'});
+            }]);
+			
+			app.controller('AppCtrl', function($scope, $http){
+			$scope.class = "hidemenu";
+			$scope.class1 = "showbreakng";
+			
+			$http.get('menu.json').success(function(data, status){
+				$scope.navigation = data.menu;
+			}).error(function(data, status){
+				$scope.messages = data || "Request failed";
+	           $scope.status = status;
+			});
+			
+				$scope.showMenu = function(){
+					if ($scope.class === "hidemenu")
+					  $scope.class = "menushow";
+				}
+				
+				
+			$scope.hideMenu = function(){
+				if ($scope.class === "menushow")
+					$scope.class = "hidemenu";
+			     }
+				
+			$scope.breakingnews = function(){
+				if ($scope.class1 === "showbreakng")
+					$scope.class1 = "hidebraking"
+				}
+			});
+			
+			
+			app.controller('homecontroller', function($scope, $http){
+	
+				$http.get('home.json').success(function(data, status){
+				$scope.topstories = data.channel.item;
+
+				}).error(function(data, status){
+					$scope.messages = data || "Request failed";
+				   $scope.status = status;
+				});
+
+			});
+			
+		app.directive('mydirective', function(){
+					  return {
+						//scope:{},
+						restrict : 'E',
+						//controllerAs: 'homecontroller',
+						link:function(scope, element, attrs){
+							element.on('click', function(){
+								 element.parent('div').parent('div').children('div').children('toggleInnerDataBox').removeClass('showcotonet');
+								 element.next('div').addClass('showcotonet');
+							});
+						}
+					}
+				});
+				
+			
+			
+			
+			
+        </script>
+     
+     
+    </body>
+</html>

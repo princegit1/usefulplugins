@@ -1,0 +1,114 @@
+*{ margin:0; padding:0; outline: none}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+body{ font-size:100%; font-family:mangal}
+
+.topHeader{ background:#3e83fc; height:45px; box-sizing: border-box; float: left; width:100%}
+.leftmenuSec{ float: left; width:100px; height:100%}
+.leftmenuSec .topMenuIcon{ margin:8px 0 0 5px; display: inline-block; float: left; cursor: pointer}
+.leftmenuSec .logoIcon{ display: inline-block; float: left; margin:2px 0 0 15px;}
+
+.rightSearchSec{ float: right; width:100px;}
+.searchIcon{ float: right; margin:8px 10px 0 0px; cursor: pointer}
+.topLiveTV{float: right; }
+.topLiveTV .liveTV{ display: block; position: relative; background:#c32b26; height:45px; width:52px;}
+.topLiveTV .liveTV img{ position: absolute; display: block; margin: auto; left:0; top:0; bottom:0;right:0; height:32px; width:32px;}
+
+.breakingNewsSec{ float: left; width:100%; box-sizing: border-box; padding:12px 5px 5px 10px; height:48px; background:#0c213e; position: relative}
+.breakingTxt{ float: left; display: inline-block; font:12px/16px Arial, Helvetica, sans-serif; color:#f8bb22; width:70px}
+.breakingTxt small{ font-size:17px; font-weight: bold}
+.breakingNewsSec p{ font:12px/16px mangal; float: left; width:220px; color:#fff}
+.breakingNewClose{ display: inline-block; position: absolute; right:0px; top:0px; cursor: pointer}
+
+.mainContainerSec{ float: left; width:100%; padding:3%; box-sizing: border-box}
+
+.topNewsSec{ float: left; width:100%}
+.topNewsStorySec{ float: left; width:100%; background:#e5e5e5}
+.topNewsStorySec  img{ width:100%; float: left}
+.topNewsStorySec h1{ font:600 13px/20px mangal; color:#000; padding:5px 16px; box-sizing: border-box; float: left; width:100%}
+
+.topNewStoryList{ float: left; width:100%; margin-top:10px;}
+.topNewStoryList .leftStoryImg img{ float: left; width:70px; margin-right:10px;}
+.topNewStoryList ul li{ list-style: none; margin-bottom:15px; float: left; width:100%}
+.topNewStoryList ul li p{ font:12px/18px mangal; overflow:hidden; color:#454545}
+.topNewStoryList ul li p a{ font:12px/18px mangal; overflow:hidden; color:#454545; text-decoration:none}
+.readMoreNews{ display: block; font:12px/16px mangal; float: right; padding-right:10px; text-decoration: none; color:#2d2d2d; position: relative}
+.readMoreNews span{ color:#000; position: absolute; top:-2px; right:0; font-weight: bold; font-size:14px}
+
+.categorySecContainer{ float: left; width:100%; box-sizing: border-box}
+.categoryListBox{ float: left; width:100%; margin-bottom:40px;}
+.categoryHeadingBox{ float: left; width:100%; box-sizing: border-box; background:#f9fafc; border-bottom:1px solid #e0e0e0; border-top:1px solid #e0e0e0; padding:4px 10px ; height:28px; cursor: pointer}
+.categoryHeadingBox h2 a{ font:bold 13px mangal; color:#b61a28; float: left; text-decoration: none}
+.categoryHeadingBox .plusIcon{ background:url(../images/plusIcon.png) no-repeat; height:20px; width:20px; float: right; cursor: pointer}
+.minusIcon{ background:url(../images/minusIcon.png) no-repeat !important; height:20px; width:20px;}
+.categoryHeadingBox.active h2 a{ color:#424242}
+.categoryHeadingBox.active{ border-bottom:0px;}
+.toggleInnerDataBox{ float: left; width:100%; box-sizing: border-box; background:#fafafa; padding:10px 10px 0; display: none}
+
+
+.bottomFooterSec{ float: left; width:100%; box-sizing: border-box; margin-top:-25px;}
+.bottomFooterSec li{ list-style: none; float: left; width:100%; border-top:2px solid #a8a8aa; }
+.bottomFooterSec li:nth-child(odd){ border-right:0;}
+.bottomFooterSec li li{ border:0px; width:49%; box-sizing: border-box;  padding:5px 0 5px 45px}
+.bottomFooterSec li li:nth-child(odd){ border-right:2px solid #a8a8aa; padding-left:30px}
+.bottomFooterSec li li a{ text-decoration: none; color:#8a8a8a; font:600 13px/16px mangal}
+.footerBlueBg{ float: left; width:100%; background:#3d83fc; box-sizing: border-box; height:48px;}
+
+.scroll_top_btn{ position: fixed; bottom:60px;;  right:10px; display: none; cursor: pointer}
+
+/*auto slider*/
+.whiteBg{ background:#fff}
+.videoHeadTxt{ font:12px/18px mangal; color:#3e3d3b; text-align: center; display: inline-block; width:100%}
+#slide_area_box{ margin:0 auto; width:195px; position: relative}
+#slide_area_box #vslide{float:left; width:200px; position:relative; overflow:hidden;}
+#slide_area_box #vslide ul{list-style:none; margin:0; padding:9px 0; position:relative; overflow:hidden;}
+#slide_area_box #vslide ul li{width:200px; float:left; padding:0 5px 0 13px; box-sizing: border-box}
+#slide_area_box #vslide ul li img{ width:100%}
+.autoslider-nav{position:absolute; bottom:0px; right:37%;}
+.autoslider-nav a{background:#eaeaea; height:7px; width:7px; text-indent:-999px; margin-right:3px; float:left; border-radius:50% 50%}
+.autoslider-nav a.active{background:#3587ff}
+
+#slide_area_box1{ margin:0 auto; width:195px; position: relative}
+#slide_area_box1 #vslider{float:left; width:200px; position:relative; overflow:hidden;}
+#slide_area_box1 #vslider ul{list-style:none; margin:0; padding:9px 0; position:relative; overflow:hidden;}
+#slide_area_box1 #vslider ul li{width:200px; float:left; padding:0 0px 0 0px; box-sizing: border-box}
+#slide_area_box1 #vslider ul li img{ width:100%}
+.autoslider-nav1{position:absolute; bottom:0px; right:37%;}
+.autoslider-nav1 a{background:#eaeaea; height:7px; width:7px; text-indent:-999px; margin-right:3px; float:left; border-radius:50% 50%}
+.autoslider-nav1 a.active{background:#3587ff}
+
+
+.mobileMenuContainer{ width:100%; background:rgba(0, 0, 0, 0.9); position: fixed; left:0; top:0px; z-index:9999; height:100%; box-sizing: border-box; padding:10px 10px;}
+.leftMenuTopSec,.MenuSearchSec{ float: left; width:100%}
+.leftMenuTopSec a{ float: left; width:100px}
+.leftMenuTopSec span.close1{ float: right; margin-top:16px; cursor: pointer}
+.MenuSearchSec{ height:30px; background:#f1f1f1}
+
+
+.homeMenuTxt{ float: left; width:100%}
+.homeMenuTxt{ float: left; width:100%; box-sizing: border-box; margin-top:20px}
+.homeMenuTxt ul  li{ border:0px; width:49%; box-sizing: border-box;  padding:5px 0 5px 30px; float:left; list-style:none}
+.homeMenuTxt ul li li:nth-child(odd){  padding-left:30px}
+.homeMenuTxt ul li a{ text-decoration: none; color:#fff; font:400 16px/18px Mangal}
+
+
+.slideDown{transition: all 0.5s ease; left:0; }
+.mobileMenuContainer { left:-100%;  transition: all 0.5s ease;}
+.menushow {left:0; transition: all 0.5s ease;}
+.hidebraking { transition: all 0.5s ease; height:0; padding:0; opacity:0   }
+.breakingNewClose { position:static; float:right; margin-top:-5px;}
+.breakingNewsSec p {width: 66%;}
+
+.toggleInnerDataBox { display:block; height:1px; visibility:hidden; transition: all 0.5s ease; opacity:0}
+.showcotonet {transition: all 0.5s ease!Important; height:auto!Important; visibility:visible!Important; opacity:1!important }
+
+
+
+
+
+
+
+
+
+
+
